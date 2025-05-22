@@ -1,0 +1,174 @@
+
+
+===   [ 收集测试用例 ]  === 
+
+
+== cases\demo1.py 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:51:38 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"gradeid": null, "retlist": [], "retcode": 0}
+-------- HTTP response * end -------
+
+
+删除班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:51:38 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"reason": "id \u4e3a`20250`\u7684\u73ed\u7ea7\u4e0d\u5b58\u5728", "retcode": 404}
+-------- HTTP response * end -------
+
+
+
+** no cases in this file, skip it.
+
+== cases\空白环境\__st__.py 
+
+
+== cases\空白环境\空白.py 
+
+
+
+===   [ 执行测试用例 ]  === 
+
+预备执行用例数量 : 1
+
+
+
+  ========= 测试开始 : 20250522_215138 =========
+
+
+
+>>> cases\空白环境\
+
+[ suite setup ] cases\空白环境\
+
+
+>>> cases\空白环境\空白.py
+
+* 添加班级1-API-tc000001  -  2025-05-22 21:51:38
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建班级 
+
+添加班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:51:38 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"invitecode": "202510276381", "retcode": 0, "id": 20251}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  返回的retcode值=0 ---->  通过
+
+
+-- 第 2 步 -- 列出班级 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:51:38 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"gradeid": 1, "retlist": [{"name": "\u5b9e\u9a8c\u4e00\u73ed", "grade__name": "\u4e03\u5e74\u7ea7", "invitecode": "202510276381", "studentlimit": 80, "studentnumber": 0, "id": 20251, "teacherlist": []}], "retcode": 0}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  返回的消息体数据正确，添加班级是否成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加班级1-API-tc000001
+删除班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:51:38 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"retcode": 0}
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\
+
+
+  ========= 测试结束 : 20250522_215138 =========
+
+
+  耗时    : 0.141 秒
+
+
+  预备执行用例数量 : 1
+
+  实际执行用例数量 : 1
+
+  通过 : 1
+
+  失败 : 0
+
+  异常 : 0
+
+  套件初始化失败 : 0
+
+  套件清除  失败 : 0
+
+  用例初始化失败 : 0
+
+  用例清除  失败 : 0

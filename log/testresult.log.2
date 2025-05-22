@@ -1,0 +1,152 @@
+
+
+===   [ 收集测试用例 ]  === 
+
+
+== cases\demo1.py 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:43:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"gradeid": null, "retlist": [], "retcode": 0}
+-------- HTTP response * end -------
+
+
+删除班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:43:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"reason": "id \u4e3a`20247`\u7684\u73ed\u7ea7\u4e0d\u5b58\u5728", "retcode": 404}
+-------- HTTP response * end -------
+
+
+
+** no cases in this file, skip it.
+
+== cases\空白环境\__st__.py 
+
+
+== cases\空白环境\空白.py 
+
+
+
+===   [ 执行测试用例 ]  === 
+
+预备执行用例数量 : 1
+
+
+
+  ========= 测试开始 : 20250522_214336 =========
+
+
+
+>>> cases\空白环境\
+
+[ suite setup ] cases\空白环境\
+
+
+>>> cases\空白环境\空白.py
+
+* 添加班级1-API-tc000001  -  2025-05-22 21:43:36
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建班级 
+
+添加班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:43:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{"invitecode": "202494967497", "retcode": 0, "id": 20249}
+-------- HTTP response * end -------
+
+
+  ABORT   'Response' object is not subscriptable 
+Traceback:
+  File "D:\tools\projects\autotest_yjyx\cases\空白环境\空白.py", line 14, in teststeps
+    invitecode = r["invitecode"]
+                 ~^^^^^^^^^^^^^^
+TypeError: 'Response' object is not subscriptable
+
+
+[ case teardown ] 添加班级1-API-tc000001
+删除班级
+
+
+-------- HTTP response * begin -------
+500
+Server: nginx/1.17.0
+Date: Thu, 22 May 2025 13:43:36 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+
+<h1>Server Error (500)</h1>
+消息体不是json格式！！！
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\
+
+
+  ========= 测试结束 : 20250522_214336 =========
+
+
+  耗时    : 0.102 秒
+
+
+  预备执行用例数量 : 1
+
+  实际执行用例数量 : 1
+
+  通过 : 0
+
+  失败 : 0
+
+  异常 : 1
+
+  套件初始化失败 : 0
+
+  套件清除  失败 : 0
+
+  用例初始化失败 : 0
+
+  用例清除  失败 : 0
