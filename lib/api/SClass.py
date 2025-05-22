@@ -1,13 +1,15 @@
 import requests
 from hytest import INFO
 from cfg.cfg import *
+import json
 
 
 def getFirstClass():
-    # 获取第一个班级的id
+    # 获取第一个班级的信息
     r = sclass.list_class()
     listRet = r.json()
-    return listRet['retlist'][0]['id']
+    # {'name': '实验二班', 'grade__name': '八年级', 'invitecode': '202563130374', 'studentlimit': 50, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
+    return listRet['retlist'][0]
 
 
 class SClass:
@@ -20,11 +22,9 @@ class SClass:
             INFO(f'{k}: {v}')
         INFO('')
 
-        body = response.content.decode('utf8')
-        INFO(body)
-
         try:
-            response.json()
+            r = response.json()
+            INFO(json.dumps(r, ensure_ascii=False, indent=2))
         except:
             INFO('消息体不是json格式！！！')
         INFO('-------- HTTP response * end -------\n\n')
@@ -60,7 +60,20 @@ class SClass:
         self._printResponse(response)
         return response
 
+    def modify_class(self, classid, name=None, studentlimit=None):
+        INFO("修改班级")
+        data = {
+            "vcode": g_vcode,
+            "action": "modify",
+        }
+        if name is not None:
+            data["name"] = name
+        if studentlimit is not None:
+            data["studentlimit"] = studentlimit
+        response = requests.put(f'{g_api_url_class}/{classid}', data=data)
+        self._printResponse(response)
+        return response
+
 
 sclass = SClass()
-
 

@@ -1,15 +1,16 @@
 from lib.api.Teacher import teacher
 from cfg.cfg import *
 from lib.api.SClass import *
+# newgrade, newname, studentlimit = '九年级', '实验一班', 50
 # newgrade, newname, studentlimit = '八年级', '实验二班', 50
 # r = sclass.add_class(grade=newgrade, classname=newname, studentlimit=studentlimit)
 # print(r.json())
-r = sclass.list_class()
-listRet = r.json()
-print(listRet)
+# r = sclass.list_class()
+# listRet = r.json()
+# print(listRet)
 # print(listRet['retlist'][0]['id'])
-# r = sclass.del_class(20252)
-# r = sclass.del_class(20253)
+# r = sclass.del_class(20267)
+# r = sclass.del_class(20263)
 # print(r.json())
 
 # username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
@@ -26,11 +27,19 @@ print(listRet)
 # print(addRet)
 
 
-r = teacher.list_teacher()
-print(r.json())
+# r = teacher.list_teacher()
+# print(r.json())
 
 # r = teacher.del_teacher(5214)
 # r = teacher.del_teacher(5215)
 # print(r.json())
 # r = teacher.list_teacher()
 # print(r.json())
+
+
+r = sclass.list_class()
+listRet = r.json()
+print(listRet)
+r = teacher.list_teacher()
+print(r.json())
+

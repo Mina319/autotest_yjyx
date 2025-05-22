@@ -14,11 +14,9 @@ class Teacher:
             INFO(f'{k}: {v}')
         INFO('')
 
-        body = response.content.decode('utf8')
-        INFO(body)
-
         try:
-            response.json()
+            r = response.json()
+            INFO(json.dumps(r, ensure_ascii=False, indent=2))
         except:
             INFO('消息体不是json格式！！！')
         INFO('-------- HTTP response * end -------\n\n')
