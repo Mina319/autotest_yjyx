@@ -2,7 +2,7 @@ from hytest import CHECK_POINT, STEP
 from lib.api.SClass import sclass
 from cfg.cfg import *
 
-
+# 班级
 class Case_tc000001:
     name = '添加班级1-API-tc000001'
 

@@ -3,7 +3,7 @@ from lib.api.Teacher import teacher
 from cfg.cfg import *
 from lib.api.SClass import *
 
-
+# 老师
 class Case_tc001001:
     name = '添加老师1-API-tc001001'
 
@@ -46,6 +46,7 @@ class Case_tc001001:
         teacher.del_teacher(self.tid)
 
 
+# 班级
 class Case_tc000002:
     name = '添加班级2-API-tc000002'
 
@@ -216,7 +217,7 @@ class Case_tc000082:
         self.name, self.gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
         r = sclass.del_class(self.cid)
         delRet = r.json()
-        print('modifyRet----', delRet)
+        print('delRet----', delRet)
         expected = {
             "retcode": 0,
         }
