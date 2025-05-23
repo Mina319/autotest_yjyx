@@ -60,6 +60,14 @@ class SClass:
         self._printResponse(response)
         return response
 
+    def del_allclasses(self):
+        INFO("删除所有班级")
+        r = self.list_class()
+        for info in r.json()["retlist"]:
+            classid = info["id"]
+            response = requests.delete(f'{g_api_url_class}/{classid}', data={"vcode": g_vcode})
+            self._printResponse(response)
+
     def modify_class(self, classid, name=None, studentlimit=None):
         INFO("修改班级")
         data = {

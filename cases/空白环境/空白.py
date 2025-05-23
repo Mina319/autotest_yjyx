@@ -50,3 +50,17 @@ class Case_tc000001:
         sclass.del_class(self.cid)
 
 
+class Case_tc000081:
+    name = '删除班级1-API-tc000081'
+
+    def teststeps(self):
+        STEP(1, '删除班级：使用不存在的班级ID')
+        cid = 111
+        r = sclass.del_class(cid)
+        delRet = r.json()
+        print('delRet----', delRet)
+        expected = {
+          "reason": f"id 为`{cid}`的班级不存在",
+          "retcode": 404
+        }
+        CHECK_POINT('响应体消息是否符合预期', expected == delRet)

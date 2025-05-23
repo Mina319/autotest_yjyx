@@ -56,5 +56,12 @@ class Teacher:
         self._printResponse(response)
         return response
 
+    def del_allteachers(self):
+        INFO("删除所有老师")
+        r = self.list_teacher()
+        for info in r.json()["retlist"]:
+            teacherid = info["id"]
+            response = requests.delete(f'{g_api_url_teacher}/{teacherid}', data={"vcode": g_vcode})
+            self._printResponse(response)
 
 teacher = Teacher()

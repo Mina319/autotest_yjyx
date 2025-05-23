@@ -9,8 +9,8 @@ from lib.api.SClass import *
 # listRet = r.json()
 # print(listRet)
 # print(listRet['retlist'][0]['id'])
-# r = sclass.del_class(20267)
-# r = sclass.del_class(20263)
+# r = sclass.del_class(20286)
+# r = sclass.del_class(20272)
 # print(r.json())
 
 # username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
@@ -31,7 +31,7 @@ from lib.api.SClass import *
 # print(r.json())
 
 # r = teacher.del_teacher(5214)
-# r = teacher.del_teacher(5215)
+# r = teacher.del_teacher(20263)
 # print(r.json())
 # r = teacher.list_teacher()
 # print(r.json())

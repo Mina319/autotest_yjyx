@@ -165,7 +165,6 @@ class Case_tc000052:
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
         self.name, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
-        newname = '实验三班'
         r = sclass.modify_class(self.cid, self.name)
         modifyRet = r.json()
         print('modifyRet----', modifyRet)
@@ -188,4 +187,54 @@ class Case_tc000052:
         CHECK_POINT('班级名是否修改成功', flag)
 
 
+class Case_tc000053:
+    name = '修改班级3-API-tc000053'
+
+    def teststeps(self):
+        STEP(1, '修改班级：使用不存在的班级ID')
+        # 获取已经存在班级的信息
+        # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
+        self.name, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        newname, newlimit = '实验二班', 20
+        r = sclass.modify_class(111, newname, newlimit)
+        modifyRet = r.json()
+        print('modifyRet----', modifyRet)
+        expected = {
+            "retcode": 404,
+            "reason": "id 为`111`的班级不存在"
+        }
+        CHECK_POINT('响应体消息是否符合预期', expected == modifyRet)
+
+
+class Case_tc000082:
+    name = '删除班级2-API-tc000082'
+
+    def teststeps(self):
+        STEP(1, '删除班级')
+        # 获取已经存在班级的信息
+        # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
+        self.name, self.gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        r = sclass.del_class(self.cid)
+        delRet = r.json()
+        print('modifyRet----', delRet)
+        expected = {
+            "retcode": 0,
+        }
+        CHECK_POINT('响应体消息是否符合预期', expected == delRet)
+
+        STEP(2, '列出班级')
+        r = sclass.list_class(grade=self.gradename)
+        listRet = r.json()
+        print('listRet----', listRet)
+        flag = True  # 查询为空，默认为True
+        for cinfo in listRet['retlist']:
+            name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
+            if self.cid == id1 and name1 == self.name:
+                flag = False  # 找到的话就是为False
+                break
+        CHECK_POINT('该老师 是否 不在列出结果中', flag)
+
+    def teardown(self):
+        # 删掉，再加回来
+        sclass.add_class(self.gradename, self.name, self.studentlimit)
 
