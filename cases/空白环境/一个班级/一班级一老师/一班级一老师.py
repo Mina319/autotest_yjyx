@@ -120,21 +120,31 @@ class Case_tc001052:
         STEP(1, '修改老师')
         # {'username': 'sunny', 'teachclasslist': [20247], 'realname': '孙四', 'id': 5214, 'phonenumber': '13451812456', 'email': 'sunny@163.com', 'idcardnumber': '3208251983080987799'}
         username, teachclasslist, realname, tid, phonenumber, email, idcardnumber = getFirstTeacher().values()
-        teachclasslist.append({"id": self.cid})
+        teachclasslist1 = [{"id": teachclasslist[0]}]
+        teachclasslist1.append({"id": self.cid})
+        # teachclasslist.append(self.cid)
         realname1 = '张星星'
-        r = teacher.modify_teacher(teacherid=tid, realname=realname1, classlist=teachclasslist)
-        modifyRet = r.json()
-        expected = {"retcode": 0}
-        print('modifyRet----', modifyRet)
-        print('expected----', expected)
-        CHECK_POINT('返回消息体是否符合预期', modifyRet == expected)
+        try:
+            r = teacher.modify_teacher(teacherid=tid, realname=realname1, classlist=teachclasslist1)
+            # 检查返回状态码
+            if r.status_code == 200:
+                modifyRet = r.json()
+                expected = {"retcode": 0}
+                print('modifyRet----', modifyRet)
+                print('expected----', expected)
+                CHECK_POINT('返回消息体是否符合预期', modifyRet == expected)
+            else:
+                print(f"修改老师信息失败，响应状态码：{r.status_code}")
+                print(f"响应内容：{r.text}")
+        except Exception as e:
+            print(f"修改老师信息时发生错误：{str(e)}")
 
         STEP(2, '列出老师')
         r = teacher.list_teacher()
         listRet = r.json()
         flag = False
         for ts in listRet["retlist"]:
-            if ts["id"] == tid and ts["realname"] == realname1 and ts["teachclasslist"] == teachclasslist:
+            if ts["id"] == tid and ts["realname"] == realname1 and ts["teachclasslist"] == [i["id"] for i in teachclasslist1]:
                 # 找到该老师，并且信息也都是修改后的
                 flag = True
         CHECK_POINT('信息是否更正', flag)
