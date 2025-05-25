@@ -7,6 +7,12 @@ g_api_url_class = g_api_server + "/api/3school/school_classes"
 g_api_url_teacher = g_api_server + "/api/3school/teachers"
 g_api_url_student = g_api_server + "/api/3school/students"
 
+# ui
+g_ui_url_teacher = g_api_server + "/teacher/login/login.html"
+g_ui_url_student = g_api_server + "/student/login/login.html"
+
+g_school = '白月学院00002'
+
 # 年级对应的ID
 gradeToId = {
     "七年级": 1,

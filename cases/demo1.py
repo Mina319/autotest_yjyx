@@ -31,12 +31,14 @@ from lib.api.Student import *
 # r = teacher.list_teacher()
 # print(r.json())
 
-# r = teacher.del_teacher(5214)
-# r = teacher.del_teacher(20263)
+# r = teacher.del_teacher(5225)
 # print(r.json())
 # r = teacher.list_teacher()
 # print(r.json())
 
+# teacher.del_allteachers()
+# sclass.del_allclasses()
+# student.del_student()
 
 r = sclass.list_class()
 listRet = r.json()
