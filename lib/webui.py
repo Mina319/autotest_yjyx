@@ -1,3 +1,6 @@
+import string
+import random
+
 from selenium import webdriver
 from hytest import *
 from selenium.webdriver.common.by import By
@@ -25,3 +28,20 @@ def mgr_login():
     # 点击登录
     (wd.find_element(By.CLASS_NAME, 'btn-flat')).click()
 
+
+def generate_mixed_string(length=100):
+    # 定义字符集
+    chinese_chars = [chr(i) for i in range(0x4e00, 0x9fa5 + 1)]  # 常用汉字范围
+    english_chars = string.ascii_letters  # 所有英文字母
+    special_chars = "*()"  # 特殊字符
+
+    # 组合所有可能的字符
+    all_chars = chinese_chars + list(english_chars) + list(special_chars)
+
+    # 随机选择字符直到达到指定长度
+    result = []
+    for _ in range(length):
+        char = random.choice(all_chars)
+        result.append(char)
+
+    return ''.join(result)

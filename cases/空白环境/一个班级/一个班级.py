@@ -1,8 +1,11 @@
 from hytest import CHECK_POINT, STEP
 from lib.api.Teacher import teacher
+from lib.api.Student import *
 from cfg.cfg import *
 from lib.api.SClass import *
 from lib.ui.TeacherUI import *
+from lib.ui.StudnetUI import *
+
 # 老师
 class Case_tc001001:
     name = '添加老师1-API-tc001001'
@@ -134,7 +137,7 @@ class Case_tc000051:
         STEP(1, '修改班级')
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.name, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        self.classname, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
         newname = '实验三班'
         r = sclass.modify_class(self.cid, newname)
         modifyRet = r.json()
@@ -155,7 +158,7 @@ class Case_tc000051:
 
     def teardown(self):
         # 该班级名修改回来
-        sclass.modify_class(self.cid, self.name)
+        sclass.modify_class(self.cid, self.classname)
 
 
 class Case_tc000052:
@@ -165,8 +168,8 @@ class Case_tc000052:
         STEP(1, '修改班级')
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.name, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
-        r = sclass.modify_class(self.cid, self.name)
+        self.classname, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        r = sclass.modify_class(self.cid, self.classname)
         modifyRet = r.json()
         print('modifyRet----', modifyRet)
         expected = {
@@ -183,7 +186,7 @@ class Case_tc000052:
         for cinfo in listRet['retlist']:
             name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
             if self.cid == id1:
-                flag = name1 == self.name
+                flag = name1 == self.classname
                 break
         CHECK_POINT('班级名是否修改成功', flag)
 
@@ -195,7 +198,7 @@ class Case_tc000053:
         STEP(1, '修改班级：使用不存在的班级ID')
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.name, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        self.classname, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
         newname, newlimit = '实验二班', 20
         r = sclass.modify_class(111, newname, newlimit)
         modifyRet = r.json()
@@ -214,7 +217,7 @@ class Case_tc000082:
         STEP(1, '删除班级')
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.name, self.gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        self.classname, self.gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
         r = sclass.del_class(self.cid)
         delRet = r.json()
         print('delRet----', delRet)
@@ -230,14 +233,14 @@ class Case_tc000082:
         flag = True  # 查询为空，默认为True
         for cinfo in listRet['retlist']:
             name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
-            if self.cid == id1 and name1 == self.name:
+            if self.cid == id1 and name1 == self.classname:
                 flag = False  # 找到的话就是为False
                 break
         CHECK_POINT('该老师 是否 不在列出结果中', flag)
 
     def teardown(self):
         # 删掉，再加回来
-        sclass.add_class(self.gradename, self.name, self.studentlimit)
+        sclass.add_class(self.gradename, self.classname, self.studentlimit)
 
 
 # web功能
@@ -288,7 +291,50 @@ class Case_tc005001:
         mes = wd.find_element(By.CSS_SELECTOR, '.panel-body > div:nth-child(2)')
         SELENIUM_LOG_SCREEN(wd, width='70%')
         CHECK_POINT('学生列表是否为空', mes.text == '该班级还没有学生注册')
+        wd.close()
 
     def teardown(self):
         # 删掉老师
         teacher.del_teacher(self.tid)
+
+
+class Case_tc005081:
+    name = '学生登录1-API-tc005081'
+
+    def teststeps(self):
+        STEP(1, '创建学生')
+        username, realname, grade, classid, phonenumber = 'qinsang', '秦桑', '高一', \
+                                                          getFirstClass()["id"], '1894567233'
+        gradeid = gradeToId[grade]
+        r = student.add_student(username, realname, gradeid, classid, phonenumber)
+        self.sid = r.json()["id"]
+        CHECK_POINT('是否创建学生成功', r.json()["retcode"] == 0)
+
+        STEP(2, '登录web系统')
+        s_ui.open_browser()
+        s_ui.login(username=username)
+        INFO('检查 学校、姓名、已发布微课、已发布作业 的信息是否正确')
+        wd = GSTORE['wd']
+        sleep(2)
+        infos_ele = wd.find_elements(By.XPATH, '//table//td[2]/span')
+        infos = [e.text for e in infos_ele]
+        name1, school1, parent = infos
+        infos_ele1 = wd.find_elements(By.XPATH, '//*[@id="icon-choose"]/div[1]//h2//strong')
+        infos1 = [int(e.text) for e in infos_ele1]
+        microlessons, homework = infos1
+        sleep(1)
+        SELENIUM_LOG_SCREEN(wd, width='70%')
+        CHECK_POINT('检查信息是否正确', name1 == realname and microlessons == 0
+                    and homework == 0 and school1 == g_school)
+
+        STEP(3, '点击班级学生')
+        # 点击错题库
+        wd.find_element(By.CSS_SELECTOR, 'div.main-menu a:nth-child(4) > li').click()
+        info = wd.find_element(By.CSS_SELECTOR, '#page-wrapper > div > div > div.row.ng-scope > div > span')
+        SELENIUM_LOG_SCREEN(wd, width='70%')
+        CHECK_POINT('检查错题库', info.text == '您尚未有错题入库哦')
+        wd.close()
+
+    def teardown(self):
+        # 删掉同学
+        student.del_student(self.sid)

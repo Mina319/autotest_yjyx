@@ -14,15 +14,19 @@ from lib.api.Student import *
 # r = sclass.del_class(20272)
 # print(r.json())
 
+# subject = '初中数学'
 # username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
-#     'zhangming', '张明', subjectToId['初中数学'], [{"id": getFirstClass()}], '13451813456', \
+#     'zhangming', '张明', subjectToId[subject], [{"id": getFirstClass()['id']}], '13451813456', \
 #     'zhangming@163.com', '3209251983090987799'
-# username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
-#     'sunny', '孙四', subjectToId['初中英语'], [{"id": getFirstClass()["id"]}], '13451812456', \
-#     'sunny@163.com', '3208251983080987799'
-# r = teacher.add_teacher(username=username, realname=realname, subjectid=subjectid,
-#                         classlist=classlist, phonenumber=phonenumber, email=email,
-#                         idcardnumber=idcardnumber)
+# teacher.add_teacher(username=username, realname=realname, subjectid=subjectid,
+#                     classlist=classlist, phonenumber=phonenumber, email=email,
+#                     idcardnumber=idcardnumber)
+#
+# username, realname, grade, classid, phonenumber = 'qinsang', '秦桑', '高一', \
+#                                                   getFirstClass()["id"], '1894567233'
+# gradeid = gradeToId[grade]
+# student.add_student(username, realname, gradeid, classid, phonenumber)
+
 # print(r)
 # addRet = r.json()
 # print(addRet)
@@ -36,9 +40,10 @@ from lib.api.Student import *
 # r = teacher.list_teacher()
 # print(r.json())
 
+# student.del_allstudents()
 # teacher.del_allteachers()
 # sclass.del_allclasses()
-# student.del_student()
+
 
 r = sclass.list_class()
 listRet = r.json()

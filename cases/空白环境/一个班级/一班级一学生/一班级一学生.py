@@ -60,6 +60,7 @@ class Case_tc005002:
         SELENIUM_LOG_SCREEN(wd, width='70%')
         CHECK_POINT('学生列表是否为空', int(stuNum.text) == 1 and
                     stuName == name.text)
+        wd.close()
 
     def teardown(self):
         # 删掉老师
