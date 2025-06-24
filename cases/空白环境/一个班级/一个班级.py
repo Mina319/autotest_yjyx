@@ -6,6 +6,7 @@ from lib.api.SClass import *
 from lib.ui.TeacherUI import *
 from lib.ui.StudnetUI import *
 
+
 # 老师
 class Case_tc001001:
     name = '添加老师1-API-tc001001'
@@ -16,7 +17,6 @@ class Case_tc001001:
         username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
             'zhangming', '张明', subjectToId[subject], [{"id": getFirstClass()['id']}], '13451813456', \
             'zhangming@163.com', '3209251983090987799'
-
         r = teacher.add_teacher(username=username, realname=realname, subjectid=subjectid,
                                 classlist=classlist, phonenumber=phonenumber, email=email,
                                 idcardnumber=idcardnumber)
