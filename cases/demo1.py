@@ -40,9 +40,10 @@ from lib.api.Student import *
 # r = teacher.list_teacher()
 # print(r.json())
 
-# student.del_allstudents()
-# teacher.del_allteachers()
 # sclass.del_allclasses()
+# teacher.del_allteachers()
+# student.del_allstudents()
+
 
 
 r = sclass.list_class()
