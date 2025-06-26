@@ -16,7 +16,7 @@
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:25 GMT
+Date: Thu, 26 Jun 2025 05:30:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -27,24 +27,7 @@ Access-Control-Allow-Origin: *
 
 {
   "gradeid": null,
-  "retlist": [
-    {
-      "name": "实验一班",
-      "grade__name": "七年级",
-      "invitecode": "202734632934",
-      "studentlimit": 80,
-      "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
-    }
-  ],
+  "retlist": [],
   "retcode": 0
 }
 -------- HTTP response * end -------
@@ -56,7 +39,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:25 GMT
+Date: Thu, 26 Jun 2025 05:30:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -66,19 +49,7 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "retlist": [
-    {
-      "username": "zhangming",
-      "teachclasslist": [
-        20273
-      ],
-      "realname": "张明",
-      "id": 5219,
-      "phonenumber": "13451813456",
-      "email": "zhangming@163.com",
-      "idcardnumber": "3209251983090987799"
-    }
-  ],
+  "retlist": [],
   "retcode": 0
 }
 -------- HTTP response * end -------
@@ -90,7 +61,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:26 GMT
+Date: Thu, 26 Jun 2025 05:30:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -143,13 +114,13 @@ Access-Control-Allow-Origin: *
 
 
 
-  ========= 测试开始 : 20250620_153426 =========
+  ========= 测试开始 : 20250626_133024 =========
 
 
 
 >>> cases\空白环境\空白.py
 
-* 添加班级1-API-tc000001  -  2025-06-20 15:34:26
+* 添加班级1-API-tc000001  -  2025-06-26 13:30:24
 
   [ case execution steps ]
 
@@ -161,7 +132,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:26 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -171,30 +142,81 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "Traceback (most recent call last):\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 542, in addClass\n    school_class = self._addClass(name,schoolid,gradeid,studentlimit)\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 531, in _addClass\n    school_class.save()\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 710, in save\n    force_update=force_update, update_fields=update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 738, in save_base\n    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 822, in _save_table\n    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 861, in _do_insert\n    using=using, raw=raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/manager.py\", line 127, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/query.py\", line 920, in _insert\n    return query.get_compiler(using=using).execute_sql(return_id)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py\", line 974, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/utils.py\", line 97, in __exit__\n    six.reraise(dj_exc_type, dj_exc_value, traceback)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py\", line 124, in execute\n    return self.cursor.execute(query, args)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py\", line 205, in execute\n    self.errorhandler(self, exc, value)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py\", line 36, in defaulterrorhandler\n    raise errorclass, errorvalue\nIntegrityError: (1062, \"Duplicate entry '\\xe5\\xae\\x9e\\xe9\\xaa\\x8c\\xe4\\xb8\\x80\\xe7\\x8f\\xad-407-1' for key 'name'\")\n",
-  "retcode": 1
+  "invitecode": "204138161609",
+  "retcode": 0,
+  "id": 20413
 }
 -------- HTTP response * end -------
 
 
-  ABORT   'invitecode' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\空白.py", line 14, in teststeps
-    invitecode = addRet["invitecode"]
-                 ~~~~~~^^^^^^^^^^^^^^
-KeyError: 'invitecode'
 
+** 检查点 **  返回的retcode值=0 ---->  通过
+
+
+-- 第 2 步 -- 列出班级 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": 3,
+  "retlist": [
+    {
+      "name": "实验一班",
+      "grade__name": "九年级",
+      "invitecode": "204138161609",
+      "studentlimit": 70,
+      "studentnumber": 0,
+      "id": 20413,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  返回的消息体数据正确，添加班级是否成功 ---->  通过
+
+  PASS 
 
 [ case teardown ] 添加班级1-API-tc000001
-case teardown fail | 'Case_tc000001' object has no attribute 'cid' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\空白.py", line 50, in teardown
-    sclass.del_class(self.cid)
-                     ^^^^^^^^
-AttributeError: 'Case_tc000001' object has no attribute 'cid'
+删除班级
 
 
-* 删除班级1-API-tc000081  -  2025-06-20 15:34:26
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+* 删除班级1-API-tc000081  -  2025-06-26 13:30:25
 
   [ case execution steps ]
 
@@ -206,7 +228,7 @@ AttributeError: 'Case_tc000001' object has no attribute 'cid'
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:26 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -237,7 +259,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -247,8 +269,9 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "Traceback (most recent call last):\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 542, in addClass\n    school_class = self._addClass(name,schoolid,gradeid,studentlimit)\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 531, in _addClass\n    school_class.save()\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 710, in save\n    force_update=force_update, update_fields=update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 738, in save_base\n    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 822, in _save_table\n    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 861, in _do_insert\n    using=using, raw=raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/manager.py\", line 127, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/query.py\", line 920, in _insert\n    return query.get_compiler(using=using).execute_sql(return_id)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py\", line 974, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/utils.py\", line 97, in __exit__\n    six.reraise(dj_exc_type, dj_exc_value, traceback)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py\", line 124, in execute\n    return self.cursor.execute(query, args)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py\", line 205, in execute\n    self.errorhandler(self, exc, value)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py\", line 36, in defaulterrorhandler\n    raise errorclass, errorvalue\nIntegrityError: (1062, \"Duplicate entry '\\xe5\\xae\\x9e\\xe9\\xaa\\x8c\\xe4\\xb8\\x80\\xe7\\x8f\\xad-407-1' for key 'name'\")\n",
-  "retcode": 1
+  "invitecode": "204147432491",
+  "retcode": 0,
+  "id": 20414
 }
 -------- HTTP response * end -------
 
@@ -257,7 +280,7 @@ Access-Control-Allow-Origin: *
 
 >>> cases\空白环境\一个班级\一个班级.py
 
-* 添加老师1-API-tc001001  -  2025-06-20 15:34:27
+* 添加老师1-API-tc001001  -  2025-06-26 13:30:25
 
   [ case execution steps ]
 
@@ -269,7 +292,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -284,18 +307,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -309,7 +325,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -319,30 +335,81 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "登录名 zhangming 已经存在",
-  "retcode": 1
+  "retcode": 0,
+  "id": 5342
 }
 -------- HTTP response * end -------
 
 
-  ABORT   'id' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 24, in teststeps
-    self.tid = addRet["id"]
-               ~~~~~~^^^^^^
-KeyError: 'id'
 
+** 检查点 **  返回的retcode值=0 ---->  通过
+
+
+-- 第 2 步 -- 列出老师 
+
+列出老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5342,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  返回的消息体，是否包含刚刚添加的老师的id ---->  通过
+
+  PASS 
 
 [ case teardown ] 添加老师1-API-tc001001
-case teardown fail | 'Case_tc001001' object has no attribute 'tid' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 49, in teardown
-    teacher.del_teacher(self.tid)
-                        ^^^^^^^^
-AttributeError: 'Case_tc001001' object has no attribute 'tid'
+删除老师
 
 
-* 添加班级2-API-tc000002  -  2025-06-20 15:34:27
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+* 添加班级2-API-tc000002  -  2025-06-26 13:30:25
 
   [ case execution steps ]
 
@@ -354,7 +421,7 @@ AttributeError: 'Case_tc001001' object has no attribute 'tid'
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -364,9 +431,9 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "invitecode": "202769896850",
+  "invitecode": "204154901040",
   "retcode": 0,
-  "id": 20276
+  "id": 20415
 }
 -------- HTTP response * end -------
 
@@ -383,7 +450,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -398,10 +465,10 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验二班",
       "grade__name": "八年级",
-      "invitecode": "202769896850",
+      "invitecode": "204154901040",
       "studentlimit": 70,
       "studentnumber": 0,
-      "id": 20276,
+      "id": 20415,
       "teacherlist": []
     }
   ],
@@ -422,7 +489,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:27 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -438,7 +505,7 @@ Access-Control-Allow-Origin: *
 
 
 
-* 添加班级3-API-tc000003  -  2025-06-20 15:34:27
+* 添加班级3-API-tc000003  -  2025-06-26 13:30:25
 
   [ case execution steps ]
 
@@ -450,7 +517,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -465,18 +532,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -490,7 +550,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:25 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -506,32 +566,29 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * end -------
 
 
-  FAIL   添加班级异常或返回结构错误，异常信息: 'invitecode' 
+
+** 检查点 **  返回值和期望一致 ---->  !! 不通过!!
+
+  FAIL   添加班级异常或返回结构错误，异常信息:  
 Traceback:
-                 ~~~~~~^^^^^^^^^^^^^^
-KeyError: 'invitecode'
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\utils\runner.py", line 615, in _exec_cases
     case.teststeps()
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 114, in teststeps
+  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 115, in teststeps
     assert False, f"添加班级异常或返回结构错误，异常信息: {e}"
            ^^^^^
-AssertionError: 添加班级异常或返回结构错误，异常信息: 'invitecode'
+AssertionError: 添加班级异常或返回结构错误，异常信息: 
 
 
 [ case teardown ] 添加班级3-API-tc000003
-case teardown fail | 'Case_tc000003' object has no attribute 'cid' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 130, in teardown
-    sclass.del_class(self.cid)
-                     ^^^^^^^^
-AttributeError: 'Case_tc000003' object has no attribute 'cid'
 
-
-* 修改班级1-API-tc000051  -  2025-06-20 15:34:28
+* 修改班级1-API-tc000051  -  2025-06-26 13:30:25
 
   [ case execution steps ]
 
@@ -543,7 +600,7 @@ AttributeError: 'Case_tc000003' object has no attribute 'cid'
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -558,18 +615,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -583,7 +633,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -604,7 +654,7 @@ Access-Control-Allow-Origin: *
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 145, in teststeps
+  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 147, in teststeps
     CHECK_POINT('修改班级返回retcode为0', modifyRet['retcode'] == 0)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
@@ -618,7 +668,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -635,11 +685,11 @@ Access-Control-Allow-Origin: *
 
 
 
-* 修改班级2-API-tc000052  -  2025-06-20 15:34:28
+* 修改班级2-API-tc000052  -  2025-06-26 13:30:26
 
   [ case execution steps ]
 
--- 第 1 步 -- 修改班级 
+-- 第 1 步 -- 获取已有班级名称 
 
 列出班级
 
@@ -647,7 +697,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -662,18 +712,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -681,13 +724,42 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * end -------
 
 
+
+-- 第 2 步 -- 创建新的班级 
+
+添加班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:26 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "invitecode": "204170477079",
+  "retcode": 0,
+  "id": 20417
+}
+-------- HTTP response * end -------
+
+
+
+-- 第 3 步 -- 修改班级名称与已有班级相同 
+
 修改班级
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -708,14 +780,37 @@ Access-Control-Allow-Origin: *
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 179, in teststeps
+  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 187, in teststeps
     CHECK_POINT('响应体消息是否符合预期', expected == modifyRet)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 修改班级3-API-tc000053  -  2025-06-20 15:34:28
+[ case teardown ] 修改班级2-API-tc000052
+删除班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:26 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+* 修改班级3-API-tc000053  -  2025-06-26 13:30:26
 
   [ case execution steps ]
 
@@ -727,7 +822,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -742,18 +837,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -767,7 +855,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -788,19 +876,16 @@ Access-Control-Allow-Origin: *
 
   PASS 
 
-* 删除班级2-API-tc000082  -  2025-06-20 15:34:28
+* 删除班级2-API-tc000082  -  2025-06-26 13:30:26
 
-  [ case execution steps ]
-
--- 第 1 步 -- 删除班级 
-
-列出班级
+[ case setup ] 删除班级2-API-tc000082
+添加班级
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -810,29 +895,17 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "gradeid": null,
-  "retlist": [
-    {
-      "name": "实验一班",
-      "grade__name": "七年级",
-      "invitecode": "202734632934",
-      "studentlimit": 80,
-      "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
-    }
-  ],
-  "retcode": 0
+  "invitecode": "204183381194",
+  "retcode": 0,
+  "id": 20418
 }
 -------- HTTP response * end -------
 
+
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 删除班级 
 
 删除班级
 
@@ -840,7 +913,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:28 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -850,32 +923,24 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "此班级里还有老师，需清空后才能删除",
-  "retcode": 1
+  "retcode": 0
 }
 -------- HTTP response * end -------
 
 
 
-** 检查点 **  响应体消息是否符合预期 ---->  !! 不通过!!
-
-  FAIL    
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 227, in teststeps
-    CHECK_POINT('响应体消息是否符合预期', expected == delRet)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
-    raise AssertionError()
-AssertionError
+** 检查点 **  响应体消息是否符合预期 ---->  通过
 
 
-[ case teardown ] 删除班级2-API-tc000082
-添加班级
+-- 第 2 步 -- 列出班级 
+
+列出班级
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:29 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -885,14 +950,19 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "Traceback (most recent call last):\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 542, in addClass\n    school_class = self._addClass(name,schoolid,gradeid,studentlimit)\n  File \"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py\", line 531, in _addClass\n    school_class.save()\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 710, in save\n    force_update=force_update, update_fields=update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 738, in save_base\n    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 822, in _save_table\n    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/base.py\", line 861, in _do_insert\n    using=using, raw=raw)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/manager.py\", line 127, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/query.py\", line 920, in _insert\n    return query.get_compiler(using=using).execute_sql(return_id)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py\", line 974, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/utils.py\", line 97, in __exit__\n    six.reraise(dj_exc_type, dj_exc_value, traceback)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py\", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File \"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py\", line 124, in execute\n    return self.cursor.execute(query, args)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py\", line 205, in execute\n    self.errorhandler(self, exc, value)\n  File \"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py\", line 36, in defaulterrorhandler\n    raise errorclass, errorvalue\nIntegrityError: (1062, \"Duplicate entry '\\xe5\\xae\\x9e\\xe9\\xaa\\x8c\\xe4\\xb8\\x80\\xe7\\x8f\\xad-407-1' for key 'name'\")\n",
-  "retcode": 1
+  "gradeid": 2,
+  "retlist": [],
+  "retcode": 0
 }
 -------- HTTP response * end -------
 
 
 
-* 老师登录1-API-tc005001  -  2025-06-20 15:34:28
+** 检查点 **  该老师 是否 不在列出结果中 ---->  通过
+
+  PASS 
+
+* 老师登录1-API-tc005001  -  2025-06-26 13:30:26
 
   [ case execution steps ]
 
@@ -904,7 +974,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:29 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -919,18 +989,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -944,7 +1007,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:29 GMT
+Date: Thu, 26 Jun 2025 05:30:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -954,30 +1017,57 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "登录名 zhangming 已经存在",
-  "retcode": 1
+  "retcode": 0,
+  "id": 5343
 }
 -------- HTTP response * end -------
 
 
-  ABORT   'id' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 260, in teststeps
-    self.tid = r.json()["id"]
-               ~~~~~~~~^^^^^^
-KeyError: 'id'
 
+** 检查点 **  是否创建老师成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250626133032002049.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 点击班级学生 
+
+picture imgs/20250626133035337126.png
+
+** 检查点 **  学生列表是否为空 ---->  通过
+
+  PASS 
 
 [ case teardown ] 老师登录1-API-tc005001
-case teardown fail | 'Case_tc005001' object has no attribute 'tid' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一个班级.py", line 298, in teardown
-    teacher.del_teacher(self.tid)
-                        ^^^^^^^^
-AttributeError: 'Case_tc005001' object has no attribute 'tid'
+删除老师
 
 
-* 学生登录1-API-tc005081  -  2025-06-20 15:34:29
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:35 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+* 学生登录1-API-tc005081  -  2025-06-26 13:30:35
 
   [ case execution steps ]
 
@@ -989,7 +1079,7 @@ AttributeError: 'Case_tc005001' object has no attribute 'tid'
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:29 GMT
+Date: Thu, 26 Jun 2025 05:30:35 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1004,18 +1094,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -1029,7 +1112,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:29 GMT
+Date: Thu, 26 Jun 2025 05:30:36 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1040,7 +1123,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2122
+  "id": 2250
 }
 -------- HTTP response * end -------
 
@@ -1053,14 +1136,14 @@ Access-Control-Allow-Origin: *
 
 打开浏览器
 检查 学校、姓名、已发布微课、已发布作业 的信息是否正确
-picture imgs/20250620153434569642.png
+picture imgs/20250626133041306562.png
 
 ** 检查点 **  检查信息是否正确 ---->  通过
 
 
 -- 第 3 步 -- 点击班级学生 
 
-picture imgs/20250620153434827186.png
+picture imgs/20250626133041565924.png
 
 ** 检查点 **  检查错题库 ---->  通过
 
@@ -1073,7 +1156,7 @@ picture imgs/20250620153434827186.png
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1099,7 +1182,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1114,18 +1197,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -1139,7 +1215,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1150,7 +1226,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2123
+  "id": 2251
 }
 -------- HTTP response * end -------
 
@@ -1159,7 +1235,7 @@ Access-Control-Allow-Origin: *
 
 >>> cases\空白环境\一个班级\一班级一学生\一班级一学生.py
 
-* 老师登录2-API-tc005002  -  2025-06-20 15:34:35
+* 老师登录2-API-tc005002  -  2025-06-26 13:30:42
 
   [ case execution steps ]
 
@@ -1171,7 +1247,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1186,18 +1262,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 1,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -1211,7 +1280,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1221,38 +1290,34 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "任课信息冲突",
-  "retcode": 1
+  "retcode": 0,
+  "id": 5344
 }
 -------- HTTP response * end -------
 
 
-  ABORT   'id' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一学生\一班级一学生.py", line 23, in teststeps
-    self.tid = r.json()["id"]
-               ~~~~~~~~^^^^^^
-KeyError: 'id'
+
+** 检查点 **  是否创建老师成功 ---->  通过
 
 
-[ case teardown ] 老师登录2-API-tc005002
-case teardown fail | 'Case_tc005002' object has no attribute 'tid' 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一学生\一班级一学生.py", line 67, in teardown
-    teacher.del_teacher(self.tid)
-                        ^^^^^^^^
-AttributeError: 'Case_tc005002' object has no attribute 'tid'
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250626133047598999.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
 
 
-[ suite teardown ] cases\空白环境\一个班级\一班级一学生\
-删除所有学生
+-- 第 3 步 -- 点击班级学生 
+
 列出学生
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1264,11 +1329,72 @@ Access-Control-Allow-Origin: *
 {
   "retlist": [
     {
-      "classid": 20273,
+      "classid": 20414,
       "realname": "秦桑",
       "username": "qinsang",
       "phonenumber": "1894567233",
-      "id": 2123
+      "id": 2251
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+picture imgs/20250626133050986304.png
+
+** 检查点 **  学生列表是否为空 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录2-API-tc005002
+删除老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\一个班级\一班级一学生\
+删除所有学生
+列出学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "classid": 20414,
+      "realname": "秦桑",
+      "username": "qinsang",
+      "phonenumber": "1894567233",
+      "id": 2251
     }
   ],
   "retcode": 0
@@ -1281,7 +1407,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:35 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1307,7 +1433,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1322,18 +1448,11 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": [
-        {
-          "teacher__realname": "张明",
-          "subject_id": 1,
-          "subject__name": "初中数学",
-          "teacher__user_id": 7799
-        }
-      ]
+      "id": 20414,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -1347,7 +1466,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1357,8 +1476,8 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "reason": "登录名 zhangming 已经存在",
-  "retcode": 1
+  "retcode": 0,
+  "id": 5345
 }
 -------- HTTP response * end -------
 
@@ -1367,7 +1486,7 @@ Access-Control-Allow-Origin: *
 
 >>> cases\空白环境\一个班级\一班级一老师\一班级一老师.py
 
-* 添加老师2-API-tc001002  -  2025-06-20 15:34:35
+* 添加老师2-API-tc001002  -  2025-06-26 13:30:51
 
   [ case execution steps ]
 
@@ -1379,7 +1498,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1394,16 +1513,16 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
+      "id": 20414,
       "teacherlist": [
         {
           "teacher__realname": "张明",
           "subject_id": 1,
           "subject__name": "初中数学",
-          "teacher__user_id": 7799
+          "teacher__user_id": 8060
         }
       ]
     }
@@ -1419,7 +1538,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1430,7 +1549,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 5221
+  "id": 5346
 }
 -------- HTTP response * end -------
 
@@ -1447,7 +1566,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1461,10 +1580,10 @@ Access-Control-Allow-Origin: *
     {
       "username": "lining",
       "teachclasslist": [
-        20273
+        20414
       ],
       "realname": "李宁",
-      "id": 5221,
+      "id": 5346,
       "phonenumber": "13410243456",
       "email": "lining@163.com",
       "idcardnumber": "3209251988090987199"
@@ -1487,7 +1606,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1503,7 +1622,7 @@ Access-Control-Allow-Origin: *
 
 
 
-* 添加老师3-API-tc001003  -  2025-06-20 15:34:36
+* 添加老师3-API-tc001003  -  2025-06-26 13:30:54
 
   [ case execution steps ]
 
@@ -1515,7 +1634,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1529,10 +1648,10 @@ Access-Control-Allow-Origin: *
     {
       "username": "zhangming",
       "teachclasslist": [
-        20273
+        20414
       ],
       "realname": "张明",
-      "id": 5219,
+      "id": 5345,
       "phonenumber": "13451813456",
       "email": "zhangming@163.com",
       "idcardnumber": "3209251983090987799"
@@ -1549,7 +1668,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1564,16 +1683,16 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
+      "id": 20414,
       "teacherlist": [
         {
           "teacher__realname": "张明",
           "subject_id": 1,
           "subject__name": "初中数学",
-          "teacher__user_id": 7799
+          "teacher__user_id": 8060
         }
       ]
     }
@@ -1589,7 +1708,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1617,7 +1736,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1638,7 +1757,7 @@ Access-Control-Allow-Origin: *
 
   PASS 
 
-* 修改老师1-API-tc001051  -  2025-06-20 15:34:36
+* 修改老师1-API-tc001051  -  2025-06-26 13:30:54
 
   [ case execution steps ]
 
@@ -1650,7 +1769,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1667,18 +1786,11 @@ Access-Control-Allow-Origin: *
 
 
 
-** 检查点 **  返回消息体是否符合预期 ---->  !! 不通过!!
+** 检查点 **  返回消息体是否符合预期 ---->  通过
 
-  FAIL    
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师.py", line 106, in teststeps
-    CHECK_POINT('返回消息体是否符合预期', modifyRet == expected)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
-    raise AssertionError()
-AssertionError
+  PASS 
 
-
-* 修改老师2-API-tc001052  -  2025-06-20 15:34:36
+* 修改老师2-API-tc001052  -  2025-06-26 13:30:54
 
 [ case setup ] 修改老师2-API-tc001052
 添加班级
@@ -1687,7 +1799,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:36 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1697,9 +1809,9 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "invitecode": "202792009841",
+  "invitecode": "204197995324",
   "retcode": 0,
-  "id": 20279
+  "id": 20419
 }
 -------- HTTP response * end -------
 
@@ -1715,7 +1827,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1729,10 +1841,10 @@ Access-Control-Allow-Origin: *
     {
       "username": "zhangming",
       "teachclasslist": [
-        20273
+        20414
       ],
       "realname": "张明",
-      "id": 5219,
+      "id": 5345,
       "phonenumber": "13451813456",
       "email": "zhangming@163.com",
       "idcardnumber": "3209251983090987799"
@@ -1749,7 +1861,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 500
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: text/html
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1770,7 +1882,7 @@ Content-Language: zh-cn
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1784,10 +1896,10 @@ Access-Control-Allow-Origin: *
     {
       "username": "zhangming",
       "teachclasslist": [
-        20273
+        20414
       ],
       "realname": "张明",
-      "id": 5219,
+      "id": 5345,
       "phonenumber": "13451813456",
       "email": "zhangming@163.com",
       "idcardnumber": "3209251983090987799"
@@ -1817,7 +1929,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1833,7 +1945,7 @@ Access-Control-Allow-Origin: *
 
 
 
-* 删除老师1-API-tc001081  -  2025-06-20 15:34:37
+* 删除老师1-API-tc001081  -  2025-06-26 13:30:54
 
   [ case execution steps ]
 
@@ -1845,7 +1957,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1866,19 +1978,16 @@ Access-Control-Allow-Origin: *
 
   PASS 
 
-* 删除老师2-API-tc001082  -  2025-06-20 15:34:37
+* 删除老师2-API-tc001082  -  2025-06-26 13:30:54
 
-  [ case execution steps ]
-
--- 第 1 步 -- 删除老师 
-
-列出老师
+[ case setup ] 删除老师2-API-tc001082
+列出班级
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1888,17 +1997,23 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
+  "gradeid": null,
   "retlist": [
     {
-      "username": "zhangming",
-      "teachclasslist": [
-        20273
-      ],
-      "realname": "张明",
-      "id": 5219,
-      "phonenumber": "13451813456",
-      "email": "zhangming@163.com",
-      "idcardnumber": "3209251983090987799"
+      "name": "实验一班",
+      "grade__name": "七年级",
+      "invitecode": "204147432491",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20414,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8060
+        }
+      ]
     }
   ],
   "retcode": 0
@@ -1906,13 +2021,40 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * end -------
 
 
+添加老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:30:54 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 5347
+}
+-------- HTTP response * end -------
+
+
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 删除老师 
+
 删除老师
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1939,7 +2081,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1949,7 +2091,19 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "retlist": [],
+  "retlist": [
+    {
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
   "retcode": 0
 }
 -------- HTTP response * end -------
@@ -1960,7 +2114,7 @@ Access-Control-Allow-Origin: *
 
   PASS 
 
-* 添加学生1-API-tc002001  -  2025-06-20 15:34:37
+* 添加学生1-API-tc002001  -  2025-06-26 13:30:54
 
   [ case execution steps ]
 
@@ -1972,7 +2126,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1987,11 +2141,18 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": []
+      "id": 20414,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8060
+        }
+      ]
     }
   ],
   "retcode": 0
@@ -2005,7 +2166,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2016,7 +2177,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2124
+  "id": 2252
 }
 -------- HTTP response * end -------
 
@@ -2033,7 +2194,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:37 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2045,11 +2206,11 @@ Access-Control-Allow-Origin: *
 {
   "retlist": [
     {
-      "classid": 20273,
+      "classid": 20414,
       "realname": "张本智和",
       "username": "benzhi",
       "phonenumber": "13723451089",
-      "id": 2124
+      "id": 2252
     }
   ],
   "retcode": 0
@@ -2069,7 +2230,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2095,7 +2256,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2110,11 +2271,18 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": []
+      "id": 20414,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8060
+        }
+      ]
     }
   ],
   "retcode": 0
@@ -2128,7 +2296,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2139,7 +2307,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2125
+  "id": 2253
 }
 -------- HTTP response * end -------
 
@@ -2148,7 +2316,7 @@ Access-Control-Allow-Origin: *
 
 >>> cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py
 
-* 添加学生2-API-tc002002  -  2025-06-20 15:34:38
+* 添加学生2-API-tc002002  -  2025-06-26 13:30:55
 
   [ case execution steps ]
 
@@ -2160,7 +2328,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2175,11 +2343,18 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验一班",
       "grade__name": "七年级",
-      "invitecode": "202734632934",
+      "invitecode": "204147432491",
       "studentlimit": 80,
       "studentnumber": 1,
-      "id": 20273,
-      "teacherlist": []
+      "id": 20414,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8060
+        }
+      ]
     }
   ],
   "retcode": 0
@@ -2193,7 +2368,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2204,7 +2379,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2126
+  "id": 2254
 }
 -------- HTTP response * end -------
 
@@ -2221,7 +2396,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2233,18 +2408,18 @@ Access-Control-Allow-Origin: *
 {
   "retlist": [
     {
-      "classid": 20273,
-      "realname": "张本智和",
-      "username": "benzhi",
-      "phonenumber": "13723451089",
-      "id": 2125
+      "classid": 20414,
+      "realname": "秦桑",
+      "username": "qinsang",
+      "phonenumber": "1894567233",
+      "id": 2253
     },
     {
-      "classid": 20273,
+      "classid": 20414,
       "realname": "姚安娜",
       "username": "yaoanna",
       "phonenumber": "13823451090",
-      "id": 2126
+      "id": 2254
     }
   ],
   "retcode": 0
@@ -2264,7 +2439,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2280,7 +2455,7 @@ Access-Control-Allow-Origin: *
 
 
 
-* 删除学生1-API-tc002081  -  2025-06-20 15:34:38
+* 删除学生1-API-tc002081  -  2025-06-26 13:30:55
 
   [ case execution steps ]
 
@@ -2292,7 +2467,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2304,11 +2479,11 @@ Access-Control-Allow-Origin: *
 {
   "retlist": [
     {
-      "classid": 20273,
-      "realname": "张本智和",
-      "username": "benzhi",
-      "phonenumber": "13723451089",
-      "id": 2125
+      "classid": 20414,
+      "realname": "秦桑",
+      "username": "qinsang",
+      "phonenumber": "1894567233",
+      "id": 2253
     }
   ],
   "retcode": 0
@@ -2322,7 +2497,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2349,7 +2524,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2377,7 +2552,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2388,13 +2563,13 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2127
+  "id": 2255
 }
 -------- HTTP response * end -------
 
 
 
-* 老师发布作业1-API-tc005101  -  2025-06-20 15:34:38
+* 老师发布作业1-API-tc005101  -  2025-06-26 13:30:55
 
   [ case execution steps ]
 
@@ -2406,159 +2581,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:38 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retlist": [],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-  ABORT   list index out of range 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py", line 91, in teststeps
-    username, realname, subjectid, classlist, phonenumber, email, idcardnumber = getFirstTeacher().values()
-                                                                                 ^^^^^^^^^^^^^^^^^
-  File "D:\tools\projects\autotest_yjyx\lib\api\Teacher.py", line 12, in getFirstTeacher
-    return listRet['retlist'][0]
-           ~~~~~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
-
-
-* 老师发布作业2-API-tc005102  -  2025-06-20 15:34:38
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录系统 
-
-列出老师
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retlist": [],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-  ABORT   list index out of range 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py", line 203, in teststeps
-    username, realname, subjectid, classlist, phonenumber, email, idcardnumber = getFirstTeacher().values()
-                                                                                 ^^^^^^^^^^^^^^^^^
-  File "D:\tools\projects\autotest_yjyx\lib\api\Teacher.py", line 12, in getFirstTeacher
-    return listRet['retlist'][0]
-           ~~~~~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
-
-
-* 老师发布作业3-API-tc005103  -  2025-06-20 15:34:38
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录系统 
-
-列出老师
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retlist": [],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-  ABORT   list index out of range 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py", line 239, in teststeps
-    username, realname, subjectid, classlist, phonenumber, email, idcardnumber = getFirstTeacher().values()
-                                                                                 ^^^^^^^^^^^^^^^^^
-  File "D:\tools\projects\autotest_yjyx\lib\api\Teacher.py", line 12, in getFirstTeacher
-    return listRet['retlist'][0]
-           ~~~~~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
-
-
-* 老师发布作业3-API-tc005104  -  2025-06-20 15:34:39
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录系统 
-
-列出老师
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retlist": [],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-  ABORT   list index out of range 
-Traceback:
-  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py", line 323, in teststeps
-    username, realname, subjectid, classlist, phonenumber, email, idcardnumber = getFirstTeacher().values()
-                                                                                 ^^^^^^^^^^^^^^^^^
-  File "D:\tools\projects\autotest_yjyx\lib\api\Teacher.py", line 12, in getFirstTeacher
-    return listRet['retlist'][0]
-           ~~~~~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
-
-
-[ suite teardown ] cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\
-删除所有学生
-列出学生
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
+Date: Thu, 26 Jun 2025 05:30:55 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2570,11 +2593,266 @@ Access-Control-Allow-Origin: *
 {
   "retlist": [
     {
-      "classid": 20273,
-      "realname": "benzhi",
-      "username": "张本智和",
-      "phonenumber": "13723451089",
-      "id": 2127
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业，包含3道选择题，把这个作业布置给一个学生 
+
+
+** 检查点 **  是否发布作业成功 ---->  通过
+
+
+-- 第 3 步 -- 学生登录系统 
+
+列出学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:07 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "classid": 20414,
+      "realname": "qinsang",
+      "username": "秦桑",
+      "phonenumber": "1894567233",
+      "id": 2255
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+打开浏览器
+
+-- 第 4 步 -- 老师登录系统 
+
+打开浏览器
+
+** 检查点 **  作业完成正确率是否一致： ---->  通过
+
+  PASS 
+
+* 老师发布作业2-API-tc005102  -  2025-06-26 13:31:15
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录系统 
+
+列出老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:15 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业，作业名称为空字符串 
+
+
+** 检查点 **  弹窗消息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 查看已发布作业 
+
+
+** 检查点 **  查看作业列表中是否出现新的作业 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\autotest_yjyx\cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\一班级一老师一学生.py", line 247, in teststeps
+    CHECK_POINT('查看作业列表中是否出现新的作业', mes1 == '没有找到符合搜索条件的试卷')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师发布作业3-API-tc005103  -  2025-06-26 13:31:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录系统 
+
+列出老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业，作业名称为1个符串 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+** 检查点 **  作业名是否正确 ---->  通过
+
+  PASS 
+
+* 老师发布作业4-API-tc005104  -  2025-06-26 13:31:35
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录系统 
+
+列出老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:35 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业，作业名称为100个符串 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+-- 第 3 步 -- 查看是否发布作业成功 
+
+
+** 检查点 **  作业名是否正确 ---->  通过
+
+  PASS 
+
+[ suite teardown ] cases\空白环境\一个班级\一班级一老师\一班级一老师一学生\
+删除所有学生
+列出学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:48 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "classid": 20414,
+      "realname": "qinsang",
+      "username": "秦桑",
+      "phonenumber": "1894567233",
+      "id": 2255
     }
   ],
   "retcode": 0
@@ -2587,7 +2865,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
+Date: Thu, 26 Jun 2025 05:31:48 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2611,7 +2889,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
+Date: Thu, 26 Jun 2025 05:31:49 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2621,40 +2899,17 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "retlist": [],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-
-[ suite teardown ] cases\空白环境\一个班级\
-列出班级
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "gradeid": null,
   "retlist": [
     {
-      "name": "实验一班",
-      "grade__name": "七年级",
-      "invitecode": "202734632934",
-      "studentlimit": 80,
-      "studentnumber": 0,
-      "id": 20273,
-      "teacherlist": []
+      "username": "zhangming",
+      "teachclasslist": [
+        20414
+      ],
+      "realname": "张明",
+      "id": 5345,
+      "phonenumber": "13451813456",
+      "email": "zhangming@163.com",
+      "idcardnumber": "3209251983090987799"
     }
   ],
   "retcode": 0
@@ -2662,13 +2917,35 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * end -------
 
 
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Thu, 26 Jun 2025 05:31:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\一个班级\
 删除班级
 
 
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 20 Jun 2025 07:34:39 GMT
+Date: Thu, 26 Jun 2025 05:31:49 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -2685,21 +2962,21 @@ Access-Control-Allow-Origin: *
 
 
 
-  ========= 测试结束 : 20250620_153439 =========
+  ========= 测试结束 : 20250626_133149 =========
 
 
-  耗时    : 13.356 秒
+  耗时    : 84.132 秒
 
 
   预备执行用例数量 : 25
 
   实际执行用例数量 : 25
 
-  通过 : 11
+  通过 : 20
 
-  失败 : 6
+  失败 : 5
 
-  异常 : 8
+  异常 : 0
 
   套件初始化失败 : 0
 
@@ -2707,4 +2984,4 @@ Access-Control-Allow-Origin: *
 
   用例初始化失败 : 0
 
-  用例清除  失败 : 5
+  用例清除  失败 : 0

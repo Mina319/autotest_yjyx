@@ -21,7 +21,7 @@ from lib.api.Student import *
 # teacher.add_teacher(username=username, realname=realname, subjectid=subjectid,
 #                     classlist=classlist, phonenumber=phonenumber, email=email,
 #                     idcardnumber=idcardnumber)
-#
+# #
 # username, realname, grade, classid, phonenumber = 'qinsang', '秦桑', '高一', \
 #                                                   getFirstClass()["id"], '1894567233'
 # gradeid = gradeToId[grade]

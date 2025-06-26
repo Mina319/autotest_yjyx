@@ -27,7 +27,7 @@ class Case_tc005002:
         t_ui.open_browser()
         t_ui.login(username=username)
         INFO('检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确')
-        wd = GSTORE['wd']
+        wd = t_ui.wd
         sleep(2)
         infos_ele = wd.find_elements(By.XPATH, '//table//td[2]/a')
         infos = [e.text for e in infos_ele]

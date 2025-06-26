@@ -1,6 +1,7 @@
 from hytest import CHECK_POINT, STEP
-from lib.api.SClass import sclass
 from cfg.cfg import *
+from lib.api.SClass import sclass
+
 
 # 班级
 class Case_tc000001:
@@ -8,7 +9,7 @@ class Case_tc000001:
 
     def teststeps(self):
         STEP(1, '创建班级')
-        newgrade, newname, studentlimit = '七年级', '实验一班', 80
+        newgrade, newname, studentlimit = '九年级', '实验一班', 70
         r = sclass.add_class(grade=newgrade, classname=newname, studentlimit=studentlimit)
         addRet = r.json()
         invitecode = addRet["invitecode"]

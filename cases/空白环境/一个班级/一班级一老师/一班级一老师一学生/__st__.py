@@ -6,10 +6,10 @@ from cfg.cfg import *
 
 def suite_setup():
     # 创建一个学生
-    classid = getFirstClass()["id"]
-    username, realname, grade, phonenumber = 'benzhi', '张本智和', '高一', '13723451089'
-    student.add_student(username=username, realname=realname, gradeid=gradeToId[grade],
-                            classid=classid, phonenumber=phonenumber)
+    username, realname, grade, classid, phonenumber = 'qinsang', '秦桑', '高一', \
+                                                      getFirstClass()["id"], '1894567233'
+    gradeid = gradeToId[grade]
+    student.add_student(username, realname, gradeid, classid, phonenumber)
 
 
 # 套件清除，只执行一次

@@ -12,18 +12,14 @@ class StudentUI:
         options = webdriver.ChromeOptions()
         os.environ['SE_DRIVER_MIRROR_URL'] = 'https://cdn.npmmirror.com/binaries/chrome-for-testing'
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        wd = webdriver.Chrome(options=options)
-        wd.implicitly_wait(10)
-        #  使用 Hytest 的全局变量 GSTORE，把浏览器实例 wd 存进去，方便其他函数拿来用
-        GSTORE['wd'] = wd
+        self.wd = webdriver.Chrome(options=options)  # 保存为 self.wd
+        self.wd.implicitly_wait(10)
 
     def login(self, username, password='888888'):
-        wd = GSTORE['wd']
-        wd.get(g_ui_url_student)
-        wd.find_element(By.ID, 'username').send_keys(username)
-        wd.find_element(By.ID, 'password').send_keys(password)
-        # 点击登录
-        (wd.find_element(By.ID, 'submit')).click()
+        self.wd.get(g_ui_url_student)
+        self.wd.find_element(By.ID, 'username').send_keys(username)
+        self.wd.find_element(By.ID, 'password').send_keys(password)
+        self.wd.find_element(By.ID, 'submit').click()
 
 
 s_ui = StudentUI()

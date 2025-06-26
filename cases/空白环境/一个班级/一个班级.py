@@ -100,7 +100,6 @@ class Case_tc000003:
         try:
             r = sclass.add_class(grade=gradename, classname=name, studentlimit=studentlimit)
             addRet = r.json()
-            invitecode = addRet["invitecode"]
             expected = {
                 "retcode": 1,
                 "reason": "duplicated class name"
@@ -108,9 +107,11 @@ class Case_tc000003:
             print('addRet----', addRet)
             print('expected----', expected)
             CHECK_POINT('返回值和期望一致', addRet == expected)
+            if addRet['retcode'] == 0:
+                self.cid = addRet['id']
+
         except Exception as e:
             print("添加班级失败，异常信息：", str(e))
-            # 失败断言
             assert False, f"添加班级异常或返回结构错误，异常信息: {e}"
 
         STEP(2, '列出班级')
@@ -120,14 +121,15 @@ class Case_tc000003:
         flag = True
         for cinfo in listRet['retlist']:
             name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
-            if self.cid == id1 and invitecode == invitecode1:
+            if hasattr(self, 'cid') and self.cid == id1:
                 flag = False
                 break
-        CHECK_POINT('返回的消息体数是否包含刚刚添加的班级信息', flag)
+        CHECK_POINT('返回的消息体数是否不包含刚刚添加的班级信息', flag)
 
     def teardown(self):
         # 删除该班级
-        sclass.del_class(self.cid)
+        if hasattr(self, 'cid') and self.cid:
+            sclass.del_class(self.cid)
 
 
 class Case_tc000051:
@@ -165,30 +167,39 @@ class Case_tc000052:
     name = '修改班级2-API-tc000052'
 
     def teststeps(self):
-        STEP(1, '修改班级')
+        STEP(1, '获取已有班级名称')
         # 获取已经存在班级的信息
         # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.classname, gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
-        r = sclass.modify_class(self.cid, self.classname)
-        modifyRet = r.json()
+        classname, gradename, _, studentlimit, _, cid, _ = getFirstClass().values()
+        STEP(2, '创建新的班级')
+        newgrade, newname, newstudentlimit = '八年级', '实验二班', 70
+        r1 = sclass.add_class(grade=newgrade, classname=newname, studentlimit=newstudentlimit)
+        addRet = r1.json()
+        self.cid2 = addRet['id']
+        STEP(3, '修改班级名称与已有班级相同')
+        r2 = sclass.modify_class(self.cid2, classname)
+        modifyRet = r2.json()
         print('modifyRet----', modifyRet)
         expected = {
             "retcode": 1,
             "reason": "duplicated class name"
         }
         CHECK_POINT('响应体消息是否符合预期', expected == modifyRet)
-
-        STEP(2, '列出班级')
-        r = sclass.list_class(grade=gradename)
+        STEP(4, '列出班级')
+        r = sclass.list_class()
         listRet = r.json()
         print('listRet----', listRet)
         flag = None
         for cinfo in listRet['retlist']:
             name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
-            if self.cid == id1:
-                flag = name1 == self.classname
+            if self.cid2 == id1:
+                flag = name1 == classname
                 break
         CHECK_POINT('班级名是否修改成功', flag)
+
+    def teardown(self):
+        # 删除新增的班级
+        sclass.del_class(self.cid2)
 
 
 class Case_tc000053:
@@ -213,11 +224,16 @@ class Case_tc000053:
 class Case_tc000082:
     name = '删除班级2-API-tc000082'
 
+    def setup(self):
+        # 创建新的班级
+        self.newgrade, self.newname, studentlimit = '八年级', '实验二班', 50
+        r = sclass.add_class(grade=self.newgrade, classname=self.newname, studentlimit=studentlimit)
+        addRet = r.json()
+        self.cid = addRet['id']
+
     def teststeps(self):
         STEP(1, '删除班级')
-        # 获取已经存在班级的信息
-        # {'name': '实验一班', 'grade__name': '七年级', 'invitecode': '202563130374', 'studentlimit': 80, 'studentnumber': 0, 'id': 20256, 'teacherlist': []}
-        self.classname, self.gradename, _, self.studentlimit, _, self.cid, _ = getFirstClass().values()
+        # 删除新建的班级号
         r = sclass.del_class(self.cid)
         delRet = r.json()
         print('delRet----', delRet)
@@ -227,20 +243,16 @@ class Case_tc000082:
         CHECK_POINT('响应体消息是否符合预期', expected == delRet)
 
         STEP(2, '列出班级')
-        r = sclass.list_class(grade=self.gradename)
+        r = sclass.list_class(grade=self.newgrade)
         listRet = r.json()
         print('listRet----', listRet)
         flag = True  # 查询为空，默认为True
         for cinfo in listRet['retlist']:
             name1, grade__name1, invitecode1, studentlimit1, studentnumber1, id1, _ = cinfo.values()
-            if self.cid == id1 and name1 == self.classname:
+            if self.cid == id1 and name1 == self.newname:
                 flag = False  # 找到的话就是为False
                 break
         CHECK_POINT('该老师 是否 不在列出结果中', flag)
-
-    def teardown(self):
-        # 删掉，再加回来
-        sclass.add_class(self.gradename, self.classname, self.studentlimit)
 
 
 # web功能
@@ -264,7 +276,7 @@ class Case_tc005001:
         t_ui.open_browser()
         t_ui.login(username=username)
         INFO('检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确')
-        wd = GSTORE['wd']
+        wd = t_ui.wd
         sleep(2)
         infos_ele = wd.find_elements(By.XPATH, '//table//td[2]/a')
         infos = [e.text for e in infos_ele]
@@ -314,7 +326,7 @@ class Case_tc005081:
         s_ui.open_browser()
         s_ui.login(username=username)
         INFO('检查 学校、姓名、已发布微课、已发布作业 的信息是否正确')
-        wd = GSTORE['wd']
+        wd = s_ui.wd
         sleep(2)
         infos_ele = wd.find_elements(By.XPATH, '//table//td[2]/span')
         infos = [e.text for e in infos_ele]
@@ -338,3 +350,6 @@ class Case_tc005081:
     def teardown(self):
         # 删掉同学
         student.del_student(self.sid)
+
+
+

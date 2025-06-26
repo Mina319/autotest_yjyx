@@ -99,7 +99,7 @@ class Case_tc001051:
         modifyRet = r.json()
         expected = {
             "retcode": 1,
-            "reason": f" id 为`{tid}`的老师不存在"
+            "reason": f"id 为`{tid}`的老师不存在"
         }
         print('modifyRet----', modifyRet)
         print('expected----', expected)
@@ -111,7 +111,7 @@ class Case_tc001052:
 
     def setup(self):
         # 新建第二个班级
-        newgrade, newname, studentlimit = '八年级', '实验二班', 50
+        newgrade, newname, studentlimit = '八年级', '实验四班', 50
         r = sclass.add_class(grade=newgrade, classname=newname, studentlimit=studentlimit)
         addRet = r.json()
         self.cid = addRet['id']
@@ -173,10 +173,21 @@ class Case_tc001081:
 class Case_tc001082:
     name = '删除老师2-API-tc001082'
 
+    def setup(self):
+        # 创建新的老师
+        subject = '初中英语'
+        username, realname, subjectid, classlist, phonenumber, email, idcardnumber = \
+            'niannian', '年年', subjectToId[subject], [{"id": getFirstClass()['id']}], '1345181111', \
+            'niannian@163.com', '3209251978023088899'
+        r1 = teacher.add_teacher(username=username, realname=realname, subjectid=subjectid,
+                            classlist=classlist, phonenumber=phonenumber, email=email,
+                            idcardnumber=idcardnumber)
+        addRet = r1.json()
+        self.tid = addRet['id']
+
     def teststeps(self):
         STEP(1, '删除老师')
-        username, teachclasslist, realname, tid, phonenumber, email, idcardnumber = getFirstTeacher().values()
-        r = teacher.del_teacher(tid)
+        r = teacher.del_teacher(self.tid)
         delRet = r.json()
         print('delRet----', delRet)
         expected = {
@@ -190,7 +201,7 @@ class Case_tc001082:
 
         flag = True
         for ts in listRet["retlist"]:
-            if ts["id"] == tid:
+            if ts["id"] == self.tid:
                 flag = False
         CHECK_POINT('该老师不在列表中', flag)
 
