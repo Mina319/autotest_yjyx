@@ -1,0 +1,3459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>测试报告</title>
+    <meta charset="UTF-8">
+    <style>body {    
+    font-family: consolas, Verdana, sans-serif;
+    font-size: .95em;
+    color: #696e71;
+    display: grid;
+    grid-template-columns: 1fr 5rem;
+}
+
+.main_section {   
+    width: 90%;
+    margin: 0 auto;
+}
+
+#float_menu{    
+    position:fixed;
+    top:0;
+    right:0;
+    text-align: center;
+}
+
+#float_menu .menu-item {       
+    cursor: pointer;
+    padding: .5em;
+    margin: .5em 0;
+    color: #c08580;
+    background-color: #f8f0ef;
+    font-size: 1.2em;
+}
+
+
+
+.result{  
+    display: flex;
+}
+  
+  
+.result_table{
+    border-collapse: collapse;
+    border: 1px solid #f0e0e5;
+    width: 30em;
+    text-align: center;
+    font-size: 1.0em;
+}
+      
+.result_table td{
+    border: 1px solid #f0e0e5;
+    padding: .3em;
+}
+  
+.result_barchart{  
+    width: 30em;
+    margin: 0 5em 0 5em;
+}
+  
+.barchar_item{
+    margin: 2.5rem 0;
+}
+  
+.barchart_barbox {
+    margin: 0.5em 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #86c2dd;
+    border-radius: .2em;
+}
+  
+.barchart_bar {
+    text-align: right;
+    height: 1.2rem;
+}
+  
+  
+
+
+
+.h3_button {
+    margin: 1.5em;
+    cursor: pointer;
+    color: #03a9f4;
+}
+
+
+.info
+{
+    white-space:pre-wrap;
+    margin: .8em 1.5em;
+}
+
+
+.error-info
+{
+    color: #a64747
+}
+
+.suite_dir {
+    margin: 1em .2em;
+    padding: .3em;
+    /* background-color: #dfeff6; */
+    border: 1px solid #bcd8e4;
+}
+.suite_file {
+    margin: 1em .2em;
+    padding: .3em;
+    border: 1px solid #bcd8e4;
+}
+
+
+.case {
+    margin: 1em .2em;
+    /* padding: .3em; */
+    border: 1px solid #e7d4d4;
+}
+
+.case_class_path{
+    margin: 0em 1em; 
+}
+
+
+.folder_header { 
+    padding: .2em .7em;
+    background-color: #fffaf9;
+    cursor: pointer;
+}
+
+
+.setup{
+    margin: .2em;
+    /* padding: .3em; */
+    /* border: 1px solid #e7d4d4; */
+}
+.teardown{
+    margin: .2em;
+    /* padding: .3em;*/
+    /* border: 1px solid #e7d4d4; */
+}
+.test_steps{
+    margin: .2em;
+    padding: .3em;
+    /* border: 1px solid #e7d4d4; */
+}
+
+
+.label {
+    display: inline-block;
+    padding: .1em .5em;
+    font-size: .88em;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: #0d6ebc;
+    border-radius: .2em;
+    min-width: 5em;    
+    margin-right: 2em;
+    font-family: consolas;
+}
+
+/* .suite_setup .label{
+    color: #219e26 ;
+}
+.suite_teardown .label{
+    color: #219e26;
+} */
+
+
+/* .case.pass   .casename{
+    color: #329132 ;
+} */
+.case.pass   .caselabel{
+    color: white;
+    background-color: #3b9e3f;
+}
+/* .case.fail   .casename{
+    color: #a64747;
+} */
+.case.fail   .caselabel{
+    color: white;
+    background-color: #a64747;
+}
+/* .case.abort   .casename{
+    color: #953ab7;
+} */
+.case.abort   .caselabel{
+    color: white;
+    background-color: #9c27b0;
+}
+
+
+
+.case_step  {
+    margin: .8em;
+}
+.checkpoint_pass {
+    margin: .8em;
+}
+.checkpoint_fail {
+    margin: .8em;
+}
+
+.case_step  .tag{
+    color: #2196f3;;
+    margin: .3em 1em .3em 0;
+    padding: .1em .3em;
+    font-size: .92em;
+}
+
+.checkpoint_pass .tag{
+    color: #009806;
+    margin:.3em 1em .3em .5em;
+    padding: .1em .3em;
+    font-size: .92em;
+}
+.checkpoint_fail .tag{
+    color: #9c2020;
+    margin:.3em 1em .3em .5em;
+    padding: .1em .3em;
+    font-size: .92em;
+}
+
+.screenshot {
+    border: 1px solid #86c2dd;
+}
+
+.executetime {
+    float: right;
+}</style>
+    <script type="text/javascript">var FOLDER_ALL_CASES = false //是否为精简模式的标记
+var ERROR_INFOS = [];  // 错误信息列表
+var current_error_idx = -1;
+
+// 页面加载后执行的函数
+window.addEventListener("load", function(){
+    // 所有 .folder_header 添加点击事件处理
+    let folderHeaderEles = document.querySelectorAll(".folder_header");
+    folderHeaderEles.forEach(function(ele) {
+        ele.addEventListener("click", function(event) {
+        let fb = event.target.closest('.folder_header').nextElementSibling;
+        fb.style.display = fb.style.display === 'none' ? 'block' : 'none'
+        });
+    });
+
+    // 找到所有的错误信息对象
+    ERROR_INFOS = document.querySelectorAll(".error-info");
+});
+
+
+
+function toggle_folder_all_cases(){
+    let eles = document.querySelectorAll(".folder_body");
+    
+    FOLDER_ALL_CASES = !FOLDER_ALL_CASES;
+    document.getElementById('display_mode').innerHTML = FOLDER_ALL_CASES? "Detail" : "Summary"
+
+    for (const ele of eles){
+        ele.style.display =  FOLDER_ALL_CASES? "none": "block"
+    }
+    
+}
+
+
+
+function previous_error(){
+    // 查找错误必须是详细模式
+    if (FOLDER_ALL_CASES)
+        toggle_folder_all_cases()
+
+    current_error_idx -= 1; 
+    if (current_error_idx<0)
+        current_error_idx = 0
+
+    
+    let error = ERROR_INFOS[current_error_idx];
+
+    error.scrollIntoView({behavior: "smooth", block: "center", inline: "start"});
+
+    
+}
+
+
+function next_error(){
+    
+    // 查找错误必须是详细模式
+    if (FOLDER_ALL_CASES)
+        toggle_folder_all_cases()
+
+    current_error_idx += 1;
+    if (current_error_idx > ERROR_INFOS.length-1)
+        current_error_idx = ERROR_INFOS.length-1
+
+    let error = ERROR_INFOS[current_error_idx];
+
+    error.scrollIntoView({behavior: "smooth", block: "center", inline: "start"});
+    
+}</script>
+  </head>
+  <body>
+    <div class="main_section">
+      <h1 style="font-family: auto">测试报告</h1>
+      <h3>统计结果</h3>
+      <div class="result">
+        <table class="result_table">
+          <tbody>
+            <tr>
+              <td>hytest 版本</td>
+              <td>0.8.12</td>
+            </tr>
+            <tr>
+              <td>开始时间</td>
+              <td>2025/08/01 21:05:20</td>
+            </tr>
+            <tr>
+              <td>结束时间</td>
+              <td>2025/08/01 23:01:51</td>
+            </tr>
+            <tr>
+              <td>耗时</td>
+              <td>6991.018 秒</td>
+            </tr>
+            <tr>
+              <td>预备执行用例数量</td>
+              <td>48</td>
+            </tr>
+            <tr>
+              <td>实际执用例行数量</td>
+              <td>48</td>
+            </tr>
+            <tr>
+              <td>通过</td>
+              <td>44</td>
+            </tr>
+            <tr>
+              <td>失败</td>
+              <td style="color:red">3</td>
+            </tr>
+            <tr>
+              <td>异常</td>
+              <td style="color:red">1</td>
+            </tr>
+            <tr>
+              <td>阻塞</td>
+              <td style="">0</td>
+            </tr>
+            <tr>
+              <td>套件初始化失败</td>
+              <td style="">0</td>
+            </tr>
+            <tr>
+              <td>套件清除  失败</td>
+              <td style="color:red">1</td>
+            </tr>
+            <tr>
+              <td>用例初始化失败</td>
+              <td style="">0</td>
+            </tr>
+            <tr>
+              <td>用例清除  失败</td>
+              <td style="color:red">4</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result_barchart">
+          <div class="barchar_item">
+            <span>用例通过 91.7% ： 44 个</span>
+            <div class="barchart_barbox">
+              <div class="barchart_bar" style="width: 91.7%; background-color: #04AA6D;"></div>
+            </div>
+          </div>
+          <div class="barchar_item">
+            <span>用例失败 6.2% ： 3 个</span>
+            <div class="barchart_barbox">
+              <div class="barchart_bar" style="width: 6.2%; background-color: #bb4069;"></div>
+            </div>
+          </div>
+          <div class="barchar_item">
+            <span>用例异常 2.1% ： 1 个</span>
+            <div class="barchart_barbox">
+              <div class="barchart_bar" style="width: 2.1%; background-color: #9c27b0;"></div>
+            </div>
+          </div>
+          <div class="barchar_item">
+            <span>用例阻塞 0% ： 0 个</span>
+            <div class="barchart_barbox">
+              <div class="barchart_bar" style="width: 0.0%; background-color: #dcbdbd;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:2em">
+        <h3 style="display:inline">执行日志</h3>
+      </div>
+      <div class="exec_log">
+        <div class="suite_dir" id="suite_dir cases\空白环境\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\</span>
+              <span class="executetime">2025-08-01 21:05:20</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">删除所有学生</div>
+              <div class="info">列出学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:21 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retlist&quot;: [
+    {
+      &quot;classid&quot;: 20319,
+      &quot;realname&quot;: &quot;秦桑&quot;,
+      &quot;username&quot;: &quot;qinsang&quot;,
+      &quot;phonenumber&quot;: &quot;1894567233&quot;,
+      &quot;id&quot;: 2410
+    },
+    {
+      &quot;classid&quot;: 20319,
+      &quot;realname&quot;: &quot;悟净&quot;,
+      &quot;username&quot;: &quot;wujing&quot;,
+      &quot;phonenumber&quot;: &quot;18777767233&quot;,
+      &quot;id&quot;: 2411
+    },
+    {
+      &quot;classid&quot;: 20319,
+      &quot;realname&quot;: &quot;悟能&quot;,
+      &quot;username&quot;: &quot;wuneng&quot;,
+      &quot;phonenumber&quot;: &quot;12723135643&quot;,
+      &quot;id&quot;: 2412
+    },
+    {
+      &quot;classid&quot;: 20319,
+      &quot;realname&quot;: &quot;悟空&quot;,
+      &quot;username&quot;: &quot;wukong&quot;,
+      &quot;phonenumber&quot;: &quot;15623135613&quot;,
+      &quot;id&quot;: 2413
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:21 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:21 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:21 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">删除所有老师</div>
+              <div class="info">列出老师</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retlist&quot;: [
+    {
+      &quot;username&quot;: &quot;zhangming&quot;,
+      &quot;teachclasslist&quot;: [
+        20319
+      ],
+      &quot;realname&quot;: &quot;张明&quot;,
+      &quot;id&quot;: 5286,
+      &quot;phonenumber&quot;: &quot;13451813456&quot;,
+      &quot;email&quot;: &quot;zhangming@163.com&quot;,
+      &quot;idcardnumber&quot;: &quot;3209251983090987799&quot;
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">删除所有班级</div>
+              <div class="info">列出班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;gradeid&quot;: null,
+  &quot;retlist&quot;: [
+    {
+      &quot;name&quot;: &quot;实验二班&quot;,
+      &quot;grade__name&quot;: &quot;八年级&quot;,
+      &quot;invitecode&quot;: &quot;203190206605&quot;,
+      &quot;studentlimit&quot;: 50,
+      &quot;studentnumber&quot;: 0,
+      &quot;id&quot;: 20319,
+      &quot;teacherlist&quot;: []
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_dir" id="suite_dir cases\空白环境\一班级\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\一班级\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\一班级\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\一班级\</span>
+              <span class="executetime">2025-08-01 21:05:21</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">添加班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;invitecode&quot;: &quot;203208894814&quot;,
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 20320
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_dir" id="suite_dir cases\空白环境\一班级\一班级一老师\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\一班级\一班级一老师\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\一班级\一班级一老师\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\一班级\一班级一老师\</span>
+              <span class="executetime">2025-08-01 21:05:21</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">列出班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;gradeid&quot;: null,
+  &quot;retlist&quot;: [
+    {
+      &quot;name&quot;: &quot;实验二班&quot;,
+      &quot;grade__name&quot;: &quot;八年级&quot;,
+      &quot;invitecode&quot;: &quot;203208894814&quot;,
+      &quot;studentlimit&quot;: 50,
+      &quot;studentnumber&quot;: 0,
+      &quot;id&quot;: 20320,
+      &quot;teacherlist&quot;: []
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">添加老师</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 5287
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_dir" id="suite_dir cases\空白环境\一班级\一班级一老师\一班级一老师一学生\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\一班级\一班级一老师\一班级一老师一学生\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\</span>
+              <span class="executetime">2025-08-01 21:05:22</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">列出班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;gradeid&quot;: null,
+  &quot;retlist&quot;: [
+    {
+      &quot;name&quot;: &quot;实验二班&quot;,
+      &quot;grade__name&quot;: &quot;八年级&quot;,
+      &quot;invitecode&quot;: &quot;203208894814&quot;,
+      &quot;studentlimit&quot;: 50,
+      &quot;studentnumber&quot;: 0,
+      &quot;id&quot;: 20320,
+      &quot;teacherlist&quot;: [
+        {
+          &quot;teacher__realname&quot;: &quot;张明&quot;,
+          &quot;subject_id&quot;: 1,
+          &quot;subject__name&quot;: &quot;初中数学&quot;,
+          &quot;teacher__user_id&quot;: 8159
+        }
+      ]
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">添加学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:22 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 2414
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_dir" id="suite_dir cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\</span>
+              <span class="executetime">2025-08-01 21:05:22</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">列出班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:23 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;gradeid&quot;: null,
+  &quot;retlist&quot;: [
+    {
+      &quot;name&quot;: &quot;实验二班&quot;,
+      &quot;grade__name&quot;: &quot;八年级&quot;,
+      &quot;invitecode&quot;: &quot;203208894814&quot;,
+      &quot;studentlimit&quot;: 50,
+      &quot;studentnumber&quot;: 1,
+      &quot;id&quot;: 20320,
+      &quot;teacherlist&quot;: [
+        {
+          &quot;teacher__realname&quot;: &quot;张明&quot;,
+          &quot;subject_id&quot;: 1,
+          &quot;subject__name&quot;: &quot;初中数学&quot;,
+          &quot;teacher__user_id&quot;: 8159
+        }
+      ]
+    }
+  ],
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">添加学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:23 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 2415
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">添加学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:23 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 2416
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">添加学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 13:05:23 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0,
+  &quot;id&quot;: 2417
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_dir" id="suite_dir cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\">
+          <div>
+            <span class="label">进入目录</span>
+            <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\</span>
+          </div>
+          <div class="suite_setup setup" id="suite_setup setup cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\">
+            <div class="folder_header">
+              <span class="label">套件初始化</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\</span>
+              <span class="executetime">2025-08-01 21:05:22</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">打开浏览器</div>
+              <div class="info">p: [0, '哈哈0', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈1', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈2', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈3', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈4', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈5', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈6', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈7', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈8', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈9', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈10', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈11', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈12', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈13', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈14', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈15', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈16', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈17', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈18', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈19', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈20', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈21', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈22', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈23', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈24', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈25', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈26', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈27', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈28', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈29', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈30', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈31', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈32', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈33', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈34', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈35', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈36', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈37', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈38', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈39', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈40', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈41', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈42', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈43', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈44', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈45', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈46', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈47', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈48', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈49', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈50', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈51', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈52', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈53', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈54', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈55', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈56', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈57', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈58', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈59', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈60', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈61', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈62', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈63', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈64', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈65', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈66', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈67', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈68', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈69', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈70', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [0, '哈哈71', [5, [0, 2, 3]]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈72', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈73', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈74', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈75', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈76', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈77', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈78', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈79', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈80', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈81', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈82', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈83', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈84', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈85', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈86', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈87', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈88', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈89', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈90', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈91', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈92', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈93', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈94', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈95', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈96', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈97', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈98', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈99', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈100', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈101', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈102', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈103', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈104', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈105', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈106', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈107', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈108', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈109', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈110', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈111', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈112', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈113', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈114', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈115', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈116', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈117', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈118', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈119', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈120', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈121', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈122', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈123', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈124', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈125', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈126', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈127', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈128', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈129', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈130', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈131', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[0, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈132', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈133', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 0, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈134', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈135', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 1, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈136', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈137', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 2, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈138', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈139', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 3, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈140', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈141', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 4, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈142', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 0]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+              <div class="info">p: [1, '哈哈143', [5, ['1', '2', '3', '4', '5']]]</div>
+              <div class="info">textbook:[[1, 5, 1]]</div>
+              <div class="info">创建题目是否成功：添加题目成功</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_file" id="suite_file cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py">
+          <div>
+            <span class="label">进入文件</span>
+            <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py</span>
+          </div>
+          <div class="case pass" id="case_00000001">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业1_TC_HOMEWORK_001</span>
+              <span class="executetime">2025-08-01 21:23:11</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_001</span>
+              <div class="test_steps" id="test_steps 创建作业1_TC_HOMEWORK_001">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>弹窗消息是否正确</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000002">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业2_TC_HOMEWORK_002</span>
+              <span class="executetime">2025-08-01 21:23:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_002</span>
+              <div class="test_steps" id="test_steps 创建作业2_TC_HOMEWORK_002">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>弹窗消息是否正确</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case fail" id="case_00000003">
+            <div class="folder_header">
+              <span class="label caselabel">用例 FAIL</span>
+              <span class="casename">创建作业3_TC_HOMEWORK_003</span>
+              <span class="executetime">2025-08-01 21:23:27</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_003</span>
+              <div class="test_steps" id="test_steps 创建作业3_TC_HOMEWORK_003">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_fail">
+                  <span class="tag">检查点 FAIL</span>
+                  <span>是否新建作业成功</span>
+                </div>
+                <div class="info error-info"> 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 38, in teststeps
+    teacher_ui.publish_homework(taskname='z', mes='作业名称长度应为2~100个字符')
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 471, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)</div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业3_TC_HOMEWORK_003">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000004">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业4_TC_HOMEWORK_004</span>
+              <span class="executetime">2025-08-01 21:23:52</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_004</span>
+              <div class="test_steps" id="test_steps 创建作业4_TC_HOMEWORK_004">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业4_TC_HOMEWORK_004">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000005">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业5_TC_HOMEWORK_005</span>
+              <span class="executetime">2025-08-01 21:24:17</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_005</span>
+              <div class="test_steps" id="test_steps 创建作业5_TC_HOMEWORK_005">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业5_TC_HOMEWORK_005">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000006">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业6_TC_HOMEWORK_006</span>
+              <span class="executetime">2025-08-01 21:24:42</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_006</span>
+              <div class="test_steps" id="test_steps 创建作业6_TC_HOMEWORK_006">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable fail" id="case_teardown teardown 创建作业6_TC_HOMEWORK_006">
+                <span class="label">用例清除</span>
+                <div class="info error-info">case teardown fail | Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+ 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 97, in teardown
+    res = teacher_ui.del_homework_by_taskname('哈'*50)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 303, in del_homework_by_taskname
+    self.wd.execute_script(&quot;arguments[0].click();&quot;, button)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 528, in execute_script
+    return self.execute(command, {&quot;script&quot;: script, &quot;args&quot;: converted_args})[&quot;value&quot;]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 429, in execute
+    self.error_handler.check_response(response)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py&quot;, line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="case fail" id="case_00000007">
+            <div class="folder_header">
+              <span class="label caselabel">用例 FAIL</span>
+              <span class="casename">创建作业7_TC_HOMEWORK_007</span>
+              <span class="executetime">2025-08-01 21:25:44</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_007</span>
+              <div class="test_steps" id="test_steps 创建作业7_TC_HOMEWORK_007">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_fail">
+                  <span class="tag">检查点 FAIL</span>
+                  <span>是否新建作业成功</span>
+                </div>
+                <div class="info error-info"> 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 111, in teststeps
+    teacher_ui.publish_homework(taskname='哈'*101, mes='新建作作业名称长度应为2~100个字符')
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 471, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)</div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000008">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业8_TC_HOMEWORK_008</span>
+              <span class="executetime">2025-08-01 21:25:56</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_008</span>
+              <div class="test_steps" id="test_steps 创建作业8_TC_HOMEWORK_008">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable fail" id="case_teardown teardown 创建作业8_TC_HOMEWORK_008">
+                <span class="label">用例清除</span>
+                <div class="info error-info">case teardown fail | Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+ 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 130, in teardown
+    res = teacher_ui.del_homework_by_taskname('哈sd δΔsqt / ** ^%&amp;$#@!~:&quot;?&gt;&lt; ')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 303, in del_homework_by_taskname
+    self.wd.execute_script(&quot;arguments[0].click();&quot;, button)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 528, in execute_script
+    return self.execute(command, {&quot;script&quot;: script, &quot;args&quot;: converted_args})[&quot;value&quot;]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 429, in execute
+    self.error_handler.check_response(response)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py&quot;, line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000009">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业9_TC_HOMEWORK_009</span>
+              <span class="executetime">2025-08-01 21:26:44</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_009</span>
+              <div class="test_steps" id="test_steps 创建作业9_TC_HOMEWORK_009">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000010">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业10_TC_HOMEWORK_010</span>
+              <span class="executetime">2025-08-01 21:27:01</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_010</span>
+              <div class="test_steps" id="test_steps 创建作业10_TC_HOMEWORK_010">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+                <div class="case_step">
+                  <span class="tag">步骤 #3</span>
+                  <span>查看已发布作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>检验已发布作业是否不存在</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业10_TC_HOMEWORK_010">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000011">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业11_TC_HOMEWORK_011</span>
+              <span class="executetime">2025-08-01 21:27:30</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_011</span>
+              <div class="test_steps" id="test_steps 创建作业11_TC_HOMEWORK_011">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000012">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业12_TC_HOMEWORK_012</span>
+              <span class="executetime">2025-08-01 21:27:44</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_012</span>
+              <div class="test_steps" id="test_steps 创建作业12_TC_HOMEWORK_012">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业12_TC_HOMEWORK_012">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000013">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业13_TC_HOMEWORK_013</span>
+              <span class="executetime">2025-08-01 21:28:01</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_013</span>
+              <div class="test_steps" id="test_steps 创建作业13_TC_HOMEWORK_013">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业13_TC_HOMEWORK_013">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000014">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业14_TC_HOMEWORK_014</span>
+              <span class="executetime">2025-08-01 21:28:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_014</span>
+              <div class="test_steps" id="test_steps 创建作业14_TC_HOMEWORK_014">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业14_TC_HOMEWORK_014">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000015">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业15_TC_HOMEWORK_015</span>
+              <span class="executetime">2025-08-01 21:28:38</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_015</span>
+              <div class="test_steps" id="test_steps 创建作业15_TC_HOMEWORK_015">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业15_TC_HOMEWORK_015">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000016">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业16_TC_HOMEWORK_016</span>
+              <span class="executetime">2025-08-01 21:29:18</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_016</span>
+              <div class="test_steps" id="test_steps 创建作业16_TC_HOMEWORK_016">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业16_TC_HOMEWORK_016">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000017">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业17_TC_HOMEWORK_017</span>
+              <span class="executetime">2025-08-01 21:29:37</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_017</span>
+              <div class="test_steps" id="test_steps 创建作业17_TC_HOMEWORK_017">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业17_TC_HOMEWORK_017">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000018">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业18_TC_HOMEWORK_018</span>
+              <span class="executetime">2025-08-01 21:29:57</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_018</span>
+              <div class="test_steps" id="test_steps 创建作业18_TC_HOMEWORK_018">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业18_TC_HOMEWORK_018">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000019">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业19_TC_HOMEWORK_019</span>
+              <span class="executetime">2025-08-01 21:30:16</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_019</span>
+              <div class="test_steps" id="test_steps 创建作业19_TC_HOMEWORK_019">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业19_TC_HOMEWORK_019">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000020">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业20_TC_HOMEWORK_020</span>
+              <span class="executetime">2025-08-01 21:30:35</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_020</span>
+              <div class="test_steps" id="test_steps 创建作业20_TC_HOMEWORK_020">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业20_TC_HOMEWORK_020">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000021">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业21_TC_HOMEWORK_021</span>
+              <span class="executetime">2025-08-01 21:30:54</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_021</span>
+              <div class="test_steps" id="test_steps 创建作业21_TC_HOMEWORK_021">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业21_TC_HOMEWORK_021">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000022">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业22_TC_HOMEWORK_022</span>
+              <span class="executetime">2025-08-01 21:31:16</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_022</span>
+              <div class="test_steps" id="test_steps 创建作业22_TC_HOMEWORK_022">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业22_TC_HOMEWORK_022">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000023">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业23_TC_HOMEWORK_023</span>
+              <span class="executetime">2025-08-01 21:32:00</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_023</span>
+              <div class="test_steps" id="test_steps 创建作业23_TC_HOMEWORK_023">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业23_TC_HOMEWORK_023">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000024">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业24_TC_HOMEWORK_024</span>
+              <span class="executetime">2025-08-01 21:32:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_024</span>
+              <div class="test_steps" id="test_steps 创建作业24_TC_HOMEWORK_024">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业24_TC_HOMEWORK_024">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000025">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业25_TC_HOMEWORK_025</span>
+              <span class="executetime">2025-08-01 21:32:39</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_025</span>
+              <div class="test_steps" id="test_steps 创建作业25_TC_HOMEWORK_025">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业25_TC_HOMEWORK_025">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000026">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业26_TC_HOMEWORK_026</span>
+              <span class="executetime">2025-08-01 21:32:58</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_026</span>
+              <div class="test_steps" id="test_steps 创建作业26_TC_HOMEWORK_026">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业26_TC_HOMEWORK_026">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000027">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业27_TC_HOMEWORK_027</span>
+              <span class="executetime">2025-08-01 21:33:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_027</span>
+              <div class="test_steps" id="test_steps 创建作业27_TC_HOMEWORK_027">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业27_TC_HOMEWORK_027">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000028">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业28_TC_HOMEWORK_028</span>
+              <span class="executetime">2025-08-01 21:33:38</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_028</span>
+              <div class="test_steps" id="test_steps 创建作业28_TC_HOMEWORK_028">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业28_TC_HOMEWORK_028">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000029">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业29_TC_HOMEWORK_029</span>
+              <span class="executetime">2025-08-01 21:33:58</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_029</span>
+              <div class="test_steps" id="test_steps 创建作业29_TC_HOMEWORK_029">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业29_TC_HOMEWORK_029">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000030">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业30_TC_HOMEWORK_030</span>
+              <span class="executetime">2025-08-01 21:34:41</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_030</span>
+              <div class="test_steps" id="test_steps 创建作业30_TC_HOMEWORK_030">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业30_TC_HOMEWORK_030">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000031">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业31_TC_HOMEWORK_031</span>
+              <span class="executetime">2025-08-01 21:35:00</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_031</span>
+              <div class="test_steps" id="test_steps 创建作业31_TC_HOMEWORK_031">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业31_TC_HOMEWORK_031">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000032">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业32_TC_HOMEWORK_032</span>
+              <span class="executetime">2025-08-01 21:35:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_032</span>
+              <div class="test_steps" id="test_steps 创建作业32_TC_HOMEWORK_032">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业32_TC_HOMEWORK_032">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000033">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业33_TC_HOMEWORK_033</span>
+              <span class="executetime">2025-08-01 21:35:39</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_033</span>
+              <div class="test_steps" id="test_steps 创建作业33_TC_HOMEWORK_033">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业33_TC_HOMEWORK_033">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000034">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业34_TC_HOMEWORK_034</span>
+              <span class="executetime">2025-08-01 21:35:59</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_034</span>
+              <div class="test_steps" id="test_steps 创建作业34_TC_HOMEWORK_034">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业34_TC_HOMEWORK_034">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case abort" id="case_00000035">
+            <div class="folder_header">
+              <span class="label caselabel">用例 ABORT</span>
+              <span class="casename">创建作业35_TC_HOMEWORK_035</span>
+              <span class="executetime">2025-08-01 21:36:18</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_035</span>
+              <div class="test_steps" id="test_steps 创建作业35_TC_HOMEWORK_035">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="info error-info">Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+ 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 626, in teststeps
+    teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=2, filter=f)
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 432, in publish_homework
+    self.wd.execute_script(&quot;arguments[0].click();&quot;, options[j])
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 528, in execute_script
+    return self.execute(command, {&quot;script&quot;: script, &quot;args&quot;: converted_args})[&quot;value&quot;]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 429, in execute
+    self.error_handler.check_response(response)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py&quot;, line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+</div>
+              </div>
+              <div class="case_teardown teardown case_st_lable fail" id="case_teardown teardown 创建作业35_TC_HOMEWORK_035">
+                <span class="label">用例清除</span>
+                <div class="info error-info">case teardown fail | 'NoneType' object has no attribute 'click' 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 630, in teardown
+    teacher_ui.opt_homework('已创建作业')
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 232, in opt_homework
+    btn.click()
+    ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'click'
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000036">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业36_TC_HOMEWORK_036</span>
+              <span class="executetime">2025-08-01 21:37:22</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_036</span>
+              <div class="test_steps" id="test_steps 创建作业36_TC_HOMEWORK_036">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业36_TC_HOMEWORK_036">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000037">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业37_TC_HOMEWORK_037</span>
+              <span class="executetime">2025-08-01 21:37:43</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_037</span>
+              <div class="test_steps" id="test_steps 创建作业37_TC_HOMEWORK_037">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业37_TC_HOMEWORK_037">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000038">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业38_TC_HOMEWORK_038</span>
+              <span class="executetime">2025-08-01 21:38:07</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_038</span>
+              <div class="test_steps" id="test_steps 创建作业38_TC_HOMEWORK_038">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业38_TC_HOMEWORK_038">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000039">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业39_TC_HOMEWORK_039</span>
+              <span class="executetime">2025-08-01 21:38:31</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_039</span>
+              <div class="test_steps" id="test_steps 创建作业39_TC_HOMEWORK_039">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业39_TC_HOMEWORK_039">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000040">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业40_TC_HOMEWORK_040</span>
+              <span class="executetime">2025-08-01 21:38:52</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_040</span>
+              <div class="test_steps" id="test_steps 创建作业40_TC_HOMEWORK_040">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业40_TC_HOMEWORK_040">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000041">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业41_TC_HOMEWORK_041</span>
+              <span class="executetime">2025-08-01 21:39:10</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_041</span>
+              <div class="test_steps" id="test_steps 创建作业41_TC_HOMEWORK_041">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业41_TC_HOMEWORK_041">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000042">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业42_TC_HOMEWORK_042</span>
+              <span class="executetime">2025-08-01 21:39:28</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_042</span>
+              <div class="test_steps" id="test_steps 创建作业42_TC_HOMEWORK_042">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业42_TC_HOMEWORK_042">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000043">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业43_TC_HOMEWORK_043</span>
+              <span class="executetime">2025-08-01 21:40:09</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_043</span>
+              <div class="test_steps" id="test_steps 创建作业43_TC_HOMEWORK_043">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业43_TC_HOMEWORK_043">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000044">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业44_TC_HOMEWORK_044</span>
+              <span class="executetime">2025-08-01 21:40:28</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_044</span>
+              <div class="test_steps" id="test_steps 创建作业44_TC_HOMEWORK_044">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable fail" id="case_teardown teardown 创建作业44_TC_HOMEWORK_044">
+                <span class="label">用例清除</span>
+                <div class="info error-info">case teardown fail | Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+ 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py&quot;, line 801, in teardown
+    print(f'是否删除作业{res}')
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 303, in del_homework_by_taskname
+    self.wd.execute_script(&quot;arguments[0].click();&quot;, button)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 528, in execute_script
+    return self.execute(command, {&quot;script&quot;: script, &quot;args&quot;: converted_args})[&quot;value&quot;]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 429, in execute
+    self.error_handler.check_response(response)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py&quot;, line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d4811]
+	(No symbol) [0x0x7ff622a71c0b]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000045">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业45_TC_HOMEWORK_045</span>
+              <span class="executetime">2025-08-01 21:41:19</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py::TC_HOMEWORK_045</span>
+              <div class="test_steps" id="test_steps 创建作业45_TC_HOMEWORK_045">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>是否新建作业成功</span>
+                </div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业45_TC_HOMEWORK_045">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="suite_teardown teardown fail" id="suite_teardown teardown cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\">
+            <div class="folder_header">
+              <span class="label">套件清除</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\</span>
+              <span class="executetime">2025-08-01 21:41:37</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">打开浏览器</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：True</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info">删除题目是否成功：False</div>
+              <div class="info error-info">suite teardown fail | Message: element click intercepted: Element &lt;label class=&quot;btn btn-default active&quot; sid=&quot;2&quot;&gt;...&lt;/label&gt; is not clickable at point (113, 13). Other element would receive the click: &lt;ul&gt;...&lt;/ul&gt;
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff622a283e9]
+	(No symbol) [0x0x7ff622a25d8b]
+	(No symbol) [0x0x7ff622a22dd1]
+	(No symbol) [0x0x7ff622a21ce1]
+	(No symbol) [0x0x7ff622a13458]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a12d06]
+	(No symbol) [0x0x7ff622a48820]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+ 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\__st__.py&quot;, line 51, in suite_teardown
+    res = teacher_ui.mul_questions(type=t, content=c, opt=3)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 916, in mul_questions
+    self.wd.find_elements(By.CSS_SELECTOR, '#btn_group_questiontypes label')[type].click()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py&quot;, line 119, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py&quot;, line 572, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 429, in execute
+    self.error_handler.check_response(response)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py&quot;, line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class=&quot;btn btn-default active&quot; sid=&quot;2&quot;&gt;...&lt;/label&gt; is not clickable at point (113, 13). Other element would receive the click: &lt;ul&gt;...&lt;/ul&gt;
+  (Session info: chrome=138.0.7204.170)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff622a283e9]
+	(No symbol) [0x0x7ff622a25d8b]
+	(No symbol) [0x0x7ff622a22dd1]
+	(No symbol) [0x0x7ff622a21ce1]
+	(No symbol) [0x0x7ff622a13458]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a12d06]
+	(No symbol) [0x0x7ff622a48820]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+</div>
+            </div>
+          </div>
+          <div class="suite_teardown teardown" id="suite_teardown teardown cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\">
+            <div class="folder_header">
+              <span class="label">套件清除</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\</span>
+              <span class="executetime">2025-08-01 23:01:04</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">删除学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:05 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">删除学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:05 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+              <div class="info">删除学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:05 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+          <div class="suite_teardown teardown" id="suite_teardown teardown cases\空白环境\一班级\一班级一老师\一班级一老师一学生\">
+            <div class="folder_header">
+              <span class="label">套件清除</span>
+              <span>cases\空白环境\一班级\一班级一老师\一班级一老师一学生\</span>
+              <span class="executetime">2025-08-01 23:01:04</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">删除学生</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:05 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="suite_file" id="suite_file cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py">
+          <div>
+            <span class="label">进入文件</span>
+            <span>cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py</span>
+          </div>
+          <div class="case pass" id="case_00000046">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业51_TC_HOMEWORK_051</span>
+              <span class="executetime">2025-08-01 23:01:04</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py::TC_HOMEWORK_051</span>
+              <div class="test_steps" id="test_steps 创建作业51_TC_HOMEWORK_051">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>弹窗消息是否正确</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case pass" id="case_00000047">
+            <div class="folder_header">
+              <span class="label caselabel">用例 PASS</span>
+              <span class="casename">创建作业52_TC_HOMEWORK_052</span>
+              <span class="executetime">2025-08-01 23:01:14</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py::TC_HOMEWORK_052</span>
+              <div class="test_steps" id="test_steps 创建作业52_TC_HOMEWORK_052">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_pass">
+                  <span class="tag">检查点 PASS</span>
+                  <span>弹窗消息是否正确</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case fail" id="case_00000048">
+            <div class="folder_header">
+              <span class="label caselabel">用例 FAIL</span>
+              <span class="casename">创建作业53_TC_HOMEWORK_053</span>
+              <span class="executetime">2025-08-01 23:01:22</span>
+            </div>
+            <div class="folder_body">
+              <span class="case_class_path">cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py::TC_HOMEWORK_053</span>
+              <div class="test_steps" id="test_steps 创建作业53_TC_HOMEWORK_053">
+                <span class="label">测试步骤</span>
+                <div class="case_step">
+                  <span class="tag">步骤 #1</span>
+                  <span>老师登录web系统</span>
+                </div>
+                <div class="info">打开浏览器</div>
+                <div class="case_step">
+                  <span class="tag">步骤 #2</span>
+                  <span>创建作业</span>
+                </div>
+                <div class="checkpoint_fail">
+                  <span class="tag">检查点 FAIL</span>
+                  <span>是否新建作业成功</span>
+                </div>
+                <div class="info error-info"> 
+Traceback:
+  File &quot;D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py&quot;, line 38, in teststeps
+    teacher_ui.publish_homework(taskname='z', mes='作业名称长度应为2~105个字符')
+  File &quot;D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py&quot;, line 471, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)</div>
+              </div>
+              <div class="case_teardown teardown case_st_lable" id="case_teardown teardown 创建作业53_TC_HOMEWORK_053">
+                <span class="label">用例清除</span>
+              </div>
+            </div>
+          </div>
+          <div class="suite_teardown teardown" id="suite_teardown teardown cases\空白环境\一班级\一班级一老师\">
+            <div class="folder_header">
+              <span class="label">套件清除</span>
+              <span>cases\空白环境\一班级\一班级一老师\</span>
+              <span class="executetime">2025-08-01 23:01:37</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">删除老师</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:52 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+          <div class="suite_teardown teardown" id="suite_teardown teardown cases\空白环境\一班级\">
+            <div class="folder_header">
+              <span class="label">套件清除</span>
+              <span>cases\空白环境\一班级\</span>
+              <span class="executetime">2025-08-01 23:01:51</span>
+            </div>
+            <div class="folder_body">
+              <div class="info">删除班级</div>
+              <div class="info">
+
+-------- HTTP response * begin -------</div>
+              <div class="info">200</div>
+              <div class="info">Server: nginx/1.17.0</div>
+              <div class="info">Date: Fri, 01 Aug 2025 15:01:52 GMT</div>
+              <div class="info">Content-Type: application/json</div>
+              <div class="info">Transfer-Encoding: chunked</div>
+              <div class="info">Connection: keep-alive</div>
+              <div class="info">Vary: Accept-Language</div>
+              <div class="info">X-Frame-Options: SAMEORIGIN</div>
+              <div class="info">Content-Language: zh-cn</div>
+              <div class="info">Access-Control-Allow-Origin: *</div>
+              <div class="info"></div>
+              <div class="info">{
+  &quot;retcode&quot;: 0
+}</div>
+              <div class="info">-------- HTTP response * end -------
+
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="float_menu">
+      <div class="menu-item" onclick="document.querySelector(&quot;body&quot;).scrollIntoView()">页首</div>
+      <div class="menu-item" onclick="window.open(&quot;http://www.byhy.net/tut/auto/hytest/01&quot;, &quot;_blank&quot;); ">帮助</div>
+      <div class="menu-item" id="display_mode" onclick="toggle_folder_all_cases()">Summary</div>
+      <div class="error_jumper" display="block">
+        <div class="menu-item" onclick="previous_error()" title="上一个错误">∧</div>
+        <div class="menu-item" onclick="next_error()" title="下一个错误">∨</div>
+      </div>
+    </div>
+  </body>
+</html>

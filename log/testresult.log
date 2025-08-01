@@ -3,6 +3,11 @@
 ===   [ 收集测试用例 ]  === 
 
 
+== cases\__st__.py 
+
+
+** no setup/teardown/tags in this file , skip it.
+
 == cases\空白环境\__st__.py 
 
 
@@ -81,8 +86,20 @@
 == cases\空白环境\一班级\一班级一老师\__st__.py 
 
 
+== cases\空白环境\一班级\一班级一老师\老师修改题目.py 
+
+
+** no cases in this file , skip it.
+
 == cases\空白环境\一班级\一班级一老师\老师创建题目.py 
 
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\老师查询.py 
+
+
+** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\老师登入登出.py 
 
@@ -97,12 +114,59 @@
 
 ** no cases in this file , skip it.
 
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py 
+
+
+** no cases in this file , skip it.
+
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师登入登出.py 
 
 
 ** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师首页信息.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\__st__.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\__st__.py 
+
+
+** no setup/teardown/tags in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\__st__.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师发布作业.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师查询已创建作业.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\__st__.py 
+
+
+** no setup/teardown/tags in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py 
 
 
 ** no cases in this file , skip it.
@@ -120,14 +184,40 @@
 
 ** no cases in this file , skip it.
 
+== cases\空白环境\一班级\一班级一老师\一班级一老师一题目\__st__.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师修改题目.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师删除题目.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\__st__.py 
+
+
+== cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\老师删除题目.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py 
+
+
+** no cases in this file , skip it.
+
 
 ===   [ 执行测试用例 ]  === 
 
-预备执行用例数量 : 8
+预备执行用例数量 : 20
 
 
 
-  ========= 测试开始 : 20250718_180608 =========
+  ========= 测试开始 : 20250802_000626 =========
 
 
 
@@ -141,7 +231,7 @@
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -164,7 +254,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -187,7 +277,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -215,7 +305,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -225,9 +315,9 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "invitecode": "202689564136",
+  "invitecode": "203278054699",
   "retcode": 0,
-  "id": 20268
+  "id": 20327
 }
 -------- HTTP response * end -------
 
@@ -243,7 +333,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -258,10 +348,10 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验二班",
       "grade__name": "八年级",
-      "invitecode": "202689564136",
+      "invitecode": "203278054699",
       "studentlimit": 50,
       "studentnumber": 0,
-      "id": 20268,
+      "id": 20327,
       "teacherlist": []
     }
   ],
@@ -276,7 +366,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:06:08 GMT
+Date: Fri, 01 Aug 2025 16:06:27 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -287,173 +377,698 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 5235
+  "id": 5294
 }
 -------- HTTP response * end -------
 
 
 
 
->>> cases\空白环境\一班级\一班级一老师\老师创建题目.py
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\
 
-* 创建题目1_TC_QUESTION_001  -  2025-07-18 18:06:08
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:27 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "203278054699",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20327,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8194
+        }
+      ]
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:27 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2442
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:27 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "203278054699",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20327,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 8194
+        }
+      ]
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:27 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2443
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:28 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2444
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:06:28 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2445
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py
+打开浏览器
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+* 老师修改作业1_TC_HOMEWORK_301  -  2025-08-02 00:07:21
 
   [ case execution steps ]
 
--- 第 1 步 -- 老师登录web系统 
+-- 第 1 步 -- 登录web系统 
 
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+-- 第 2 步 -- 将任务名为“哈哈1”的第2题上移 
+
+
+** 检查点 **  检验上移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业2_TC_HOMEWORK_302  -  2025-08-02 00:07:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第3题上移 
+
+
+** 检查点 **  检验上移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业3_TC_HOMEWORK_303  -  2025-08-02 00:07:44
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第4题上移 
+
+
+** 检查点 **  检验上移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业4_TC_HOMEWORK_304  -  2025-08-02 00:07:56
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第5题上移 
+
+
+** 检查点 **  检验上移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业5_TC_HOMEWORK_305  -  2025-08-02 00:08:20
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第6题上移 
+
+
+** 检查点 **  检验上移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业6_TC_HOMEWORK_306  -  2025-08-02 00:08:31
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第2题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业7_TC_HOMEWORK_307  -  2025-08-02 00:08:43
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第3题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业8_TC_HOMEWORK_308  -  2025-08-02 00:08:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第4题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业9_TC_HOMEWORK_309  -  2025-08-02 00:09:06
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第5题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业10_TC_HOMEWORK_310  -  2025-08-02 00:09:18
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第6题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  通过
+
+  PASS 
+
+* 老师修改作业11_TC_HOMEWORK_311  -  2025-08-02 00:09:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第1题上移 
+
+
+** 检查点 **  检验上移是否成功: ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 268, in teststeps
+    CHECK_POINT('检验上移是否成功:', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改作业13_TC_HOMEWORK_312  -  2025-08-02 00:09:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 将任务名为“哈哈1”的第10题下移 
+
+
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 282, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改描述1_TC_HOMEWORK_351  -  2025-08-02 00:10:17
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：点进去修改，实际并未修改 
 
 
 ** 检查点 **  提示消息 ---->  通过
 
   PASS 
 
-[ case teardown ] 创建题目1_TC_QUESTION_001
-打开浏览器
-删除题目是否成功：False
-
-* 创建题目2_TC_QUESTION_002  -  2025-07-18 18:06:30
+* 老师修改描述2_TC_HOMEWORK_352  -  2025-08-02 00:10:25
 
   [ case execution steps ]
 
--- 第 1 步 -- 老师登录web系统 
+-- 第 1 步 -- 登录web系统 
 
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  修改后的任务描述是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 305, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+    CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改描述3_TC_HOMEWORK_353  -  2025-08-02 00:10:31
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  修改后的完成时间是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 317, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', time1=60)
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1245, in edit_taskdec
+    CHECK_POINT('修改后的完成时间是否正确', str(time1) == time2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改描述4_TC_HOMEWORK_354  -  2025-08-02 00:10:37
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  修改后的任务描述是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 329, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业', time1=60)
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+    CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py
+打开浏览器
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+打开浏览器
+正确率:10.0%	规定完成时间:30分钟	提交时间:2025-08-02 00:11:17	正确题目个数:1	错误题目个数:9
+正确率:10.0%	规定完成时间:30分钟	提交时间:2025-08-02 00:11:20	正确题目个数:1	错误题目个数:9
+
+* 老师修改描述5_TC_HOMEWORK_355  -  2025-08-02 00:11:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：点进去修改，实际并未修改 
 
 
 ** 检查点 **  提示消息 ---->  通过
 
   PASS 
 
-[ case teardown ] 创建题目2_TC_QUESTION_002
-打开浏览器
-删除题目是否成功：False
-
-* 创建题目3_TC_QUESTION_003  -  2025-07-18 18:06:54
+* 老师修改描述6_TC_HOMEWORK_356  -  2025-08-02 00:11:31
 
   [ case execution steps ]
 
--- 第 1 步 -- 老师登录web系统 
+-- 第 1 步 -- 登录web系统 
 
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+-- 第 2 步 -- 修改任务描述：仅修改描述 
 
 
-** 检查点 **  提示消息 ---->  通过
-
-  PASS 
-
-* 创建题目4_TC_QUESTION_004  -  2025-07-18 18:07:27
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录web系统 
-
-打开浏览器
-
--- 第 2 步 -- 创建题目 
-
-
-** 检查点 **  提示消息 ---->  通过
-
-  PASS 
-
-* 创建题目5_TC_QUESTION_005  -  2025-07-18 18:08:07
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录web系统 
-
-打开浏览器
-
--- 第 2 步 -- 创建题目 
-
-
-** 检查点 **  提示消息 ---->  !! 不通过!!
+** 检查点 **  修改后的任务描述是否正确 ---->  !! 不通过!!
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 93, in teststeps
-    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 187, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+    CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 创建题目6_TC_QUESTION_006  -  2025-07-18 18:08:46
+* 老师修改描述7_TC_HOMEWORK_357  -  2025-08-02 00:11:37
 
   [ case execution steps ]
 
--- 第 1 步 -- 老师登录web系统 
+-- 第 1 步 -- 登录web系统 
 
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+-- 第 2 步 -- 修改任务描述：仅修改描述 
 
 
-** 检查点 **  提示消息 ---->  !! 不通过!!
+** 检查点 **  修改后的完成时间是否正确 ---->  !! 不通过!!
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 106, in teststeps
-    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 199, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', time1=60)
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1245, in edit_taskdec
+    CHECK_POINT('修改后的完成时间是否正确', str(time1) == time2)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-[ case teardown ] 创建题目6_TC_QUESTION_006
-打开浏览器
-删除题目是否成功：False
-
-* 创建题目7_TC_QUESTION_007  -  2025-07-18 18:09:00
+* 老师修改描述8_TC_HOMEWORK_358  -  2025-08-02 00:11:43
 
   [ case execution steps ]
 
--- 第 1 步 -- 老师登录web系统 
+-- 第 1 步 -- 登录web系统 
 
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+-- 第 2 步 -- 修改任务描述：仅修改描述 
 
 
-** 检查点 **  提示消息 ---->  !! 不通过!!
+** 检查点 **  修改后的任务描述是否正确 ---->  !! 不通过!!
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 126, in teststeps
-    CHECK_POINT('提示消息', res == '题目答案不能为空')
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 211, in teststeps
+    teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业', time1=60)
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+    CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 创建题目8_TC_QUESTION_008  -  2025-07-18 18:09:28
-
-  [ case execution steps ]
-
--- 第 1 步 -- 老师登录web系统 
-
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\
 打开浏览器
 
--- 第 2 步 -- 创建题目 
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\
+删除学生
 
 
-** 检查点 **  提示消息 ---->  !! 不通过!!
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:12:04 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
 
-  FAIL    
-Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 140, in teststeps
-    CHECK_POINT('提示消息', res == '题目内容过长')
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
-    raise AssertionError()
-AssertionError
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:12:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:12:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Fri, 01 Aug 2025 16:12:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
 
 
 [ suite teardown ] cases\空白环境\一班级\一班级一老师\
@@ -463,7 +1078,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:10:05 GMT
+Date: Fri, 01 Aug 2025 16:12:09 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -486,7 +1101,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 18 Jul 2025 10:10:05 GMT
+Date: Fri, 01 Aug 2025 16:12:09 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -503,19 +1118,19 @@ Access-Control-Allow-Origin: *
 
 
 
-  ========= 测试结束 : 20250718_181005 =========
+  ========= 测试结束 : 20250802_001208 =========
 
 
-  耗时    : 237.301 秒
+  耗时    : 342.106 秒
 
 
-  预备执行用例数量 : 8
+  预备执行用例数量 : 20
 
-  实际执行用例数量 : 8
+  实际执行用例数量 : 20
 
-  通过 : 4
+  通过 : 12
 
-  失败 : 4
+  失败 : 8
 
   异常 : 0
 

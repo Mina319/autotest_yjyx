@@ -14,7 +14,7 @@ class TC_HOME_112:
         sleep(0.5)
         STEP(2, '更改为不存在的班级')
         mes = student_ui.change_class(newclass='123456')
-        student_ui.wd.close()
+        student_ui.wd.quit()
         CHECK_POINT('检查首页信息', mes == '错误 : 您输入的班级邀请码不存在')
 
 
@@ -30,5 +30,5 @@ class TC_HOME_113:
         r = sclass.list_class()
         invitecode = r.json()['retlist'][1]['invitecode']
         mes = student_ui.change_class(newclass=invitecode)
-        student_ui.wd.close()
+        student_ui.wd.quit()
         CHECK_POINT('检查首页信息', mes == '修改班级成功')

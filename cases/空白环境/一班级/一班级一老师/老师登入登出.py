@@ -10,27 +10,27 @@ class TC_LOGINLOGOUT_0xxx:
 
     ddt_cases = [
         {
-            'name': '老师登录-0005',
+            'name': '老师登录5_TC_LOGINLOGOUT_005',
             'para': ['', '88888888', '请输入用户名']
         },
         {
-            'name': '老师登录-0006',
+            'name': '老师登录6_TC_LOGINLOGOUT_006',
             'para': ['zhangming', '', '请输入密码']
         },
         {
-            'name': '老师登录-0007',
+            'name': '老师登录7_TC_LOGINLOGOUT_007',
             'para': ['', '', '请输入密码']
         },
         {
-            'name': '老师登录-0008',
+            'name': '老师登录8_TC_LOGINLOGOUT_008',
             'para': ['zhangmin', '888888', '登录失败 : 用户或者密码错误']
         },
         {
-            'name': '老师登录-0009',
+            'name': '老师登录9_TC_LOGINLOGOUT_009',
             'para': ['zhangming', '88888', '登录失败 : 用户或者密码错误']
         },
         {
-            'name': '老师登录-0010',
+            'name': '老师登录10_TC_LOGINLOGOUT_010',
             'para': ['zhangmin', '8888888', '登录失败 : 用户或者密码错误']
         }
     ]
@@ -45,6 +45,6 @@ class TC_LOGINLOGOUT_0xxx:
         sleep(0.2)
         mes = wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
         INFO(f'mes:{mes}')
-        wd.close()
+        wd.quit()
         CHECK_POINT('提示框消息是否正确', mes == info)
 

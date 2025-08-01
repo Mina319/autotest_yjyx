@@ -18,7 +18,8 @@ class TC_LOGINLOGOUT_001:
         teacher_ui.login(username='sunny12', password='12sd8ndfd')
         sleep(0.2)
         mes = wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
-        wd.close()
+        sleep(0.2)
+        wd.quit()
         CHECK_POINT('提示框消息', mes == '登录失败 : 用户或者密码错误')
 
 

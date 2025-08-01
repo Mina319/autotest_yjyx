@@ -36,7 +36,7 @@ class TC_HOME_001:
 
         STEP(3, '查看顶部菜单')
         menus = teacher_ui.get_menus()
-        wd.close()
+        wd.quit()
         CHECK_POINT('顶部菜单是否一致', menus == ['主页', '微课', '作业', '题目', '班级情况'])
 
     def teardown(self):

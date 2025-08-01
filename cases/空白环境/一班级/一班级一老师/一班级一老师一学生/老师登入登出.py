@@ -34,7 +34,7 @@ class TC_LOGINLOGOUT_011:
         STEP(3, '重新登录')
         teacher_ui.login(username='zhangming', password='xxxxxxx')
         tname = teacher_ui.get_right_name()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         INFO(f'老师姓名：{tname}')
         CHECK_POINT('检查是否登录成功，获取老师姓名', tname == '张明')
 
@@ -43,7 +43,7 @@ class TC_LOGINLOGOUT_011:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming', password='xxxxxxx')
         teacher_ui.set_pwd('xxxxxxx', '888888')
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
 
 
 class TC_LOGINLOGOUT_012:
@@ -62,6 +62,7 @@ class TC_LOGINLOGOUT_012:
         except Exception as e:
             INFO(f'获取用户名失败，异常信息：{e}')
         finally:
+            wd.quit()
             CHECK_POINT('检查再次登录是否可以直接跳转主页', tname == '张明')
 
 
@@ -76,7 +77,7 @@ class TC_LOGINLOGOUT_013:
         sleep(0.2)
         mes = wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
         INFO(f'mes:{mes}')
-        wd.close()
+        wd.quit()
         CHECK_POINT('提示框消息是否正确', mes == '登录失败 : 用户或者密码错误')
 
 
@@ -92,6 +93,6 @@ class TC_LOGINLOGOUT_101:
         STEP(3, '再次登录')
         teacher_ui.login(username='zhangming')
         tname = teacher_ui.get_right_name()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         INFO(f'老师姓名：{tname}')
         CHECK_POINT('检查是否登录成功，获取老师姓名', tname == '张明')

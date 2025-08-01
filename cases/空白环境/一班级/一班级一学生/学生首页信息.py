@@ -19,6 +19,8 @@ class TC_HOME_103:
         student_ui.wd.refresh()
         name1, school1, microlessons, homework = student_ui.get_home_infos()
         menus = student_ui.get_menus()
+        sleep(0.4)
+        student_ui.wd.quit()
         CHECK_POINT('检查首页信息', name1 == '秦桑' and microlessons == 0
                     and homework == 0 and school1 == g_school and
                     menus == ['主页', '亿教课堂', '我的任务', '错题库', '统计'])
@@ -45,7 +47,7 @@ class TC_HOME_104:
         student_ui.login(username='qinsang')
         name1, school1, microlessons, homework = student_ui.get_home_infos()
         name2 = student_ui.get_right_name()
-        student_ui.wd.close()
+        student_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', newrealname == name1 and newrealname == name2)
 
     def teardown(self):
@@ -53,7 +55,7 @@ class TC_HOME_104:
         student_ui.open_browser()
         student_ui.login(username='qinsang')
         student_ui.set_realname('秦桑')
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
 
 class TC_HOME_105:
@@ -75,7 +77,7 @@ class TC_HOME_105:
         student_ui.login(username='qinsang', password='xxxxxxx')
         name1, school1, microlessons, homework = student_ui.get_home_infos()
         name2 = student_ui.get_right_name()
-        student_ui.wd.close()
+        student_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', '秦桑' == name1 and '秦桑' == name2)
 
     def teardown(self):
@@ -83,7 +85,7 @@ class TC_HOME_105:
         student_ui.open_browser()
         student_ui.login(username='qinsang', password='xxxxxxx')
         student_ui.set_pwd('xxxxxxx', '888888')
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
 
 class TC_HOME_106:
@@ -102,7 +104,7 @@ class TC_HOME_106:
         student_ui.login(username='qinsang', password='xxxxxxx')
         name1, school1, microlessons, homework = student_ui.get_home_infos()
         name2 = student_ui.get_right_name()
-        student_ui.wd.close()
+        student_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', '桑桑' == name1 and '桑桑' == name2)
 
     def teardown(self):
@@ -112,7 +114,7 @@ class TC_HOME_106:
         student_ui.set_realname('秦桑')
         student_ui.login(username='qinsang', password='xxxxxxx')
         student_ui.set_pwd('xxxxxxx', '888888')
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
 
 class TC_HOME_107:
@@ -125,6 +127,8 @@ class TC_HOME_107:
         student_ui.login(username='qinsang')
         STEP(2, '修改头像')
         mes1 = student_ui.set_icon()
+        sleep(0.4)
+        student_ui.wd.quit()
         CHECK_POINT('用户修改头像是否成功', mes1 == '用户信息修改成功')
 
     def teardown(self):
@@ -132,7 +136,7 @@ class TC_HOME_107:
         student_ui.open_browser()
         student_ui.login(username='qinsang')
         student_ui.set_icon()
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
 
 class TC_HOME_108:
@@ -146,7 +150,7 @@ class TC_HOME_108:
         mes1 = student_ui.submit_view()
         INFO(f'mes: {mes1}')
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '请选择分类')
-
+        student_ui.wd.quit()
 
 class TC_HOME_109:
     name = '学生首页信息9_TC_HOME_109'
@@ -158,7 +162,7 @@ class TC_HOME_109:
         STEP(2, '选择意见种类：操作不方便')
         mes1 = student_ui.submit_view(0)
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '请填写详细说明')
-
+        student_ui.wd.quit()
 
 class TC_HOME_110:
     name = '学生首页信息10_TC_HOME_110'
@@ -170,7 +174,7 @@ class TC_HOME_110:
         STEP(2, '选择意见种类：系统错误')
         mes1 = student_ui.submit_view(1, '系统错误', '1111111111')
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '提交成功，感谢您的意见，我们将尽快处理')
-
+        student_ui.wd.quit()
 
 class TC_HOME_111:
     name = '学生首页信息11_TC_HOME_111'
@@ -187,6 +191,6 @@ class TC_HOME_111:
         phone = student_ui.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div/div[3]/div/input').text
         CHECK_POINT('检查意见是否清除', view == '')
         CHECK_POINT('检查意见是否清除', phone == '')
-
+        student_ui.wd.quit()
 
 

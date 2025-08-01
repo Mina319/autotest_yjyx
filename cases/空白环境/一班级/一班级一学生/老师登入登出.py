@@ -37,7 +37,7 @@ class TC_LOGINLOGOUT_003:
         STEP(3, '查看班级是否有学生')
         sclasses, sum1 = teacher_ui.has_students()
         SELENIUM_LOG_SCREEN(wd, width='70%')
-        wd.close()
+        wd.quit()
         r = student.list_student()
         CHECK_POINT('学生个数是否和系统一致', sum1 == len(r.json()['retlist']))
 

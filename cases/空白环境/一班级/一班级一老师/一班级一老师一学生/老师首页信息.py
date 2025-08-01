@@ -47,7 +47,7 @@ class TC_HOME_004:
         teacher_ui.login(username='zhangming')
         school1, name1, subject1, goldcoin, microlessons, homework = teacher_ui.get_home_infos()
         name2 = teacher_ui.get_right_name()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', newrealname == name1 and newrealname == name2)
 
     def teardown(self):
@@ -55,7 +55,7 @@ class TC_HOME_004:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         teacher_ui.set_realname('张明')
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
 
 
 class TC_HOME_005:
@@ -80,7 +80,7 @@ class TC_HOME_005:
         teacher_ui.login(username='zhangming', password='xxxxxxx')
         school1, name1, subject1, goldcoin, microlessons, homework = teacher_ui.get_home_infos()
         name2 = teacher_ui.get_right_name()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', '张明' == name1 and '张明' == name2)
 
     def teardown(self):
@@ -88,7 +88,7 @@ class TC_HOME_005:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming', password='xxxxxxx')
         teacher_ui.set_pwd('xxxxxxx', '888888')
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
 
 
 class TC_HOME_006:
@@ -108,7 +108,7 @@ class TC_HOME_006:
         # 点击 主页
         school1, name1, subject1, goldcoin, microlessons, homework = teacher_ui.get_home_infos()
         name2 = teacher_ui.get_right_name()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         CHECK_POINT('检查修改后的姓名是否正确', '明明' == name1 and '明明' == name2)
 
     def teardown(self):
@@ -118,7 +118,7 @@ class TC_HOME_006:
         teacher_ui.set_realname('张明')
         teacher_ui.login(username='zhangming', password='xxxxxxx')
         teacher_ui.set_pwd('xxxxxxx', '888888')
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
 
 
 class TC_HOME_007:
@@ -131,6 +131,8 @@ class TC_HOME_007:
         teacher_ui.login(username='zhangming')
         STEP(2, '修改头像')
         mes1 = teacher_ui.set_icon()
+        sleep(0.4)
+        teacher_ui.wd.quit()
         CHECK_POINT('用户修改头像是否成功', mes1 == '用户信息修改成功')
 
     def teardown(self):
@@ -138,7 +140,7 @@ class TC_HOME_007:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         teacher_ui.set_icon()
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
 
 
 class TC_HOME_008:
@@ -150,6 +152,8 @@ class TC_HOME_008:
         teacher_ui.login(username='zhangming')
         STEP(2, '提交空的意见')
         mes1 = teacher_ui.submit_view()
+        sleep(0.4)
+        teacher_ui.wd.quit()
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '请选择分类')
 
 
@@ -162,6 +166,8 @@ class TC_HOME_009:
         teacher_ui.login(username='zhangming')
         STEP(2, '选择意见种类：操作不方便')
         mes1 = teacher_ui.submit_view(0)
+        sleep(0.4)
+        teacher_ui.wd.quit()
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '请填写详细说明')
 
 
@@ -174,6 +180,8 @@ class TC_HOME_010:
         teacher_ui.login(username='zhangming')
         STEP(2, '选择意见种类：系统错误')
         mes1 = teacher_ui.submit_view(1, '系统错误', '1111111111')
+        sleep(0.4)
+        teacher_ui.wd.quit()
         CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '提交成功，感谢您的意见，我们将尽快处理')
 
 
@@ -184,14 +192,18 @@ class TC_HOME_011:
         STEP(1, '老师登录web系统')
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
-        STEP(2, '选择意见种类：不能登录，提交意见')
-        mes1 = teacher_ui.submit_view(2, '不能登录', '1111111111')
-        CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '提交成功，感谢您的意见，我们将尽快处理')
-        STEP(3, '检查意见提交后是否清空')
-        view = teacher_ui.wd.find_element(By.CSS_SELECTOR, '.col-md-12 textarea').text
-        phone = teacher_ui.wd.find_element(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/div[3]/div/input').text
-        CHECK_POINT('检查意见是否清除', view == '')
-        CHECK_POINT('检查意见是否清除', phone == '')
+
+        try:
+            STEP(2, '选择意见种类：不能登录，提交意见')
+            mes1 = teacher_ui.submit_view(2, '不能登录', '1111111111')
+            CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '提交成功，感谢您的意见，我们将尽快处理')
+            STEP(3, '检查意见提交后是否清空')
+            view = teacher_ui.wd.find_element(By.CSS_SELECTOR, '.col-md-12 textarea').text
+            phone = teacher_ui.wd.find_element(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/div[3]/div/input').text
+            CHECK_POINT('检查意见是否清除', view == '')
+            CHECK_POINT('检查意见是否清除', phone == '')
+        finally:
+            teacher_ui.wd.quit()
 
 
 

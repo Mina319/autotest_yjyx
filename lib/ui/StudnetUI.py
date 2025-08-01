@@ -1,8 +1,14 @@
+import datetime
+import random
+import re
+
 from selenium import webdriver
 from hytest import *
 from selenium.webdriver.common.by import By
 from cfg.cfg import *
 from time import sleep
+
+from lib.webui import get_text_with_retry, get_element_with_retry
 
 
 class StudentUI:
@@ -12,6 +18,11 @@ class StudentUI:
         options = webdriver.ChromeOptions()
         os.environ['SE_DRIVER_MIRROR_URL'] = 'https://cdn.npmmirror.com/binaries/chrome-for-testing'
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
+        # 添加无头模式配置
+        # options.add_argument('--headless')  # 启用无头模式
+        # options.add_argument('--disable-gpu')  # 禁用 GPU 加速 (在某些系统上有帮助)
+        # options.add_argument('--no-sandbox')  # 某些系统可能需要此选项
+
         self.wd = webdriver.Chrome(options=options)  # 保存为 self.wd
         self.wd.implicitly_wait(10)
 
@@ -121,8 +132,9 @@ class StudentUI:
 
     def get_right_name(self):
         # 获取主页  右上角 用户名
-        sleep(2)
-        tname = self.wd.find_element(By.CSS_SELECTOR, 'ul > li:nth-child(2) .ng-binding').text
+        sleep(1)
+        # tname = self.wd.find_element(By.CSS_SELECTOR, 'ul > li:nth-child(2) .ng-binding').text
+        tname = get_text_with_retry(self.wd, By.CSS_SELECTOR, 'ul > li:nth-child(2) .ng-binding')
         return tname
 
     def click_wrong_answer_database(self):
@@ -192,37 +204,96 @@ class StudentUI:
         mes = self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-message').text
         return mes
 
-    def do_homework(self):
-        # 做作业
-        self.wd.switch_to.window(self.wd.window_handles[-1])
-        # 点击 消息
-        self.wd.find_element(By.CSS_SELECTOR, 'li.dropdown > a > i.fa-tasks').click()
-        # 点击 查看所有任务
-        self.wd.find_element(By.CSS_SELECTOR, 'li.last').click()
-
-        # 点击 去做
-        self.wd.find_element(By.CSS_SELECTOR, 'table.table td:last-child > button').click()
-        # 默认全都点击 C
-        c_eles = self.wd.find_elements(By.XPATH, '//div//button[3]')
-        for e in c_eles:
-            e.click()
-        # 点击 提交
-        self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[3]/button').click()
-        # 点击 确定
-        self.wd.find_element(By.CSS_SELECTOR, 'div.bootstrap-dialog-footer-buttons > button:last-child').click()
-        # 执行 JavaScript 来点击页面的某个位置
-        self.wd.execute_script("document.elementFromPoint(100, 100).click();")
-        # 获取信息：正确率
-        acc_element = self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[1]/div[2]/span[2]')
-        acc_text = acc_element.text
-        acc = float(acc_text[4:-1].strip()) / 100
-        self.wd.close()
-        return acc
 
     def get_menus(self):
         # 获取主页 菜单
         eles = self.wd.find_elements(By.CSS_SELECTOR, '.main-menu li')
         menus = [e.text for e in eles]
         return menus
+
+    def click_message(self):
+        # 点击消息
+
+        # self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div[2]/ul/li[1]/a/i').click()
+        btn1 = self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div[2]/ul/li[1]/a/i')
+        self.wd.execute_script("arguments[0].click();", btn1)
+        # 查看所有任务
+        # self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div[2]/ul/li[1]/ul/li[3]/a').click()
+        btn2 = self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div[2]/ul/li[1]/ul/li[3]/a')
+        self.wd.execute_script("arguments[0].click();", btn2)
+
+    def do_homework(self, taskid, num=None, sleeptime=None):
+        # 做作业
+        # num 完成题目数量
+        window1 = self.wd.current_window_handle
+        self.click_message()
+        allwindows = self.wd.window_handles
+        self.wd.switch_to.window(allwindows[-1])
+
+        # task id
+        taskids = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[1]')
+        taskids = [i.text.strip() for i in taskids]
+        time = None
+
+        for i, td in enumerate(taskids):
+            if td == taskid:
+                times = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[5]/span')
+                time = int(''.join([char for char in times[i].text if char.isdigit()]))
+                dos = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[7]/button')
+                dos[i].click()  # 点击做任务
+
+        sleep(0.2)
+        coms = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div')
+
+        for i in range(len(coms)):
+            if i == num and num is not None:
+                break
+            n = random.randint(1, 4)
+            # com_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div/div[2]/div/div')
+            # com_btns[i].find_element(By.XPATH, f'/button[{n}]').click()
+            btn = get_element_with_retry(self.wd, By.XPATH, f'//*[@id="exam_question_list_choice"]/div/div/div[{i+1}]/div[2]/div/div/button[{n}]')
+            btn.click()
+        if sleeptime is not None:
+            sleep(sleeptime*60)
+
+        # 点击提交
+        self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[3]/button').click()
+
+        mes1 = self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-message').text.strip()
+        # CHECK_POINT('检查', mes1 == mes)
+        # 点击 确定
+        self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-footer-buttons button:nth-child(2)').click()
+        # 获取当前时间
+        current_time = datetime.datetime.now()
+        # 格式化时间为 "YYYY-MM-DD HH:MM:SS"
+        complete_time = current_time.strftime('%Y-%m-%d %H:%M:%S')
+
+        sleep(0.3)
+
+        # 执行 JavaScript 来点击页面的某个位置
+        self.wd.execute_script("document.elementFromPoint(100, 100).click();")
+        # 获取信息：正确率
+        acc_element = self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[1]/div[2]/span[2]')
+        acc_text = acc_element.text
+        acc = float(acc_text[4:-1].strip()) / 100
+        bingo = self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[1]/div[2]/sapn[2]').text.strip()
+        error = self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[1]/div[2]/span[1]').text.strip()
+        pattern = re.compile(r'\d+')
+        # 提取数字
+        result1 = pattern.search(bingo)
+        result2 = pattern.search(error)
+        b, e = None, None
+        if result1:
+            b = result1.group(0)
+        if result2:
+            e = result2.group(0)
+
+        INFO(f'正确率:{acc*100}%\t规定完成时间:{time}分钟\t提交时间:{complete_time}\t正确题目个数:{b}\t错误题目个数:{e}')
+
+        return acc, b, e, complete_time, time, mes1
+
+
+
+
 
 student_ui = StudentUI()

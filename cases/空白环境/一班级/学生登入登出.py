@@ -32,7 +32,7 @@ class TC_LOGINLOGOUT_202:
         info = student_ui.click_wrong_answer_database()
         SELENIUM_LOG_SCREEN(student_ui.wd, width='70%')
         CHECK_POINT('检查错题库', info == '您尚未有错题入库哦')
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
     def teardown(self):
         # 删掉同学

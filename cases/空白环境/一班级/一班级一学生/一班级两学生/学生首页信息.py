@@ -28,3 +28,4 @@ class TC_HOME_102:
         CHECK_POINT('检查首页信息', name1 == '红玉' and microlessons == 0
                     and homework == 0 and school1 == g_school and
                     menus == ['主页', '亿教课堂', '我的任务', '错题库', '统计'])
+        student_ui.wd.quit()

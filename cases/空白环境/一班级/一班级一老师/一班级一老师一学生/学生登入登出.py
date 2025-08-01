@@ -32,7 +32,7 @@ class TC_LOGINLOGOUT_203:
         info = student_ui.click_wrong_answer_database()
         SELENIUM_LOG_SCREEN(student_ui.wd, width='70%')
         CHECK_POINT('检查错题库', info == '您尚未有错题入库哦')
-        student_ui.wd.close()
+        student_ui.wd.quit()
 
     def teardown(self):
         # 删掉同学
@@ -50,5 +50,5 @@ class TC_LOGINLOGOUT_213:
         sleep(0.2)
         mes = wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
         INFO(f'mes:{mes}')
-        wd.close()
+        wd.quit()
         CHECK_POINT('提示框消息是否正确', mes == '登录失败 : 请使用学生账户登录')

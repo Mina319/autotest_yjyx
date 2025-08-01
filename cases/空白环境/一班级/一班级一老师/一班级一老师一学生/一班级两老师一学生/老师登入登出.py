@@ -8,7 +8,7 @@ from lib.webui import *
 from lib.api.SClass import getFirstClass
 
 
-class student:
+class TC_LOGINLOGOUT_102:
     name = '老师登出2_TC_LOGINLOGOUT_102'
 
     def teststeps(self):
@@ -24,7 +24,7 @@ class student:
         teacher_ui.logout()
 
         mes = teacher_ui.wd.find_element(By.XPATH, '//*[@id="teacher-page"]/h2').text
-        teacher_ui.wd.close()
+        teacher_ui.wd.quit()
         INFO(f'mes：{mes}')
         CHECK_POINT('检查是否登出成功，登录页面', mes == '老师登录')
 

@@ -36,7 +36,7 @@ class TC_LOGINLOGOUT_002:
         STEP(3, '查看班级是否有学生')
         sclasses, sum1 = teacher_ui.has_students()
         SELENIUM_LOG_SCREEN(wd, width='70%')
-        wd.close()
+        wd.quit()
         CHECK_POINT('学生列表是否为空', sum1 == 0)
 
     def teardown(self):

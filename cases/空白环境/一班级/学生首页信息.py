@@ -32,7 +32,7 @@ class TC_HOME_101:
 
         STEP(3, '查看顶部菜单')
         menus = student_ui.get_menus()
-        wd.close()
+        wd.quit()
         CHECK_POINT('顶部菜单是否一致', menus == ['主页', '亿教课堂', '我的任务', '错题库', '统计'])
 
     def teardown(self):

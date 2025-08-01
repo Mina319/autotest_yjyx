@@ -21,6 +21,6 @@ class TC_LOGINLOGOUT_302:
         student_ui.login(username='hongyu')
         student_ui.logout()
         mes = student_ui.wd.find_element(By.XPATH, '//*[@id="page-container"]/h1').text
-        student_ui.wd.close()
+        student_ui.wd.quit()
         INFO(f'mes：{mes}')
         CHECK_POINT('检查是否登出成功，登录页面', mes == '学生登录')
