@@ -5,7 +5,7 @@ from lib.ui.TeacherUI import teacher_ui
 from lib.webui import *
 
 # 任务编号
-taskid = None
+taskids = []
 # 作业完成结果： username: (acc, complete_time)
 res = {}
 
@@ -16,24 +16,22 @@ def suite_setup():
     teacher_ui.login(username='zhangming')
     global taskid
     # 将任务全部发给所有 学生
-    taskid = teacher_ui.publish_process(taskname='哈哈1', taskdec='作业' + '哈' * 8,
+    for i in range(3):
+        taskid = teacher_ui.publish_process(taskname=f'哈哈{i+1}', taskdec=f'作业{i+1}'+'哈'*8,
                                         mes1='作业已发布给学生', checkall=True)
-    teacher_ui.publish_process(taskname='哈哈2', taskdec='作业' + '哈' * 8,
-                               mes1='作业已发布给学生', checkall=True)
-    teacher_ui.publish_process(taskname='哈哈3', taskdec='作业' + '哈' * 8,
-                               mes1='作业已发布给学生', checkall=True)
+        taskids.append(taskid)
     teacher_ui.wd.quit()
 
     # 学生1 做作业
     student_ui.open_browser()
     student_ui.login(username='qinsang')
-    acc, b, e, complete_time, time, mes = student_ui.do_homework(taskid=taskid)
+    acc, b, e, complete_time, time, mes = student_ui.do_homework(taskid=taskids[0])
     res['秦桑'] = complete_time, f'正确率 {int(acc*100)} % : 对 {b} 题， 错 {e} 题'
 
 
     # 学生2 做作业
     student_ui.login(username='wukong')
-    acc, b, e, complete_time, time, mes = student_ui.do_homework(taskid=taskid)
+    acc, b, e, complete_time, time, mes = student_ui.do_homework(taskid=taskids[0])
     res['悟空'] = complete_time, f'正确率 {int(acc*100)} % : 对 {b} 题， 错 {e} 题'
     student_ui.wd.quit()
 

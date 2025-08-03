@@ -47,37 +47,57 @@ def generate_mixed_string(length=100):
     return ''.join(result)
 
 
-# 自定义获取文本的函数
-def get_text_with_retry(driver, by, path, max_retries=3, wait_time=1):
+def get_text_with_retry(driver, by, path, multi=False, max_retries=3, wait_time=1):
     """
-    封装获取网页文本的函数，支持重试机制。
+    获取页面元素文本（单个或多个），支持重试机制。
 
-    driver: WebDriver对象
-    xpath: 要获取的元素的XPath路径
-    max_retries: 最大重试次数
-    wait_time: 每次重试前的等待时间（秒）
+    参数:
+    driver       : WebDriver对象
+    by           : By 类型（如 By.XPATH、By.ID 等）
+    path         : 元素定位路径（如 xpath 表达式）
+    multi        : 是否获取多个元素，默认 False（即 get_element）
+    max_retries  : 最大重试次数
+    wait_time    : 每次重试等待时间（秒）
 
-    return: 获取的文本或空字符串
+    返回:
+    - 如果 multi=False：返回文本字符串 或 None
+    - 如果 multi=True：返回文本列表（可能为空列表）
     """
     print(f'\n获取{path}元素的文本：')
-    retries = 0
-    while retries < max_retries:
+    for attempt in range(1, max_retries + 1):
         try:
-            element = driver.find_element(by, path)
-            # 获取文本内容
-            text = element.text.strip()
-            if text:  # 如果获取到的文本不为空
-                return text
+            if multi:
+                # 获取多个元素
+                elements = driver.find_elements(by, path)
+                if elements:
+                    # 获取所有元素的文本，并过滤掉空文本
+                    texts = [element.text.strip() for element in elements if element.text.strip()]
+                    if texts:
+                        print(f"\t第{attempt}次尝试：找到 {len(elements)} 个元素，文本已提取")
+                        return texts
+                    else:
+                        print(f"\t第{attempt}次尝试：未找到任何有效文本，重试中...")
+                else:
+                    print(f"\t第{attempt}次尝试：未找到任何元素，重试中...")
             else:
-                print(f"\t第{retries + 1}次尝试：获取的内容为空，继续重试...")
+                # 获取单个元素
+                element = driver.find_element(by, path)
+                text = element.text.strip()
+                if text:
+                    print(f"\t第{attempt}次尝试：成功找到元素，文本已提取")
+                    return text
+                else:
+                    print(f"\t第{attempt}次尝试：找到元素，但文本为空，重试中...")
+        except NoSuchElementException:
+            print(f"\t第{attempt}次尝试：元素不存在，等待 {wait_time} 秒后重试...")
         except Exception as e:
-            print(f"\t第{retries + 1}次尝试：获取失败，错误信息：{e}")
+            print(f"\t第{attempt}次尝试：发生异常：{e}")
 
         # 重试前等待一段时间
         sleep(wait_time)
-        retries += 1
 
-    return ""  # 返回空字符串，表示尝试失败
+    print("所有尝试失败。")
+    return [] if multi else None
 
 
 def get_element_with_retry(driver, by, path, multi=False, max_retries=3, wait_time=1):

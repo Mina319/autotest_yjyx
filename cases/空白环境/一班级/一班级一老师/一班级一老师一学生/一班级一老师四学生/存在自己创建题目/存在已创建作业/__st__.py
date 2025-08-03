@@ -10,6 +10,9 @@ def suite_setup():
     STEP(2, '创建作业')
     for i in range(3):
         teacher_ui.publish_homework(taskname=f'哈哈{i+1}', mes='新建作业成功', num=10)
+
+    teacher_ui.publish_homework(taskname='哈' * 10, mes='新建作业成功', num=10)
+
     teacher_ui.wd.quit()
 
 
@@ -21,4 +24,6 @@ def suite_teardown():
     for i in range(3):
         res = teacher_ui.del_homework_by_taskname(f'哈哈{i+1}')
         print(f'是否删除作业{res}')
+    res = teacher_ui.del_homework_by_taskname('哈' * 10)
+    print(f'是否删除作业{res}')
     teacher_ui.wd.quit()

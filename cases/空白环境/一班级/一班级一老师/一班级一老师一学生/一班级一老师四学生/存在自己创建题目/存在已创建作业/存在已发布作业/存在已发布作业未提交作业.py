@@ -268,7 +268,6 @@ class TC_HOMEWORK_311:
         CHECK_POINT('检验上移是否成功:', res)
 
 
-
 class TC_HOMEWORK_312:
     name = '老师修改作业13_TC_HOMEWORK_312'
 
@@ -277,7 +276,7 @@ class TC_HOMEWORK_312:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, f'将任务名为“哈哈1”的第10题下移')
-        res = teacher_ui.edit_homework(taskname='哈哈1', idx=10, move='down')
+        res = teacher_ui.edit_homework(taskname='哈哈1', idx='next', move='down')
         teacher_ui.wd.quit()
         CHECK_POINT('检验下移是否成功', res)
 

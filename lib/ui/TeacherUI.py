@@ -258,6 +258,7 @@ class TeacherUI:
                 self.wd.find_element(By.XPATH,
                                      "//*[@class='bootstrap-dialog-footer-buttons']//button[text()='确定']").click()
                 flag = True
+                break
         taskname_eles = self.wd.find_elements(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody//tr//td[3]')
 
         msg = None
@@ -284,9 +285,9 @@ class TeacherUI:
 
         # 当前窗口
         window1 = self.wd.current_window_handle
-        t_eles = self.wd.find_elements(By.CSS_SELECTOR, '.row .div-search-result-one-text')
-        num = len(t_eles)  # 已发布作业个数
-        t = [i.text.strip() for i in t_eles]
+        # t_eles = self.wd.find_elements(By.CSS_SELECTOR, '.row .div-search-result-one-text')
+        t = get_text_with_retry(self.wd, By.CSS_SELECTOR, '.row .div-search-result-one-text', True)
+        num = len(t)  # 已发布作业个数
         # del_eles = self.wd.find_elements(By.XPATH, '//*[@id="serach_result_table"]//div//label[3]')
         for i, t1 in enumerate(t):
             if t1 == taskname:
@@ -294,6 +295,7 @@ class TeacherUI:
                 # del_eles[i].click()
                 self.wd.execute_script("arguments[0].click();", del_eles[i])
                 sleep(1)
+                break
 
         window2 = self.wd.current_window_handle
         self.wd.switch_to.window(window2)
@@ -317,6 +319,7 @@ class TeacherUI:
                 # del_eles[i].click()
                 self.wd.execute_script("arguments[0].click();", del_eles[i])
                 sleep(1)
+                break
 
         window2 = self.wd.current_window_handle
         self.wd.switch_to.window(window2)
@@ -333,11 +336,11 @@ class TeacherUI:
 
         # 创建作业
         self.opt_homework(opt='创建作业')
-        sleep(0.2)
+        sleep(1)
         if taskname is None or taskname.strip() == '':
             # 点击 确定添加
             self.wd.find_element(By.XPATH, '//*[@id="btn_submit"]').click()
-            sleep(0.5)
+            sleep(1)
             mes = self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-message').text
             CHECK_POINT('弹窗消息是否正确', mes == '请输入作业名称')
             return
@@ -345,7 +348,7 @@ class TeacherUI:
         input = self.wd.find_element(By.XPATH, '//*[@id="exam_name_text"]')
         input.send_keys(taskname)
         self.wd.find_element(By.XPATH, '//*[@id="btn_pick_question"]').click()
-        sleep(0.5)
+        sleep(1)
         # 切换窗口iframe，选择题目的小窗口
         self.wd.switch_to.frame("pick_questions_frame")
         sleep(1)
@@ -363,25 +366,25 @@ class TeacherUI:
                 # eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_treetype"]/label')
                 idx = dict1[filter[0]]
                 eles[idx].click()
-                sleep(0.5)
+                sleep(1)
             # 选择题 填空题
             if filter[1] is not None:
                 eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_questiontypes"]/label')
                 idx = dict1[filter[1]]
                 eles[idx].click()
-                sleep(0.5)
+                sleep(1)
             # 浙教版 人教版
             if filter[2] is not None:
                 eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_textbookvers"]/label')
                 idx = dict1[filter[2]]
                 eles[idx].click()
-                sleep(0.5)
+                sleep(1)
             # 年纪 七 八 九 高一 二 三
             if filter[3] is not None:
                 eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_grades"]/label')
                 idx = dict1[filter[3]]
                 eles[idx].click()
-                sleep(0.5)
+                sleep(1)
             # 上册 下册
             if filter[4] is not None:
                 eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_textbookvols"]/label')
@@ -393,11 +396,11 @@ class TeacherUI:
                 eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_level"]/label')
                 idx = dict1[filter[5]]
                 eles[idx].click()
-                sleep(0.5)
+                sleep(1)
             # 我创建的
             if filter[6] is not None:
                 self.wd.find_element(By.XPATH, '//*[@id="onlysearchmine"]').click()
-                sleep(0.5)
+                sleep(1)
 
         ############
         # 检查是否能够找到某个 iframe 中的元素（例如一个按钮）
@@ -410,7 +413,7 @@ class TeacherUI:
             )
             # add_all_btn.click()
             self.wd.execute_script("arguments[0].click();", add_all_btn)
-            sleep(0.2)  # 稍微等待一下加入完成
+            sleep(1)  # 稍微等待一下加入完成
 
             # 等待“下一页”按钮可点击并点击
             next_page_btn = WebDriverWait(self.wd, 10).until(
@@ -419,7 +422,7 @@ class TeacherUI:
 
             # next_page_btn.click()
             self.wd.execute_script("arguments[0].click();", next_page_btn)
-            sleep(0.2)  # 再加一点缓冲时间
+            sleep(0.5)  # 再加一点缓冲时间
 
         # 点击最后一页的前 remainder 个题目
         if remainder > 0:
@@ -433,14 +436,10 @@ class TeacherUI:
             except:
                 pass
         # 点击确定
-        sleep(0.5)
+        sleep(1)
         # self.wd.find_element(By.XPATH, '//*[@id="cart_footer"]/div[4]/div[2]').click()
         btn1 = self.wd.find_element(By.XPATH, '//*[@id="cart_footer"]/div[4]/div[2]')
         self.wd.execute_script("arguments[0].click();", btn1)
-        # btn = WebDriverWait(self.wd, 10).until(
-        #     EC.element_to_be_clickable((By.XPATH, '//*[@id="cart_footer"]/div[4]/div[2]'))
-        # )
-        # self.wd.execute_script("arguments[0].click();", btn)
         sleep(0.5)
 
         # 切换窗口：点击确认添加  按钮
@@ -455,7 +454,8 @@ class TeacherUI:
         window2 = self.wd.current_window_handle
         self.wd.switch_to.window(window2)
         sleep(1)
-        mes11 = self.wd.find_element(By.CSS_SELECTOR, 'div.bootstrap-dialog-message h3').text
+        # mes11 = self.wd.find_element(By.CSS_SELECTOR, 'div.bootstrap-dialog-message h3').text
+        mes11 = get_text_with_retry(self.wd, By.CSS_SELECTOR, 'div.bootstrap-dialog-message h3')
         # 弹框点击  将作业发布给学生，不能直接定位id，id是自动生成的
         if ispublished:
             # 点击发布
@@ -470,14 +470,18 @@ class TeacherUI:
         self.opt_homework('已创建作业')
         window2 = self.wd.current_window_handle
         flag = True
-        homework = self.wd.find_elements(By.XPATH, '//*[@id="serach_result_table"]/div/div[1]')
-        h = [i.text for i in homework]
+        # homework = self.wd.find_elements(By.XPATH, '//*[@id="serach_result_table"]/div/div[1]')
+        # h = [i.text for i in homework]
+        h = get_text_with_retry(self.wd, By.XPATH, '//*[@id="serach_result_table"]/div/div[1]', True)
         for i, h1 in enumerate(h):
             if h1 == taskname:
+                print(f'h1:{h1},taskname:{taskname}')
                 # 找到任务
-                publish_btns = self.wd.find_elements(By.XPATH, '//*[@id="serach_result_table"]/div/div[3]/div/label[4]')
+                # publish_btns = self.wd.find_elements(By.XPATH, '//*[@id="serach_result_table"]/div/div[3]/div/label[4]')
+                publish_btns = get_element_with_retry(self.wd, By.XPATH, '//*[@id="serach_result_table"]/div/div[3]/div/label[4]',True)
                 publish_btns[i].click()
                 flag = False
+                break
         if flag:
             INFO(f'没用找到要发布的作业：{taskname}')
             return
@@ -498,20 +502,18 @@ class TeacherUI:
         # 点击 确定下发
         btn = get_element_with_retry(self.wd, By.CSS_SELECTOR, 'h3 > button')
         btn.click()
-        # WebDriverWait(self.wd, 10).until(
-        #     EC.presence_of_element_located((By.CSS_SELECTOR, 'h3 > button'))
-        # ).click()
 
         if num == 0 and not checkall:
             mes = self.wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
-            self.wd.switch_to.window(self.mainWindow)
+            self.wd.switch_to.window(allwindows[0])
             CHECK_POINT('检查弹窗信息', mes1 == mes)
             return
         time_e = self.wd.find_element(By.XPATH, '//*[@id="modal-dispatch"]/div[2]/div/div[2]/input')
         time_e.clear()
         time_e.send_keys(str(time))
         sleep(1)
-        dec = self.wd.find_element(By.XPATH, '//*[@id="modal-dispatch"]/div[2]/div/div[2]/textarea')
+        # dec = self.wd.find_element(By.XPATH, '//*[@id="modal-dispatch"]/div[2]/div/div[2]/textarea')
+        dec = get_element_with_retry(self.wd, By.XPATH, '//*[@id="modal-dispatch"]/div[2]/div/div[2]/textarea')
         dec.clear()
         dec.send_keys(taskdec)
         # 点击确定
@@ -519,6 +521,9 @@ class TeacherUI:
         sleep(1)
         # mes = self.wd.find_element(By.CLASS_NAME, 'bootstrap-dialog-message').text
         mes = get_text_with_retry(self.wd, By.CLASS_NAME, 'bootstrap-dialog-message')
+        if mes is None:
+            mes = get_text_with_retry(self.wd, By.XPATH, '//*[@id="modal-dispatch"]/div[2]/div/div[2]/p')
+            return mes
         # 点击确定
         btn1 = get_element_with_retry(self.wd, By.XPATH, "//*[@class='bootstrap-dialog-footer-buttons']/button[text()='确定']")
         btn1.click()
@@ -742,25 +747,30 @@ class TeacherUI:
 
         # 点击 题目
         self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div/div/ul/li[3]').click()
+        sleep(1)
         # 点击 创建题目
         self.wd.find_element(By.CSS_SELECTOR, '.fa-plus-square-o').click()
+        sleep(1)
 
         if type is not None:
             eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_questiontypes"]/label')
             eles[type].click()
+            sleep(1)
 
         if difflevel is not None:
             eles = self.wd.find_elements(By.XPATH, '//*[@id="btn_group_level"]/label')
             eles[difflevel].click()
+            sleep(1)
 
         for i in textbook:
             # 点击 增加
             self.wd.find_element(By.XPATH, '//*[@id="nav_item_add"]/a').click()
             # 点击添加教材
-            eles = self.wd.find_elements(By.XPATH, '//*[@id="dropdown_textbookversions"]/li')
+            # eles = self.wd.find_elements(By.XPATH, '//*[@id="dropdown_textbookversions"]/li')
+            eles = get_element_with_retry(self.wd, By.XPATH, '//*[@id="dropdown_textbookversions"]/li', True)
             eles[i].click()  # 选择 浙教版 或 人教版
+            sleep(1)
 
-        sleep(0.2)
 
     def edit_question1(self, type=0, difflevel=None, knowleadege=None, textbook=None, content=None, video=None,
                        answer=None, desc=None):
@@ -924,7 +934,6 @@ class TeacherUI:
 
         sleep(0.4)
         mainWindow = self.wd.current_window_handle
-        wait = WebDriverWait(self.wd, 10)
         # 获取所有题目卡片
         for attempt in range(2):  # 重试1次
             try:
@@ -1062,13 +1071,18 @@ class TeacherUI:
         opt.click()
         sleep(1)
 
-        taskname_eles = self.wd.find_elements(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[3]')
-        for i, t_ele in enumerate(taskname_eles):
-            if t_ele.text.strip() == taskname:
+        # taskname_eles = self.wd.find_elements(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[3]')
+        taskname_texts = get_text_with_retry(self.wd, By.XPATH,
+                                             '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[3]', True)
+
+        for i, t in enumerate(taskname_texts):
+            if t == taskname:
                 # 找到taskname，点击 完成情况
-                wcqks = self.wd.find_elements(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[5]')
+                # wcqks = self.wd.find_elements(By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[5]')
+                wcqks = get_element_with_retry(self.wd,By.XPATH, '//*[@id="dynamicView"]/div[2]/div/table/tbody/tr/td[5]', True)
                 wcqks[i].click()
-                sleep(0.2)
+                sleep(1)
+                break
 
         # 筛选已完成
         if completed is not None:
@@ -1164,30 +1178,55 @@ class TeacherUI:
                 # 找到taskname，点击编辑按钮
                 edit_btns = self.wd.find_elements(By.XPATH, '//tbody//td[3]//i')
                 edit_btns[i].click()
-        sleep(1)
+                break
+        sleep(2)
 
-        contents = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
-        contents = [c.text.strip() for c in contents]
-
+        # contents = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
+        # contents = [c.text.strip() for c in contents]
+        contents = get_text_with_retry(self.wd, By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]', True)
+        n = len(contents)
+        INFO(f'n:{n}')
         res = None
         if move == 'up':
-            moveup_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div[3]/div/label[3]')
+            # moveup_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div[3]/div/label[3]')
+            moveup_btns = get_element_with_retry(self.wd, By.XPATH, '//*[@id="exam_question_list_choice"]//div[3]/div/label[3]', True)
             moveup_btns[idx - 1].click()
-            sleep(1)
-            contents1 = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
-            contents1 = [c.text.strip() for c in contents1]
+            sleep(2)
+            # contents1 = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
+            # contents1 = [c.text.strip() for c in contents1]
+            contents1 = get_text_with_retry(self.wd, By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]', True)
             i = idx - 1
             j = len(contents1) - 1 if idx == 1 else idx - 2
+            INFO(f'n:{n}, len(contents):{len(contents)},len(contents1):{len(contents1)}')
+            INFO(f'i:{i} j:{j}')
+            INFO(f'contents[i]:{contents[i]} contents1[j]:{contents1[j]}')
+            INFO(f'res: {res} ')
             res = contents[i] == contents1[j]
 
         if move == 'down':
-            movedown_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div[3]/div/label[4]')
-            movedown_btns[idx - 1].click()
-            sleep(1)
-            contents1 = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
-            contents1 = [c.text.strip() for c in contents1]
-            i = idx - 1
-            j = 0 if idx == len(contents1) else idx
+            # movedown_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div[3]/div/label[4]')
+            SELENIUM_LOG_SCREEN(self.wd, width='70%')
+            movedown_btns = get_element_with_retry(self.wd, By.XPATH,
+                                                 '//*[@id="exam_question_list_choice"]//div[3]/div/label[4]', True)
+            if idx == 'next':
+                # 最下面的一个题
+                movedown_btns[len(movedown_btns)-1].click()
+                INFO(f'len(movedown_btns)-1: {len(movedown_btns)-1}')
+                i = 6
+                j = 0
+            else:
+                movedown_btns[idx - 1].click()
+                i = idx - 1
+                j = 0 if idx == n else idx
+            sleep(2)
+            # contents1 = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]')
+            # contents1 = [c.text.strip() for c in contents1]
+            contents1 = get_text_with_retry(self.wd, By.XPATH, '//*[@id="exam_question_list_choice"]//div/div[2]/p[1]',
+                                            True)
+            INFO(f'n:{n}, len(contents):{len(contents)},len(contents1):{len(contents1)}')
+            INFO(f'i:{i} j:{j}')
+            INFO(f'contents[i]:{contents[i]} contents1[j]:{contents1[j]}')
+            INFO(f'res: {res} ')
             res = contents[i] == contents1[j]
 
         # 点击 确定修改
@@ -1212,7 +1251,9 @@ class TeacherUI:
                 # 找到任务描述，点击编辑按钮
                 edit_btns = self.wd.find_elements(By.XPATH, '//tbody//td[4]//i')
                 edit_btns[i].click()
-        sleep(0.3)
+                sleep(1)
+                break
+
 
         if dec is not None:
             dec_element = self.wd.find_element(By.XPATH, '//*[@id="modal-task_modify"]/div[2]/div/div[2]/textarea')

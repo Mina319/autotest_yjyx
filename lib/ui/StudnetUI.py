@@ -222,7 +222,7 @@ class StudentUI:
         btn2 = self.wd.find_element(By.XPATH, '//*[@id="topbar"]/div[2]/ul/li[1]/ul/li[3]/a')
         self.wd.execute_script("arguments[0].click();", btn2)
 
-    def do_homework(self, taskid, num=None, sleeptime=None):
+    def do_homework(self, taskid, num=10, sleeptime=None):
         # 做作业
         # num 完成题目数量
         window1 = self.wd.current_window_handle
@@ -235,41 +235,49 @@ class StudentUI:
         taskids = [i.text.strip() for i in taskids]
         time = None
 
+
         for i, td in enumerate(taskids):
             if td == taskid:
                 times = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[5]/span')
                 time = int(''.join([char for char in times[i].text if char.isdigit()]))
-                dos = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[7]/button')
+                # dos = self.wd.find_elements(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[7]/button')
+                dos = get_element_with_retry(self.wd, By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[2]/div/table/tbody/tr/td[7]/button', True)
                 dos[i].click()  # 点击做任务
-
-        sleep(0.2)
-        coms = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div')
-
-        for i in range(len(coms)):
-            if i == num and num is not None:
+                sleep(2)
                 break
+
+        # coms = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div')
+        coms = get_element_with_retry(self.wd, By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div', True)
+        n = len(coms)
+        sleep(1)
+        for i in range(n):
             n = random.randint(1, 4)
             # com_btns = self.wd.find_elements(By.XPATH, '//*[@id="exam_question_list_choice"]/div/div/div/div[2]/div/div')
             # com_btns[i].find_element(By.XPATH, f'/button[{n}]').click()
             btn = get_element_with_retry(self.wd, By.XPATH, f'//*[@id="exam_question_list_choice"]/div/div/div[{i+1}]/div[2]/div/div/button[{n}]')
+            INFO(f'btn: {btn}')
+            SELENIUM_LOG_SCREEN(self.wd, width='100%')
             btn.click()
+            sleep(1)
+            if i == num - 1:
+                break
+
         if sleeptime is not None:
             sleep(sleeptime*60)
 
         # 点击提交
         self.wd.find_element(By.XPATH, '//*[@id="page-wrapper"]/div/div/div/div[1]/div[3]/button').click()
-
+        sleep(1)
         mes1 = self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-message').text.strip()
         # CHECK_POINT('检查', mes1 == mes)
         # 点击 确定
         self.wd.find_element(By.CSS_SELECTOR, '.bootstrap-dialog-footer-buttons button:nth-child(2)').click()
+        sleep(1)
         # 获取当前时间
         current_time = datetime.datetime.now()
         # 格式化时间为 "YYYY-MM-DD HH:MM:SS"
         complete_time = current_time.strftime('%Y-%m-%d %H:%M:%S')
-
-        sleep(0.3)
-
+        sleep(1)
         # 执行 JavaScript 来点击页面的某个位置
         self.wd.execute_script("document.elementFromPoint(100, 100).click();")
         # 获取信息：正确率
@@ -287,13 +295,8 @@ class StudentUI:
             b = result1.group(0)
         if result2:
             e = result2.group(0)
-
         INFO(f'正确率:{acc*100}%\t规定完成时间:{time}分钟\t提交时间:{complete_time}\t正确题目个数:{b}\t错误题目个数:{e}')
-
         return acc, b, e, complete_time, time, mes1
-
-
-
 
 
 student_ui = StudentUI()

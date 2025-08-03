@@ -121,13 +121,13 @@ class TC_HOMEWORK_008:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, '创建作业')
-        teacher_ui.publish_homework(taskname='哈sd δΔsqt / ** ^%&$#@!~:"?>< ', mes='新建作业成功')
+        teacher_ui.publish_homework(taskname='哈sd δΔsqt / ** ^%&$#@!~:"?><', mes='新建作业成功')
 
     def teardown(self):
         # 删除创建的作业
         try:
             teacher_ui.opt_homework('已创建作业')
-            res = teacher_ui.del_homework_by_taskname('哈sd δΔsqt / ** ^%&$#@!~:"?>< ')
+            res = teacher_ui.del_homework_by_taskname('哈sd δΔsqt / ** ^%&$#@!~:"?><')
             print(f'是否删除作业{res}')
         finally:
             teacher_ui.wd.quit()
@@ -549,8 +549,11 @@ class TC_HOMEWORK_031:
         f = ['按章节', '填空题', '浙教版', '九年级', '下册', None, None]
         teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=2, filter=f)
 
+
     def teardown(self):
         # 删除创建的作业
+        teacher_ui.open_browser()
+        teacher_ui.login(username='zhangming')
         teacher_ui.opt_homework('已创建作业')
         res = teacher_ui.del_homework_by_taskname('哈'*50)
         print(f'是否删除作业{res}')
@@ -585,7 +588,7 @@ class TC_HOMEWORK_033:
         teacher_ui.login(username='zhangming')
         STEP(2, '创建作业')
         f = ['按章节', '填空题', '人教版', '七年级', '下册', None, None]
-        teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=2, filter=f)
+        teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=1, filter=f)
 
     def teardown(self):
         # 删除创建的作业
@@ -666,10 +669,15 @@ class TC_HOMEWORK_037:
         teacher_ui.login(username='zhangming')
         STEP(2, '创建作业')
         f = ['按章节', '填空题', '人教版', '九年级', '下册', None, None]
-        teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=2, filter=f)
+        try:
+            teacher_ui.publish_homework(taskname='哈'*50, mes='新建作业成功', num=1, filter=f)
+        finally:
+            teacher_ui.wd.quit()
 
     def teardown(self):
         # 删除创建的作业
+        teacher_ui.open_browser()
+        teacher_ui.login(username='zhangming')
         teacher_ui.opt_homework('已创建作业')
         res = teacher_ui.del_homework_by_taskname('哈'*50)
         print(f'是否删除作业{res}')
@@ -723,10 +731,15 @@ class TC_HOMEWORK_040:
         teacher_ui.login(username='zhangming')
         STEP(2, '创建作业')
         f = ['按知识点', '选择题', None, None, None, '较难', None]
-        teacher_ui.publish_homework(taskname='哈' * 50, mes='新建作业成功', num=2, filter=f)
+        try:
+            teacher_ui.publish_homework(taskname='哈' * 50, mes='新建作业成功', num=1, filter=f)
+        finally:
+            teacher_ui.wd.quit()
 
     def teardown(self):
         # 删除创建的作业
+        teacher_ui.open_browser()
+        teacher_ui.login(username='zhangming')
         teacher_ui.opt_homework('已创建作业')
         res = teacher_ui.del_homework_by_taskname('哈' * 50)
         print(f'是否删除作业{res}')

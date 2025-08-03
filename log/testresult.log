@@ -14,12 +14,8 @@
 == cases\空白环境\学生登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\老师登入登出.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\__st__.py 
 
@@ -27,17 +23,11 @@
 == cases\空白环境\一班级\学生登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\学生首页信息.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\老师登录登出.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一学生\__st__.py 
 
@@ -45,22 +35,14 @@
 == cases\空白环境\一班级\一班级一学生\学生登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一学生\学生首页信息.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一学生\老师登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一学生\老师首页信息.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一学生\一班级两学生\__st__.py 
 
@@ -68,12 +50,8 @@
 == cases\空白环境\一班级\一班级一学生\一班级两学生\学生登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一学生\一班级两学生\学生首页信息.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一学生\两班级两学生\__st__.py 
 
@@ -81,30 +59,20 @@
 == cases\空白环境\一班级\一班级一学生\两班级两学生\学生首页信息.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\__st__.py 
 
 
 == cases\空白环境\一班级\一班级一老师\老师修改题目.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\老师创建题目.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\老师查询.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\老师登入登出.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\__st__.py 
 
@@ -112,35 +80,24 @@
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\学生登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师首页信息.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\__st__.py 
 
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\__st__.py 
 
-
-** no setup/teardown/tags in this file , skip it.
+textbook: [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [0, 2, 0], [0, 2, 1], [0, 3, 0], [0, 3, 1], [0, 4, 0], [0, 4, 1], [0, 5, 0], [0, 5, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1], [1, 2, 0], [1, 2, 1], [1, 3, 0], [1, 3, 1], [1, 4, 0], [1, 4, 1], [1, 5, 0], [1, 5, 1]]
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\__st__.py 
 
@@ -148,17 +105,8 @@
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师发布作业.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师查询已创建作业.py 
 
-
-** no cases in this file , skip it.
-
-== cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\__st__.py 
-
-
-** no setup/teardown/tags in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py 
 
@@ -169,20 +117,14 @@
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\__st__.py 
 
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\老师登入登出.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\老师首页信息.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一题目\__st__.py 
 
@@ -190,12 +132,8 @@
 == cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师修改题目.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师删除题目.py 
 
-
-** no cases in this file , skip it.
 
 == cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\__st__.py 
 
@@ -203,21 +141,17 @@
 == cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\老师删除题目.py 
 
 
-** no cases in this file , skip it.
-
 == cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py 
 
-
-** no cases in this file , skip it.
 
 
 ===   [ 执行测试用例 ]  === 
 
-预备执行用例数量 : 20
+预备执行用例数量 : 200
 
 
 
-  ========= 测试开始 : 20250802_000626 =========
+  ========= 测试开始 : 20250803_173350 =========
 
 
 
@@ -231,7 +165,7 @@
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:33:50 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -241,7 +175,35 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "retlist": [],
+  "retlist": [
+    {
+      "classid": 20298,
+      "realname": "秦桑",
+      "username": "qinsang",
+      "phonenumber": "1894567233",
+      "id": 2248
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:33:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
   "retcode": 0
 }
 -------- HTTP response * end -------
@@ -254,7 +216,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:33:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -277,7 +239,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:33:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -288,12 +250,72 @@ Access-Control-Allow-Origin: *
 
 {
   "gradeid": null,
-  "retlist": [],
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202980490847",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20298,
+      "teacherlist": []
+    }
+  ],
   "retcode": 0
 }
 -------- HTTP response * end -------
 
 
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:33:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\学生登入登出.py
+
+* 学生登录1_TC_LOGINLOGOUT_201  -  2025-08-03 17:33:51
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+
+** 检查点 **  提示框消息 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\老师登入登出.py
+
+* 老师登录1_TC_LOGINLOGOUT_001  -  2025-08-03 17:34:00
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+
+** 检查点 **  提示框消息 ---->  通过
+
+  PASS 
 
 
 >>> cases\空白环境\一班级\
@@ -305,7 +327,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:34:08 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -315,9 +337,1349 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "invitecode": "203278054699",
+  "invitecode": "202996894830",
   "retcode": 0,
-  "id": 20327
+  "id": 20299
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\学生登入登出.py
+
+* 学生登录2_TC_LOGINLOGOUT_202  -  2025-08-03 17:34:07
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建学生 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2249
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建学生成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 检查 学校、姓名、已发布微课、已发布作业 的信息是否正确 
+
+picture imgs/20250803173413526750.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 4 步 -- 查看错题库 
+
+picture imgs/20250803173414994887.png
+
+** 检查点 **  检查错题库 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生登录2_TC_LOGINLOGOUT_202
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\学生首页信息.py
+
+* 学生首页信息1_TC_HOME_101  -  2025-08-03 17:34:19
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建学生 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2250
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建学生成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250803173426152457.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 查看顶部菜单 
+
+
+** 检查点 **  顶部菜单是否一致 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生首页信息1_TC_HOME_101
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\老师登录登出.py
+
+* 老师登录2_TC_LOGINLOGOUT_002  -  2025-08-03 17:34:29
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建老师 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 5263
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建老师成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250803173435531320.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 查看班级是否有学生 
+
+picture imgs/20250803173436492754.png
+
+** 检查点 **  学生列表是否为空 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录2_TC_LOGINLOGOUT_002
+删除老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:39 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\
+
+[ suite setup ] cases\空白环境\一班级\一班级一学生\
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:40 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 0,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:34:40 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2251
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\学生登入登出.py
+
+* 学生登录5_TC_LOGINLOGOUT_205  -  2025-08-03 17:34:39
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一学生\学生登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 学生登录6_TC_LOGINLOGOUT_206  -  2025-08-03 17:34:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一学生\学生登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 学生登录7_TC_LOGINLOGOUT_207  -  2025-08-03 17:34:52
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一学生\学生登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 学生登录8_TC_LOGINLOGOUT_208  -  2025-08-03 17:34:58
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+* 学生登录9_TC_LOGINLOGOUT_209  -  2025-08-03 17:35:03
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+* 学生登录10_TC_LOGINLOGOUT_210  -  2025-08-03 17:35:09
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+* 学生登录4_TC_LOGINLOGOUT_204  -  2025-08-03 17:35:19
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 访问web系统，点击忘记密码 
+
+打开浏览器
+mes:
+
+** 检查点 **  获取验证码状态 ---->  通过
+
+  PASS 
+
+* 学生登录11_TC_LOGINLOGOUT_211  -  2025-08-03 17:35:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改密码 
+
+
+** 检查点 **  获取验证码状态 ---->  通过
+
+
+-- 第 3 步 -- 重新登录 
+
+学生姓名：秦桑
+
+** 检查点 **  是否重新登录，查看用户姓名 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生登录11_TC_LOGINLOGOUT_211
+打开浏览器
+
+* 学生登录12_TC_LOGINLOGOUT_212  -  2025-08-03 17:35:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 打开浏览器，进入学生系统登录页 
+
+打开浏览器
+
+-- 第 2 步 -- 使用学生账号登录系统 
+
+学生姓名：秦桑
+
+** 检查点 **  是否成功登录，查看用户姓名 ---->  通过
+
+
+-- 第 3 步 -- 不退出登录，直接在地址栏输入登录页地址 
+
+
+-- 第 4 步 -- 验证是否被跳转回首页 
+
+学生姓名：None
+
+** 检查点 **  是否成功登录，查看用户姓名 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一学生\学生登入登出.py", line 112, in teststeps
+    CHECK_POINT('是否成功登录，查看用户姓名', sname == '秦桑')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 学生登出1_TC_LOGINLOGOUT_301  -  2025-08-03 17:36:23
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 退出 
+
+
+-- 第 3 步 -- 再次登录 
+
+学生姓名：秦桑
+
+** 检查点 **  检查是否登录成功，获取学生姓名 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一学生\学生首页信息.py
+
+* 学生首页信息3_TC_HOME_103  -  2025-08-03 17:36:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+* 学生首页信息4_TC_HOME_104  -  2025-08-03 17:36:39
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改姓名 
+
+
+** 检查点 **  用户修改信息是否成功 ---->  通过
+
+
+-- 第 3 步 -- 查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+
+-- 第 4 步 -- 重新登录检查姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生首页信息4_TC_HOME_104
+打开浏览器
+
+* 学生首页信息5_TC_HOME_105  -  2025-08-03 17:37:16
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改密码 
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+-- 第 3 步 -- 重新登录，查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+
+-- 第 4 步 -- 重新登录检查姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生首页信息5_TC_HOME_105
+打开浏览器
+
+* 学生首页信息6_TC_HOME_106  -  2025-08-03 17:37:37
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改姓名和密码 
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+-- 第 3 步 -- 重新登录，查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生首页信息6_TC_HOME_106
+打开浏览器
+
+* 学生首页信息7_TC_HOME_107  -  2025-08-03 17:37:59
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改头像 
+
+
+** 检查点 **  用户修改头像是否成功 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一学生\学生首页信息.py", line 132, in teststeps
+    CHECK_POINT('用户修改头像是否成功', mes1 == '用户信息修改成功')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 学生首页信息7_TC_HOME_107
+打开浏览器
+
+* 学生首页信息8_TC_HOME_108  -  2025-08-03 17:38:14
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 提交空的意见 
+
+mes: 请选择分类
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+  PASS 
+
+* 学生首页信息9_TC_HOME_109  -  2025-08-03 17:38:21
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：操作不方便 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+  PASS 
+
+* 学生首页信息10_TC_HOME_110  -  2025-08-03 17:38:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：系统错误 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+  PASS 
+
+* 学生首页信息11_TC_HOME_111  -  2025-08-03 17:39:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：不能登录，提交意见 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+
+-- 第 3 步 -- 检查意见提交后是否清空 
+
+
+** 检查点 **  检查意见是否清除 ---->  通过
+
+
+** 检查点 **  检查意见是否清除 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一学生\老师登入登出.py
+
+* 老师登录3_TC_LOGINLOGOUT_003  -  2025-08-03 17:39:09
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建老师 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:09 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:09 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 5264
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建老师成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250803173919777948.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 查看班级是否有学生 
+
+picture imgs/20250803173920747471.png
+列出学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retlist": [
+    {
+      "classid": 20299,
+      "realname": "秦桑",
+      "username": "qinsang",
+      "phonenumber": "1894567233",
+      "id": 2251
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  学生个数是否和系统一致 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录3_TC_LOGINLOGOUT_003
+删除老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\老师首页信息.py
+
+* 老师首页信息1_TC_HOME_001  -  2025-08-03 17:39:23
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建老师 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 5265
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建老师成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+检查 学校、姓名、学科、金币、已发布微课、已发布作业 的信息是否正确
+picture imgs/20250803173929464143.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 查看顶部菜单 
+
+
+** 检查点 **  顶部菜单是否一致 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师首页信息1_TC_HOME_001
+删除老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:39:32 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\一班级两学生\
+
+[ suite setup ] cases\空白环境\一班级\一班级一学生\一班级两学生\
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:40:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:40:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2252
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\一班级两学生\学生登入登出.py
+
+* 学生登出2_TC_LOGINLOGOUT_302  -  2025-08-03 17:40:20
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生A登录web系统并退出 
+
+打开浏览器
+mes：学生登录
+
+** 检查点 **  检查是否登出成功，登录页面 ---->  通过
+
+
+-- 第 2 步 -- 学生B登录web系统并退出 
+
+mes：学生登录
+
+** 检查点 **  检查是否登出成功，登录页面 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一学生\一班级两学生\学生首页信息.py
+
+* 学生首页信息2_TC_HOME_102  -  2025-08-03 17:40:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用学生A账号登录，查看首页信息 
+
+打开浏览器
+
+** 检查点 **  检查首页信息 ---->  通过
+
+
+-- 第 2 步 -- 使用学生B账号登录，查看首页信息 
+
+打开浏览器
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+[ suite teardown ] cases\空白环境\一班级\一班级一学生\一班级两学生\
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:40:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\两班级两学生\
+
+[ suite setup ] cases\空白环境\一班级\一班级一学生\两班级两学生\
+添加班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:40:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "invitecode": "203004660304",
+  "retcode": 0,
+  "id": 20300
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:40:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2253
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一学生\两班级两学生\学生首页信息.py
+
+* 学生首页信息12_TC_HOME_112  -  2025-08-03 17:40:49
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 更改为不存在的班级 
+
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+* 学生首页信息13_TC_HOME_113  -  2025-08-03 17:40:57
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 更改为存在的班级 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:41:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": []
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 1,
+      "id": 20300,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+[ suite teardown ] cases\空白环境\一班级\一班级一学生\两班级两学生\
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:41:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:41:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "reason": "id 为`20300`的学生不存在",
+  "retcode": 404
+}
+-------- HTTP response * end -------
+
+
+
+[ suite teardown ] cases\空白环境\一班级\一班级一学生\
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:41:09 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
 }
 -------- HTTP response * end -------
 
@@ -333,7 +1695,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:41:09 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -348,10 +1710,19 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验二班",
       "grade__name": "八年级",
-      "invitecode": "203278054699",
+      "invitecode": "202996894830",
       "studentlimit": 50,
       "studentnumber": 0,
-      "id": 20327,
+      "id": 20299,
+      "teacherlist": []
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20300,
       "teacherlist": []
     }
   ],
@@ -366,7 +1737,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:41:09 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -377,11 +1748,477 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 5294
+  "id": 5266
 }
 -------- HTTP response * end -------
 
 
+
+
+>>> cases\空白环境\一班级\一班级一老师\老师修改题目.py
+
+* 修改题目1_TC_QUESTION_101  -  2025-08-03 17:41:08
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 编辑题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改题目1_TC_QUESTION_101
+删除题目是否成功：True
+
+
+>>> cases\空白环境\一班级\一班级一老师\老师创建题目.py
+
+* 创建题目1_TC_QUESTION_001  -  2025-08-03 17:41:40
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目1_TC_QUESTION_001
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目2_TC_QUESTION_002  -  2025-08-03 17:42:14
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 1, 1], [1, 0, 1]]
+textbook:[[0, 1, 1], [1, 0, 1]]
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目2_TC_QUESTION_002
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目3_TC_QUESTION_003  -  2025-08-03 17:42:52
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 1, 1], [1, 0, 1]]
+textbook:[[0, 1, 1], [1, 0, 1]]
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目4_TC_QUESTION_004  -  2025-08-03 17:43:48
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目5_TC_QUESTION_005  -  2025-08-03 17:44:29
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 100, in teststeps
+    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建题目6_TC_QUESTION_006  -  2025-08-03 17:45:01
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 114, in teststeps
+    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 创建题目6_TC_QUESTION_006
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目7_TC_QUESTION_007  -  2025-08-03 17:45:34
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目8_TC_QUESTION_008  -  2025-08-03 17:46:07
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师创建题目.py", line 151, in teststeps
+    CHECK_POINT('提示消息', res == '题目内容过长')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建题目11_TC_QUESTION_011  -  2025-08-03 17:46:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目12_TC_QUESTION_012  -  2025-08-03 17:46:54
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目13_TC_QUESTION_013  -  2025-08-03 17:47:31
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  检查是否成功删除 ---->  通过
+
+  PASS 
+
+* 创建题目14_TC_QUESTION_014  -  2025-08-03 17:47:47
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['填空题', '简单', '哈哈', ['1', '2', '3'], [<selenium.webdriver.remote.webelement.WebElement (session="a35fc909c4b85b199d8afb15fd805d75", element="f.BD6756A5CDF418BB8BF955013B5299FD.d.7DF92806AD1EA938708E2CA3FF3D2EA8.e.241")>], [['七年级', '', '']]]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目14_TC_QUESTION_014
+打开浏览器
+删除题目是否成功：False
+
+* 创建题目20_TC_QUESTION_020  -  2025-08-03 17:51:00
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 0, 0], [1, 1, 0]]
+textbook:[[0, 0, 0], [1, 1, 0]]
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['填空题', '中等', '哈哈', ['1', '2', '3', '987gs^&'], [<selenium.webdriver.remote.webelement.WebElement (session="537b44365a7b1a0b7eb8ecb18140b3bb", element="f.558CF3B3E68714546B729DB3659E8D3F.d.4F912008912E51365123278B920E8D3C.e.373")>], [['七年级', '上册', ''], ['八年级', '上册', '']]]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目20_TC_QUESTION_020
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目21_TC_QUESTION_021  -  2025-08-03 17:51:48
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['选择题', '简单', '哈哈δΔ让we are one. 然后，还有什么呢?', ['A', 'C', 'D'], [<selenium.webdriver.remote.webelement.WebElement (session="1113b7cb7cc79e357cb7755f3fe15ca2", element="f.2D080BEAC1D790F84CE5B96AE346576C.d.F705D3C3F8B0BF9474C717B4B768D898.e.218")>], []]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目21_TC_QUESTION_021
+删除题目是否成功：False
+
+* 创建题目22_TC_QUESTION_022  -  2025-08-03 17:52:34
+
+[ case setup ] 创建题目22_TC_QUESTION_022
+打开浏览器
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 查询 
+
+num:5
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目22_TC_QUESTION_022
+
+* 创建题目23_TC_QUESTION_023  -  2025-08-03 17:53:58
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录并创建题目 
+
+打开浏览器
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['选择题', '中等', '@#￥%……函数f(x) = 2x^2 - 3x + 1在x=2时的值。答案：将x=2代入函数f(x) = 2x^2 - 3x + 1，得到f(2) = 2(2)^2 - 3(2) + 1 = 8 - 6 + 1 = 3。2. 题目：解方程3x - 5 = 2', ['C'], [<selenium.webdriver.remote.webelement.WebElement (session="f61dec181698fc49c54955df71dc33a4", element="f.91F3F6CA8ACE81A4DA3B13069BB16C7A.d.5F0AF76708A4CEB6C7BD28358BDCB916.e.219")>], []]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目23_TC_QUESTION_023
+
+
+>>> cases\空白环境\一班级\一班级一老师\老师查询.py
+
+* 查询已创建作业4_TC_HOMEWORK_454  -  2025-08-03 17:55:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 查询已创建作业 
+
+
+** 检查点 **  核实已创建作业数量 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一老师\老师登入登出.py
+
+* 老师登录5_TC_LOGINLOGOUT_005  -  2025-08-03 17:55:20
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师登录6_TC_LOGINLOGOUT_006  -  2025-08-03 17:55:26
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师登录7_TC_LOGINLOGOUT_007  -  2025-08-03 17:55:51
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\老师登入登出.py", line 49, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师登录8_TC_LOGINLOGOUT_008  -  2025-08-03 17:55:56
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+* 老师登录9_TC_LOGINLOGOUT_009  -  2025-08-03 17:56:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+* 老师登录10_TC_LOGINLOGOUT_010  -  2025-08-03 17:56:08
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录 
+
+打开浏览器
+mes:登录失败 : 用户或者密码错误
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
 
 
 >>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\
@@ -393,7 +2230,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:56:14 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -408,18 +2245,27 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验二班",
       "grade__name": "八年级",
-      "invitecode": "203278054699",
+      "invitecode": "202996894830",
       "studentlimit": 50,
       "studentnumber": 0,
-      "id": 20327,
+      "id": 20299,
       "teacherlist": [
         {
           "teacher__realname": "张明",
           "subject_id": 1,
           "subject__name": "初中数学",
-          "teacher__user_id": 8194
+          "teacher__user_id": 7978
         }
       ]
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20300,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -433,7 +2279,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 09:56:22 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -444,11 +2290,799 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2442
+  "id": 2254
 }
 -------- HTTP response * end -------
 
 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\学生登入登出.py
+
+* 学生登录3_TC_LOGINLOGOUT_203  -  2025-08-03 17:56:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建学生 
+
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:56:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 7978
+        }
+      ]
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20300,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:56:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 2255
+}
+-------- HTTP response * end -------
+
+
+
+** 检查点 **  是否创建学生成功 ---->  通过
+
+
+-- 第 2 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 检查 学校、姓名、已发布微课、已发布作业 的信息是否正确 
+
+picture imgs/20250803175626546260.png
+
+** 检查点 **  检查信息是否正确 ---->  通过
+
+
+-- 第 4 步 -- 查看错题库 
+
+picture imgs/20250803175626806049.png
+
+** 检查点 **  检查错题库 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生登录3_TC_LOGINLOGOUT_203
+删除学生
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 09:56:30 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+* 学生登录13_TC_LOGINLOGOUT_213  -  2025-08-03 17:56:29
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用老师账号登录老师web系统 
+
+打开浏览器
+mes:登录失败 : 请使用学生账户登录
+
+** 检查点 **  提示框消息是否正确 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py
+
+* 创建题目24_TC_QUESTION_024  -  2025-08-03 17:56:35
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目24_TC_QUESTION_024
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目25_TC_QUESTION_025  -  2025-08-03 17:57:10
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 1, 1], [1, 0, 1]]
+textbook:[[0, 1, 1], [1, 0, 1]]
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目25_TC_QUESTION_025
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目26_TC_QUESTION_026  -  2025-08-03 17:57:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 1, 1], [1, 0, 1]]
+textbook:[[0, 1, 1], [1, 0, 1]]
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目27_TC_QUESTION_027  -  2025-08-03 17:58:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目28_TC_QUESTION_028  -  2025-08-03 17:59:07
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py", line 93, in teststeps
+    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建题目29_TC_QUESTION_029  -  2025-08-03 17:59:35
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py", line 108, in teststeps
+    CHECK_POINT('提示消息', res == '选择题最多提供10个选项')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 创建题目29_TC_QUESTION_029
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目30_TC_QUESTION_030  -  2025-08-03 18:00:08
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py", line 130, in teststeps
+    CHECK_POINT('提示消息', res == '题目答案不能为空')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建题目31_TC_QUESTION_031  -  2025-08-03 18:00:39
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师创建题目.py", line 145, in teststeps
+    CHECK_POINT('提示消息', res == '题目内容过长')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建题目32_TC_QUESTION_032  -  2025-08-03 18:01:36
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目33_TC_QUESTION_033  -  2025-08-03 18:01:49
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+* 创建题目34_TC_QUESTION_034  -  2025-08-03 18:02:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  检查是否成功删除 ---->  通过
+
+  PASS 
+
+* 创建题目35_TC_QUESTION_035  -  2025-08-03 18:02:16
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['填空题', '简单', '哈哈', ['1', '2', '3'], [<selenium.webdriver.remote.webelement.WebElement (session="910c6dcdd9762a07197bda0af935a8f3", element="f.0A92F72700622CB87E44AE507B97939C.d.53865529E14FCCA3D7C11D919E9C6F75.e.244")>], [['七年级', '', '']]]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目35_TC_QUESTION_035
+打开浏览器
+删除题目是否成功：False
+
+* 创建题目36_TC_QUESTION_036  -  2025-08-03 18:05:29
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+textbook:[[0, 0, 0], [1, 1, 0]]
+textbook:[[0, 0, 0], [1, 1, 0]]
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['填空题', '中等', '哈哈', ['1', '2', '3', '987gs^&'], [<selenium.webdriver.remote.webelement.WebElement (session="d90b80bfbf5ff0d20febc5ef63a501f1", element="f.B6FC087BCF7939E689F9FCE3EB475A1F.d.1417BBA940348D7C02ACBEDDFFA85E9D.e.378")>], [['七年级', '上册', ''], ['八年级', '上册', '']]]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目36_TC_QUESTION_036
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目37_TC_QUESTION_037  -  2025-08-03 18:07:05
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['选择题', '简单', '哈哈δΔ让we are one. 然后，还有什么呢?', ['A', 'C', 'D'], [<selenium.webdriver.remote.webelement.WebElement (session="a78e41b33bade957488209721cc94ebf", element="f.3A0728A5032051A49A7E19348BEB8FD3.d.EDE8466BF6AB353D80C8D4D519937CF4.e.223")>], []]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目37_TC_QUESTION_037
+打开浏览器
+删除题目是否成功：True
+
+* 创建题目38_TC_QUESTION_038  -  2025-08-03 18:07:56
+
+[ case setup ] 创建题目38_TC_QUESTION_038
+打开浏览器
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 查询 
+
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目38_TC_QUESTION_038
+
+* 创建题目39_TC_QUESTION_039  -  2025-08-03 18:09:20
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录并创建题目 
+
+打开浏览器
+
+-- 第 3 步 -- 检查创建后信息 
+
+e:['选择题', '中等', '@#￥%……函数f(x) = 2x^2 - 3x + 1在x=2时的值。答案：将x=2代入函数f(x) = 2x^2 - 3x + 1，得到f(2) = 2(2)^2 - 3(2) + 1 = 8 - 6 + 1 = 3。2. 题目：解方程3x - 5 = 2', ['C'], [<selenium.webdriver.remote.webelement.WebElement (session="65707efcdd0551b9da794de351239a97", element="f.28E1C30BBABBE904F9BA2351AF33A26F.d.3EC426C7C9E8A156DB91FDB4BF77B4FC.e.221")>], []]
+
+** 检查点 **  检查信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建题目39_TC_QUESTION_039
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师登入登出.py
+
+* 老师登录4_TC_LOGINLOGOUT_004  -  2025-08-03 18:10:53
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+mes:
+
+** 检查点 **  获取验证码状态 ---->  通过
+
+  PASS 
+
+* 老师登录11_TC_LOGINLOGOUT_011  -  2025-08-03 18:10:57
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改密码 
+
+
+** 检查点 **  弹框提示信息是否正确 ---->  通过
+
+
+-- 第 3 步 -- 重新登录 
+
+老师姓名：张明
+
+** 检查点 **  检查是否登录成功，获取老师姓名 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录11_TC_LOGINLOGOUT_011
+打开浏览器
+
+* 老师登录12_TC_LOGINLOGOUT_012  -  2025-08-03 18:11:12
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 1 步 -- 重新登录web系统 
+
+获取用户名失败，异常信息：Message: no such element: Unable to locate element: {"method":"css selector","selector":"li.dropdown .ng-binding"}
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff622a20406]
+	(No symbol) [0x0x7ff622a206bc]
+	(No symbol) [0x0x7ff622a73ac7]
+	(No symbol) [0x0x7ff622a4864f]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+
+** 检查点 **  检查再次登录是否可以直接跳转主页 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师登入登出.py", line 66, in teststeps
+    CHECK_POINT('检查再次登录是否可以直接跳转主页', tname == '张明')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师登录13_TC_LOGINLOGOUT_013  -  2025-08-03 18:11:37
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用学生账号登录老师web系统 
+
+打开浏览器
+mes:登录失败 : 请使用老师账户登录
+
+** 检查点 **  提示框消息是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师登入登出.py", line 81, in teststeps
+    CHECK_POINT('提示框消息是否正确', mes == '登录失败 : 用户或者密码错误')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师登出1_TC_LOGINLOGOUT_101  -  2025-08-03 18:11:43
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 退出 
+
+
+-- 第 3 步 -- 再次登录 
+
+老师姓名：张明
+
+** 检查点 **  检查是否登录成功，获取老师姓名 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师首页信息.py
+
+* 老师首页信息3_TC_HOME_003  -  2025-08-03 18:11:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+* 老师首页信息4_TC_HOME_004  -  2025-08-03 18:11:57
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 1 步 -- 修改姓名 
+
+
+** 检查点 **  用户修改信息是否成功 ---->  通过
+
+
+-- 第 2 步 -- 查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+
+-- 第 2 步 -- 重新登录检查姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师首页信息4_TC_HOME_004
+打开浏览器
+
+* 老师首页信息5_TC_HOME_005  -  2025-08-03 18:12:17
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改密码 
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+-- 第 3 步 -- 重新登录，查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+
+-- 第 4 步 -- 重新登录检查姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师首页信息5_TC_HOME_005
+打开浏览器
+
+* 老师首页信息6_TC_HOME_006  -  2025-08-03 18:12:51
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改姓名和密码 
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+** 检查点 **  用户修改密码是否成功 ---->  通过
+
+
+-- 第 3 步 -- 重新登录，查看首页姓名 
+
+
+** 检查点 **  检查修改后的姓名是否正确 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师首页信息6_TC_HOME_006
+打开浏览器
+
+* 老师首页信息7_TC_HOME_007  -  2025-08-03 18:13:12
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改头像 
+
+
+** 检查点 **  用户修改头像是否成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师首页信息7_TC_HOME_007
+打开浏览器
+
+* 老师首页信息8_TC_HOME_008  -  2025-08-03 18:13:27
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 提交空的意见 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\老师首页信息.py", line 157, in teststeps
+    CHECK_POINT('提交意见反馈提示文本是否正确', mes1 == '请选择分类')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师首页信息9_TC_HOME_009  -  2025-08-03 18:13:35
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：操作不方便 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+  PASS 
+
+* 老师首页信息10_TC_HOME_010  -  2025-08-03 18:13:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：系统错误 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+  PASS 
+
+* 老师首页信息11_TC_HOME_011  -  2025-08-03 18:13:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 选择意见种类：不能登录，提交意见 
+
+
+** 检查点 **  提交意见反馈提示文本是否正确 ---->  通过
+
+
+-- 第 3 步 -- 检查意见提交后是否清空 
+
+
+** 检查点 **  检查意见是否清除 ---->  通过
+
+
+** 检查点 **  检查意见是否清除 ---->  通过
+
+  PASS 
 
 
 >>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\
@@ -460,7 +3094,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 10:14:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -475,18 +3109,27 @@ Access-Control-Allow-Origin: *
     {
       "name": "实验二班",
       "grade__name": "八年级",
-      "invitecode": "203278054699",
+      "invitecode": "202996894830",
       "studentlimit": 50,
       "studentnumber": 1,
-      "id": 20327,
+      "id": 20299,
       "teacherlist": [
         {
           "teacher__realname": "张明",
           "subject_id": 1,
           "subject__name": "初中数学",
-          "teacher__user_id": 8194
+          "teacher__user_id": 7978
         }
       ]
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20300,
+      "teacherlist": []
     }
   ],
   "retcode": 0
@@ -500,7 +3143,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:27 GMT
+Date: Sun, 03 Aug 2025 10:14:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -511,7 +3154,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2443
+  "id": 2256
 }
 -------- HTTP response * end -------
 
@@ -522,7 +3165,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:28 GMT
+Date: Sun, 03 Aug 2025 10:14:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -533,7 +3176,7 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2444
+  "id": 2257
 }
 -------- HTTP response * end -------
 
@@ -544,7 +3187,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:06:28 GMT
+Date: Sun, 03 Aug 2025 10:14:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -555,11 +3198,1232 @@ Access-Control-Allow-Origin: *
 
 {
   "retcode": 0,
-  "id": 2445
+  "id": 2258
 }
 -------- HTTP response * end -------
 
 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\
+打开浏览器
+p: [0, '哈哈0', [5, [0, 2, 3]]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈1', [5, [0, 2, 3]]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈2', [5, [0, 2, 3]]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈3', [5, [0, 2, 3]]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈4', [5, [0, 2, 3]]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈5', [5, [0, 2, 3]]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈6', [5, [0, 2, 3]]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈7', [5, [0, 2, 3]]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈8', [5, [0, 2, 3]]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈9', [5, [0, 2, 3]]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈10', [5, [0, 2, 3]]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈11', [5, [0, 2, 3]]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈12', [5, [0, 2, 3]]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈13', [5, [0, 2, 3]]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈14', [5, [0, 2, 3]]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈15', [5, [0, 2, 3]]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈16', [5, [0, 2, 3]]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈17', [5, [0, 2, 3]]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈18', [5, [0, 2, 3]]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈19', [5, [0, 2, 3]]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈20', [5, [0, 2, 3]]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈21', [5, [0, 2, 3]]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈22', [5, [0, 2, 3]]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈23', [5, [0, 2, 3]]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈24', [5, [0, 2, 3]]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈25', [5, [0, 2, 3]]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈26', [5, [0, 2, 3]]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈27', [5, [0, 2, 3]]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈28', [5, [0, 2, 3]]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈29', [5, [0, 2, 3]]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈30', [5, [0, 2, 3]]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈31', [5, [0, 2, 3]]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈32', [5, [0, 2, 3]]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈33', [5, [0, 2, 3]]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈34', [5, [0, 2, 3]]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈35', [5, [0, 2, 3]]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈36', [5, [0, 2, 3]]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈37', [5, [0, 2, 3]]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈38', [5, [0, 2, 3]]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈39', [5, [0, 2, 3]]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈40', [5, [0, 2, 3]]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈41', [5, [0, 2, 3]]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈42', [5, [0, 2, 3]]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈43', [5, [0, 2, 3]]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈44', [5, [0, 2, 3]]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈45', [5, [0, 2, 3]]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈46', [5, [0, 2, 3]]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈47', [5, [0, 2, 3]]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈48', [5, [0, 2, 3]]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈49', [5, [0, 2, 3]]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈50', [5, [0, 2, 3]]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈51', [5, [0, 2, 3]]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈52', [5, [0, 2, 3]]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈53', [5, [0, 2, 3]]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈54', [5, [0, 2, 3]]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈55', [5, [0, 2, 3]]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈56', [5, [0, 2, 3]]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈57', [5, [0, 2, 3]]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈58', [5, [0, 2, 3]]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈59', [5, [0, 2, 3]]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈60', [5, [0, 2, 3]]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈61', [5, [0, 2, 3]]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈62', [5, [0, 2, 3]]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈63', [5, [0, 2, 3]]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈64', [5, [0, 2, 3]]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈65', [5, [0, 2, 3]]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈66', [5, [0, 2, 3]]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈67', [5, [0, 2, 3]]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈68', [5, [0, 2, 3]]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈69', [5, [0, 2, 3]]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈70', [5, [0, 2, 3]]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [0, '哈哈71', [5, [0, 2, 3]]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈72', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈73', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈74', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈75', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈76', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈77', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈78', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈79', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈80', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈81', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈82', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈83', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈84', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈85', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈86', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈87', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈88', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈89', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈90', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈91', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈92', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈93', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈94', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈95', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈96', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈97', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈98', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈99', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈100', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈101', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈102', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈103', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈104', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈105', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈106', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈107', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈108', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈109', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈110', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈111', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈112', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈113', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈114', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈115', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈116', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈117', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈118', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈119', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈120', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈121', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈122', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈123', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈124', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈125', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈126', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈127', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈128', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈129', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈130', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈131', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[0, 5, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈132', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈133', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 0, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈134', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈135', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 1, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈136', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈137', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 2, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈138', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈139', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 3, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈140', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈141', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 4, 1]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈142', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 0]]
+创建题目是否成功：添加题目成功
+p: [1, '哈哈143', [5, ['1', '2', '3', '4', '5']]]
+textbook:[[1, 5, 1]]
+创建题目是否成功：添加题目成功
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py
+
+* 创建作业1_TC_HOMEWORK_001  -  2025-08-03 18:32:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  弹窗消息是否正确 ---->  通过
+
+  PASS 
+
+* 创建作业2_TC_HOMEWORK_002  -  2025-08-03 18:32:36
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  弹窗消息是否正确 ---->  通过
+
+  PASS 
+
+* 创建作业3_TC_HOMEWORK_003  -  2025-08-03 18:32:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py", line 38, in teststeps
+    teacher_ui.publish_homework(taskname='z', mes='作业名称长度应为2~100个字符')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 467, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 创建作业3_TC_HOMEWORK_003
+
+* 创建作业4_TC_HOMEWORK_004  -  2025-08-03 18:33:15
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业4_TC_HOMEWORK_004
+
+* 创建作业5_TC_HOMEWORK_005  -  2025-08-03 18:33:52
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业5_TC_HOMEWORK_005
+
+* 创建作业6_TC_HOMEWORK_006  -  2025-08-03 18:34:21
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业6_TC_HOMEWORK_006
+
+* 创建作业7_TC_HOMEWORK_007  -  2025-08-03 18:34:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\老师创建作业.py", line 111, in teststeps
+    teacher_ui.publish_homework(taskname='哈'*101, mes='新建作作业名称长度应为2~100个字符')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 467, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 创建作业8_TC_HOMEWORK_008  -  2025-08-03 18:35:05
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业8_TC_HOMEWORK_008
+
+* 创建作业9_TC_HOMEWORK_009  -  2025-08-03 18:35:24
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+* 创建作业10_TC_HOMEWORK_010  -  2025-08-03 18:35:39
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+-- 第 3 步 -- 查看已发布作业 
+
+
+** 检查点 **  检验已发布作业是否不存在 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业10_TC_HOMEWORK_010
+
+* 创建作业11_TC_HOMEWORK_011  -  2025-08-03 18:36:11
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+  PASS 
+
+* 创建作业12_TC_HOMEWORK_012  -  2025-08-03 18:36:54
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业12_TC_HOMEWORK_012
+
+* 创建作业13_TC_HOMEWORK_013  -  2025-08-03 18:37:13
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业13_TC_HOMEWORK_013
+
+* 创建作业14_TC_HOMEWORK_014  -  2025-08-03 18:37:40
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业14_TC_HOMEWORK_014
+
+* 创建作业15_TC_HOMEWORK_015  -  2025-08-03 18:38:04
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业15_TC_HOMEWORK_015
+
+* 创建作业16_TC_HOMEWORK_016  -  2025-08-03 18:38:28
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业16_TC_HOMEWORK_016
+
+* 创建作业17_TC_HOMEWORK_017  -  2025-08-03 18:38:53
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业17_TC_HOMEWORK_017
+
+* 创建作业18_TC_HOMEWORK_018  -  2025-08-03 18:39:17
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业18_TC_HOMEWORK_018
+
+* 创建作业19_TC_HOMEWORK_019  -  2025-08-03 18:40:05
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业19_TC_HOMEWORK_019
+
+* 创建作业20_TC_HOMEWORK_020  -  2025-08-03 18:40:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业20_TC_HOMEWORK_020
+
+* 创建作业21_TC_HOMEWORK_021  -  2025-08-03 18:40:54
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业21_TC_HOMEWORK_021
+
+* 创建作业22_TC_HOMEWORK_022  -  2025-08-03 18:41:18
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业22_TC_HOMEWORK_022
+
+* 创建作业23_TC_HOMEWORK_023  -  2025-08-03 18:41:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业23_TC_HOMEWORK_023
+
+* 创建作业24_TC_HOMEWORK_024  -  2025-08-03 18:42:06
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业24_TC_HOMEWORK_024
+
+* 创建作业25_TC_HOMEWORK_025  -  2025-08-03 18:42:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业25_TC_HOMEWORK_025
+
+* 创建作业26_TC_HOMEWORK_026  -  2025-08-03 18:43:18
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业26_TC_HOMEWORK_026
+
+* 创建作业27_TC_HOMEWORK_027  -  2025-08-03 18:43:42
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业27_TC_HOMEWORK_027
+
+* 创建作业28_TC_HOMEWORK_028  -  2025-08-03 18:44:06
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业28_TC_HOMEWORK_028
+
+* 创建作业29_TC_HOMEWORK_029  -  2025-08-03 18:44:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业29_TC_HOMEWORK_029
+
+* 创建作业30_TC_HOMEWORK_030  -  2025-08-03 18:44:54
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业30_TC_HOMEWORK_030
+
+* 创建作业31_TC_HOMEWORK_031  -  2025-08-03 18:45:18
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业31_TC_HOMEWORK_031
+打开浏览器
+
+* 创建作业32_TC_HOMEWORK_032  -  2025-08-03 18:45:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业32_TC_HOMEWORK_032
+
+* 创建作业33_TC_HOMEWORK_033  -  2025-08-03 18:46:31
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业33_TC_HOMEWORK_033
+
+* 创建作业34_TC_HOMEWORK_034  -  2025-08-03 18:46:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业34_TC_HOMEWORK_034
+
+* 创建作业35_TC_HOMEWORK_035  -  2025-08-03 18:47:19
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业35_TC_HOMEWORK_035
+打开浏览器
+
+* 创建作业36_TC_HOMEWORK_036  -  2025-08-03 18:47:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业36_TC_HOMEWORK_036
+
+* 创建作业37_TC_HOMEWORK_037  -  2025-08-03 18:48:15
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业37_TC_HOMEWORK_037
+打开浏览器
+
+* 创建作业38_TC_HOMEWORK_038  -  2025-08-03 18:48:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业38_TC_HOMEWORK_038
+
+* 创建作业39_TC_HOMEWORK_039  -  2025-08-03 18:49:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业39_TC_HOMEWORK_039
+
+* 创建作业40_TC_HOMEWORK_040  -  2025-08-03 18:49:54
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业40_TC_HOMEWORK_040
+打开浏览器
+
+* 创建作业41_TC_HOMEWORK_041  -  2025-08-03 18:50:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业41_TC_HOMEWORK_041
+
+* 创建作业42_TC_HOMEWORK_042  -  2025-08-03 18:50:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业42_TC_HOMEWORK_042
+
+* 创建作业43_TC_HOMEWORK_043  -  2025-08-03 18:51:07
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业43_TC_HOMEWORK_043
+
+* 创建作业44_TC_HOMEWORK_044  -  2025-08-03 18:51:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业44_TC_HOMEWORK_044
+
+* 创建作业45_TC_HOMEWORK_045  -  2025-08-03 18:51:50
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 创建作业45_TC_HOMEWORK_045
 
 
 >>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\
@@ -579,6 +4443,329 @@ Access-Control-Allow-Origin: *
 ** 检查点 **  是否新建作业成功 ---->  通过
 
 
+** 检查点 **  是否新建作业成功 ---->  通过
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师发布作业.py
+
+* 发布作业1_TC_HOMEWORK_101  -  2025-08-03 18:53:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业1_TC_HOMEWORK_101
+
+* 发布作业2_TC_HOMEWORK_102  -  2025-08-03 18:54:07
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查: ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业2_TC_HOMEWORK_102
+打开浏览器
+
+* 发布作业3_TC_HOMEWORK_103  -  2025-08-03 18:55:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师发布作业.py", line 50, in teststeps
+    teacher_ui.publish_process(taskname='哈'*10, taskdec='作业'+'哈'*8, mes1='', time=0, num=1)
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 533, in publish_process
+    CHECK_POINT('检查弹窗信息', mes1 == mes[:8])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 发布作业3_TC_HOMEWORK_103
+
+* 发布作业4_TC_HOMEWORK_104  -  2025-08-03 18:55:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查: ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业4_TC_HOMEWORK_104
+case teardown fail | 'NoneType' object has no attribute 'click' 
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师发布作业.py", line 71, in teardown
+    teacher_ui.revoke_homework('哈哈2')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 249, in revoke_homework
+    self.opt_homework(opt='已发布作业')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 232, in opt_homework
+    btn.click()
+    ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'click'
+
+
+* 发布作业5_TC_HOMEWORK_105  -  2025-08-03 18:57:11
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业5_TC_HOMEWORK_105
+
+* 发布作业6_TC_HOMEWORK_106  -  2025-08-03 18:57:52
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业6_TC_HOMEWORK_106
+
+* 发布作业7_TC_HOMEWORK_107  -  2025-08-03 18:58:17
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业7_TC_HOMEWORK_107
+
+* 发布作业11_TC_HOMEWORK_111  -  2025-08-03 18:58:43
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业11_TC_HOMEWORK_111
+
+* 发布作业12_TC_HOMEWORK_112  -  2025-08-03 18:59:08
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业12_TC_HOMEWORK_112
+
+* 发布作业13_TC_HOMEWORK_113  -  2025-08-03 18:59:34
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业13_TC_HOMEWORK_113
+
+* 发布作业14_TC_HOMEWORK_114  -  2025-08-03 18:59:59
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业14_TC_HOMEWORK_114
+
+* 发布作业15_TC_HOMEWORK_115  -  2025-08-03 19:00:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 发布作业15_TC_HOMEWORK_115
+
+* 发布作业16_TC_HOMEWORK_116  -  2025-08-03 19:01:14
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+没用找到要发布的作业：哈哈哈哈哈哈哈哈哈哈
+  PASS 
+
+[ case teardown ] 发布作业16_TC_HOMEWORK_116
+
+* 发布作业17_TC_HOMEWORK_117  -  2025-08-03 19:01:57
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+没用找到要发布的作业：哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+  PASS 
+
+[ case teardown ] 发布作业17_TC_HOMEWORK_117
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师查询已创建作业.py
+
+* 查询已创建作业1_TC_HOMEWORK_451  -  2025-08-03 19:02:19
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 查询已创建作业 
+
+
+** 检查点 **  核实已创建作业数量 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师查询已创建作业.py", line 15, in teststeps
+    CHECK_POINT('核实已创建作业数量', len1 == 3)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 查询已创建作业2_TC_HOMEWORK_452  -  2025-08-03 19:02:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 查询已创建作业，搜索1 
+
+
+** 检查点 **  核实已创建作业数量 ---->  通过
+
+  PASS 
+
+* 查询已创建作业3_TC_HOMEWORK_453  -  2025-08-03 19:02:30
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 查询已创建作业，搜索哈哈 
+
+
+** 检查点 **  核实已创建作业数量 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\老师查询已创建作业.py", line 39, in teststeps
+    CHECK_POINT('核实已创建作业数量', len1 == 3)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
 
 >>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py
 
@@ -594,7 +4781,154 @@ Access-Control-Allow-Origin: *
 ** 检查点 **  检查弹窗信息 ---->  通过
 
 
-* 老师修改作业1_TC_HOMEWORK_301  -  2025-08-02 00:07:21
+* 老师查询作业1_TC_HOMEWORK_251  -  2025-08-03 19:03:16
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查撤销后，当前页面显示是否一致 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 33, in teststeps
+    res1 = teacher_ui.query_homework(revokenum=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1140, in query_homework
+    CHECK_POINT('检查撤销后，当前页面显示是否一致',
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 老师查询作业1_TC_HOMEWORK_251
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+* 老师查询作业2_TC_HOMEWORK_252  -  2025-08-03 19:03:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查撤销后，当前页面显示是否一致 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 53, in teststeps
+    res1 = teacher_ui.query_homework(revokenum=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1140, in query_homework
+    CHECK_POINT('检查撤销后，当前页面显示是否一致',
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 老师查询作业2_TC_HOMEWORK_252
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+* 老师查询作业3_TC_HOMEWORK_253  -  2025-08-03 19:03:57
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查撤销后，当前页面显示是否一致 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 74, in teststeps
+    res1 = teacher_ui.query_homework(revokenum=3)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1140, in query_homework
+    CHECK_POINT('检查撤销后，当前页面显示是否一致',
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 老师查询作业3_TC_HOMEWORK_253
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+* 老师查询作业4_TC_HOMEWORK_254  -  2025-08-03 19:04:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查已发布作业数量 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 96, in teststeps
+    CHECK_POINT('检查已发布作业数量', res1 == 3)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师查询作业5_TC_HOMEWORK_255  -  2025-08-03 19:04:39
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查已发布作业数量 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 109, in teststeps
+    CHECK_POINT('检查已发布作业数量', res1 == 3)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师查询作业6_TC_HOMEWORK_256  -  2025-08-03 19:04:47
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+** 检查点 **  检查已发布作业数量 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 124, in teststeps
+    CHECK_POINT('检查已发布作业数量', res1 == 3)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改作业1_TC_HOMEWORK_301  -  2025-08-03 19:04:55
 
   [ case execution steps ]
 
@@ -604,12 +4938,24 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第2题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:1 j:0
+contents[i]:下列说法正确的是（   ） contents1[j]:下列命题正确的是（　　）
+res: None 
 
-** 检查点 **  检验上移是否成功 ---->  通过
+** 检查点 **  检验上移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 137, in teststeps
+    CHECK_POINT('检验上移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业2_TC_HOMEWORK_302  -  2025-08-02 00:07:32
+
+* 老师修改作业2_TC_HOMEWORK_302  -  2025-08-03 19:05:17
 
   [ case execution steps ]
 
@@ -619,12 +4965,24 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第3题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:2 j:1
+contents[i]:如图，点C是线段AB的中点，点D是线段BC的中点，下面等式不正确的是（　　） contents1[j]:下列说法正确的是（   ）
+res: None 
 
-** 检查点 **  检验上移是否成功 ---->  通过
+** 检查点 **  检验上移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 150, in teststeps
+    CHECK_POINT('检验上移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业3_TC_HOMEWORK_303  -  2025-08-02 00:07:44
+
+* 老师修改作业3_TC_HOMEWORK_303  -  2025-08-03 19:05:32
 
   [ case execution steps ]
 
@@ -634,12 +4992,24 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第4题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:3 j:2
+contents[i]:下列图形属于平面图形的是（   ） contents1[j]:如图，点C是线段AB的中点，点D是线段BC的中点，下面等式不正确的是（　　）
+res: None 
 
-** 检查点 **  检验上移是否成功 ---->  通过
+** 检查点 **  检验上移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 163, in teststeps
+    CHECK_POINT('检验上移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业4_TC_HOMEWORK_304  -  2025-08-02 00:07:56
+
+* 老师修改作业4_TC_HOMEWORK_304  -  2025-08-03 19:05:47
 
   [ case execution steps ]
 
@@ -649,12 +5019,24 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第5题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:4 j:3
+contents[i]:与红砖、足球所类似的图形分别是（   ） contents1[j]:下列图形属于平面图形的是（   ）
+res: None 
 
-** 检查点 **  检验上移是否成功 ---->  通过
+** 检查点 **  检验上移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 176, in teststeps
+    CHECK_POINT('检验上移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业5_TC_HOMEWORK_305  -  2025-08-02 00:08:20
+
+* 老师修改作业5_TC_HOMEWORK_305  -  2025-08-03 19:06:02
 
   [ case execution steps ]
 
@@ -664,12 +5046,24 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第6题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:5 j:4
+contents[i]:两个角的大小之比是7∶3，他们的差是72°，则这两个角的关系是（   ） contents1[j]:与红砖、足球所类似的图形分别是（   ）
+res: None 
 
-** 检查点 **  检验上移是否成功 ---->  通过
+** 检查点 **  检验上移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 189, in teststeps
+    CHECK_POINT('检验上移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业6_TC_HOMEWORK_306  -  2025-08-02 00:08:31
+
+* 老师修改作业6_TC_HOMEWORK_306  -  2025-08-03 19:06:17
 
   [ case execution steps ]
 
@@ -679,12 +5073,25 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第2题下移 
 
+n:7
+picture imgs/20250803190743814045.png
+n:7, len(contents):7,len(contents1):7
+i:1 j:2
+contents[i]:下列说法正确的是（   ） contents1[j]:如图，点C是线段AB的中点，点D是线段BC的中点，下面等式不正确的是（　　）
+res: None 
 
-** 检查点 **  检验下移是否成功 ---->  通过
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 202, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业7_TC_HOMEWORK_307  -  2025-08-02 00:08:43
+
+* 老师修改作业7_TC_HOMEWORK_307  -  2025-08-03 19:07:50
 
   [ case execution steps ]
 
@@ -694,12 +5101,25 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第3题下移 
 
+n:7
+picture imgs/20250803190758651180.png
+n:7, len(contents):7,len(contents1):7
+i:2 j:3
+contents[i]:如图，点C是线段AB的中点，点D是线段BC的中点，下面等式不正确的是（　　） contents1[j]:下列图形属于平面图形的是（   ）
+res: None 
 
-** 检查点 **  检验下移是否成功 ---->  通过
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 215, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业8_TC_HOMEWORK_308  -  2025-08-02 00:08:55
+
+* 老师修改作业8_TC_HOMEWORK_308  -  2025-08-03 19:08:06
 
   [ case execution steps ]
 
@@ -709,12 +5129,25 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第4题下移 
 
+n:7
+picture imgs/20250803190814325189.png
+n:7, len(contents):7,len(contents1):7
+i:3 j:4
+contents[i]:下列图形属于平面图形的是（   ） contents1[j]:与红砖、足球所类似的图形分别是（   ）
+res: None 
 
-** 检查点 **  检验下移是否成功 ---->  通过
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 229, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业9_TC_HOMEWORK_309  -  2025-08-02 00:09:06
+
+* 老师修改作业9_TC_HOMEWORK_309  -  2025-08-03 19:08:21
 
   [ case execution steps ]
 
@@ -724,12 +5157,25 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第5题下移 
 
+n:7
+picture imgs/20250803190829912262.png
+n:7, len(contents):7,len(contents1):7
+i:4 j:5
+contents[i]:与红砖、足球所类似的图形分别是（   ） contents1[j]:两个角的大小之比是7∶3，他们的差是72°，则这两个角的关系是（   ）
+res: None 
 
-** 检查点 **  检验下移是否成功 ---->  通过
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 242, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业10_TC_HOMEWORK_310  -  2025-08-02 00:09:18
+
+* 老师修改作业10_TC_HOMEWORK_310  -  2025-08-03 19:08:36
 
   [ case execution steps ]
 
@@ -739,12 +5185,25 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第6题下移 
 
+n:7
+picture imgs/20250803190845447865.png
+n:7, len(contents):7,len(contents1):7
+i:5 j:6
+contents[i]:两个角的大小之比是7∶3，他们的差是72°，则这两个角的关系是（   ） contents1[j]:如图，直线AB和直线CD交于点O，EO⊥CD，垂足为O，则∠AOE和∠DOB的关系是（    ）
+res: None 
 
-** 检查点 **  检验下移是否成功 ---->  通过
+** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
-  PASS 
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 255, in teststeps
+    CHECK_POINT('检验下移是否成功', res)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
 
-* 老师修改作业11_TC_HOMEWORK_311  -  2025-08-02 00:09:30
+
+* 老师修改作业11_TC_HOMEWORK_311  -  2025-08-03 19:08:52
 
   [ case execution steps ]
 
@@ -754,6 +5213,11 @@ Access-Control-Allow-Origin: *
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第1题上移 
 
+n:7
+n:7, len(contents):7,len(contents1):7
+i:0 j:6
+contents[i]:下列命题正确的是（　　） contents1[j]:如图，直线AB和直线CD交于点O，EO⊥CD，垂足为O，则∠AOE和∠DOB的关系是（    ）
+res: None 
 
 ** 检查点 **  检验上移是否成功: ---->  !! 不通过!!
 
@@ -766,7 +5230,7 @@ Traceback:
 AssertionError
 
 
-* 老师修改作业13_TC_HOMEWORK_312  -  2025-08-02 00:09:42
+* 老师修改作业13_TC_HOMEWORK_312  -  2025-08-03 19:09:24
 
   [ case execution steps ]
 
@@ -776,19 +5240,26 @@ AssertionError
 
 -- 第 2 步 -- 将任务名为“哈哈1”的第10题下移 
 
+n:7
+picture imgs/20250803190931913338.png
+len(movedown_btns)-1: 9
+n:7, len(contents):7,len(contents1):7
+i:6 j:0
+contents[i]:如图，直线AB和直线CD交于点O，EO⊥CD，垂足为O，则∠AOE和∠DOB的关系是（    ） contents1[j]:下列命题正确的是（　　）
+res: None 
 
 ** 检查点 **  检验下移是否成功 ---->  !! 不通过!!
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 282, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 281, in teststeps
     CHECK_POINT('检验下移是否成功', res)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 老师修改描述1_TC_HOMEWORK_351  -  2025-08-02 00:10:17
+* 老师修改描述1_TC_HOMEWORK_351  -  2025-08-03 19:09:38
 
   [ case execution steps ]
 
@@ -803,7 +5274,7 @@ AssertionError
 
   PASS 
 
-* 老师修改描述2_TC_HOMEWORK_352  -  2025-08-02 00:10:25
+* 老师修改描述2_TC_HOMEWORK_352  -  2025-08-03 19:09:49
 
   [ case execution steps ]
 
@@ -818,16 +5289,16 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 305, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 304, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业')
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1284, in edit_taskdec
     CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 老师修改描述3_TC_HOMEWORK_353  -  2025-08-02 00:10:31
+* 老师修改描述3_TC_HOMEWORK_353  -  2025-08-03 19:09:56
 
   [ case execution steps ]
 
@@ -842,16 +5313,16 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 317, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 316, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', time1=60)
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1245, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1286, in edit_taskdec
     CHECK_POINT('修改后的完成时间是否正确', str(time1) == time2)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 老师修改描述4_TC_HOMEWORK_354  -  2025-08-02 00:10:37
+* 老师修改描述4_TC_HOMEWORK_354  -  2025-08-03 19:10:03
 
   [ case execution steps ]
 
@@ -866,14 +5337,73 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 329, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 328, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业', time1=60)
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1284, in edit_taskdec
     CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
+
+* 老师撤销作业1_TC_HOMEWORK_401  -  2025-08-03 19:10:09
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  检查是否撤销 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 342, in teststeps
+    CHECK_POINT('检查是否撤销', len1 == 2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师撤销作业3_TC_HOMEWORK_403  -  2025-08-03 19:10:35
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  检查是否撤销 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已发布作业未提交作业.py", line 357, in teststeps
+    CHECK_POINT('检查是否撤销', len1 == 0)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 删除作业2_TC_HOMEWORK_552  -  2025-08-03 19:11:16
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 删除作业 
+
+
+** 检查点 **  检查是否没有删除成功 ---->  通过
+
+  PASS 
 
 
 >>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py
@@ -890,10 +5420,200 @@ AssertionError
 ** 检查点 **  检查弹窗信息 ---->  通过
 
 打开浏览器
-正确率:10.0%	规定完成时间:30分钟	提交时间:2025-08-02 00:11:17	正确题目个数:1	错误题目个数:9
-正确率:10.0%	规定完成时间:30分钟	提交时间:2025-08-02 00:11:20	正确题目个数:1	错误题目个数:9
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.68")>
+picture imgs/20250803191157970767.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.71")>
+picture imgs/20250803191159160211.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.72")>
+picture imgs/20250803191200315002.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.74")>
+picture imgs/20250803191201479955.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.76")>
+picture imgs/20250803191202643111.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.79")>
+picture imgs/20250803191203825775.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.81")>
+picture imgs/20250803191204980174.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.83")>
+picture imgs/20250803191206142858.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.86")>
+picture imgs/20250803191207297991.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.6C11A67D8DBF7BDEF534FD459A412FB0.e.88")>
+picture imgs/20250803191208453004.png
+正确率:30.0%	规定完成时间:30分钟	提交时间:2025-08-03 19:12:11	正确题目个数:3	错误题目个数:7
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.204")>
+picture imgs/20250803191228686145.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.207")>
+picture imgs/20250803191229836361.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.208")>
+picture imgs/20250803191230974123.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.210")>
+picture imgs/20250803191232137278.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.212")>
+picture imgs/20250803191233295563.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.215")>
+picture imgs/20250803191234457115.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.217")>
+picture imgs/20250803191235627374.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.219")>
+picture imgs/20250803191236780365.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.222")>
+picture imgs/20250803191237923842.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="d361e665b14b4d806684cfd69597f25b", element="f.A7261B580A181ADE2E0590957F088AB2.d.87BAA1EB6BB2B35CBA1F0AE49720C820.e.224")>
+picture imgs/20250803191239077118.png
+正确率:30.0%	规定完成时间:30分钟	提交时间:2025-08-03 19:12:42	正确题目个数:3	错误题目个数:7
 
-* 老师修改描述5_TC_HOMEWORK_355  -  2025-08-02 00:11:22
+* 老师查看结果1_TC_HOMEWORK_201  -  2025-08-03 19:12:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查和实际完成情况是否一致 
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  秦桑同学的正确率是否一致 ---->  通过
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  悟空同学的正确率是否一致 ---->  通过
+
+  PASS 
+
+* 老师查看结果2_TC_HOMEWORK_202  -  2025-08-03 19:12:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查和实际完成情况是否一致 
+
+
+** 检查点 **  悟净同学的正确率是否一致 ---->  通过
+
+
+** 检查点 **  悟能同学的正确率是否一致 ---->  通过
+
+  PASS 
+
+* 老师查看结果3_TC_HOMEWORK_203  -  2025-08-03 19:13:04
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查已完成同学 实际完成情况是否一致 
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  秦桑同学的正确率是否一致 ---->  通过
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  悟空同学的正确率是否一致 ---->  通过
+
+  PASS 
+
+* 老师查看结果4_TC_HOMEWORK_204  -  2025-08-03 19:13:15
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查未完成同学 实际完成情况是否一致 
+
+
+** 检查点 **  悟净同学状态 ---->  通过
+
+
+** 检查点 **  悟能同学状态 ---->  通过
+
+  PASS 
+
+* 老师查看结果5_TC_HOMEWORK_205  -  2025-08-03 19:13:25
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查未完成同学 实际完成情况是否一致 
+
+
+** 检查点 **  检查同学人数： ---->  通过
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  秦桑同学的正确率是否一致 ---->  通过
+
+
+** 检查点 **  悟净同学暂未提交 ---->  通过
+
+
+** 检查点 **  悟能同学暂未提交 ---->  通过
+
+acc1:正确率 30 % : 对 3 题， 错 7 题,acc:正确率 30 % : 对 3 题， 错 7 题
+
+** 检查点 **  悟空同学的正确率是否一致 ---->  通过
+
+  PASS 
+
+* 老师查看结果6_TC_HOMEWORK_206  -  2025-08-03 19:13:51
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查完成同学 实际完成情况是否一致 
+
+
+** 检查点 **  检查同学人数： ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 138, in teststeps
+    CHECK_POINT(f'检查同学人数：', len(res1) == 2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师查看结果7_TC_HOMEWORK_207  -  2025-08-03 19:14:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 检查未完成同学 实际完成情况是否一致 
+
+未完成同学个数：4
+
+** 检查点 **  检查同学人数： ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 158, in teststeps
+    CHECK_POINT(f'检查同学人数：', len(res1) == 2)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师修改描述5_TC_HOMEWORK_355  -  2025-08-03 19:14:12
 
   [ case execution steps ]
 
@@ -908,7 +5628,7 @@ AssertionError
 
   PASS 
 
-* 老师修改描述6_TC_HOMEWORK_356  -  2025-08-02 00:11:31
+* 老师修改描述6_TC_HOMEWORK_356  -  2025-08-03 19:14:21
 
   [ case execution steps ]
 
@@ -923,16 +5643,16 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 187, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 185, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业')
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1284, in edit_taskdec
     CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 老师修改描述7_TC_HOMEWORK_357  -  2025-08-02 00:11:37
+* 老师修改描述7_TC_HOMEWORK_357  -  2025-08-03 19:14:28
 
   [ case execution steps ]
 
@@ -947,16 +5667,16 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 199, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 197, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', time1=60)
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1245, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1286, in edit_taskdec
     CHECK_POINT('修改后的完成时间是否正确', str(time1) == time2)
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
 
 
-* 老师修改描述8_TC_HOMEWORK_358  -  2025-08-02 00:11:43
+* 老师修改描述8_TC_HOMEWORK_358  -  2025-08-03 19:14:43
 
   [ case execution steps ]
 
@@ -971,10 +5691,136 @@ AssertionError
 
   FAIL    
 Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 211, in teststeps
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 209, in teststeps
     teacher_ui.edit_taskdec(taskname='哈哈1', dec='哈哈1作业', time1=60)
-  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1243, in edit_taskdec
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 1284, in edit_taskdec
     CHECK_POINT('修改后的任务描述是否正确', dec1 == dec)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 老师撤销作业2_TC_HOMEWORK_402  -  2025-08-03 19:14:49
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 修改任务描述：仅修改描述 
+
+
+** 检查点 **  检查是否撤销 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\存在已未提交作业的同学.py", line 222, in teststeps
+    CHECK_POINT('检查是否撤销', msg == '错误 : 该任务已经有学生做了，不能再撤销')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 删除作业1_TC_HOMEWORK_551  -  2025-08-03 19:15:04
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 删除作业 
+
+
+** 检查点 **  检查是否没有删除成功 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py
+打开浏览器
+
+-- 第 2 步 -- 发布作业 
+
+
+** 检查点 **  检查弹窗信息 ---->  通过
+
+
+* 学生完成作业1_TC_HOMEWORK_151  -  2025-08-03 19:15:26
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+btn: <selenium.webdriver.remote.webelement.WebElement (session="a00192947b27e9c86ae1dfce1b97afac", element="f.019A874241BE013121908E85F743D99F.d.A1DC3DE183F067C3008FB6F65A40907B.e.70")>
+picture imgs/20250803191532287691.png
+正确率:0.0%	规定完成时间:30分钟	提交时间:2025-08-03 19:15:35	正确题目个数:0	错误题目个数:10
+
+** 检查点 **  检查 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py", line 29, in teststeps
+    CHECK_POINT('检查', mes1 == '尚未做完，确定提交吗？')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 学生完成作业3_TC_HOMEWORK_153  -  2025-08-03 19:15:36
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.60")>
+picture imgs/20250803191548807580.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.63")>
+picture imgs/20250803191549982749.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.64")>
+picture imgs/20250803191551138422.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.66")>
+picture imgs/20250803191552313872.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.68")>
+picture imgs/20250803191553482190.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.71")>
+picture imgs/20250803191554629662.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.73")>
+picture imgs/20250803191555789237.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.75")>
+picture imgs/20250803191556949698.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.78")>
+picture imgs/20250803191558100891.png
+btn: <selenium.webdriver.remote.webelement.WebElement (session="f3f5cb1b4ef8ae40e200e89aefcc5170", element="f.383D3D0DA793A79C91EB8466A56E3E62.d.A1E68D6841FF249F770A992B33CF1920.e.80")>
+picture imgs/20250803191559250716.png
+正确率:0.0%	规定完成时间:30分钟	提交时间:2025-08-03 19:16:02	正确题目个数:0	错误题目个数:10
+
+** 检查点 **  检查 ---->  通过
+
+  PASS 
+
+* 学生完成作业4_TC_HOMEWORK_154  -  2025-08-03 19:16:03
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 学生登录web系统 
+
+打开浏览器
+btn: <selenium.webdriver.remote.webelement.WebElement (session="c43f4c527fec04440d3535faf7ff9265", element="f.5FCB0F43C9B1C66067245B29C8BDE9A3.d.1D367E5BBE21479150A2E380CCCFEFCC.e.59")>
+picture imgs/20250803191609737061.png
+正确率:0.0%	规定完成时间:30分钟	提交时间:2025-08-03 19:16:13	正确题目个数:0	错误题目个数:10
+
+** 检查点 **  检查 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\存在已发布作业\学生做作业.py", line 62, in teststeps
+    CHECK_POINT('检查', mes1 == '尚未做完，确定提交吗？')
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
     raise AssertionError()
 AssertionError
@@ -983,6 +5829,69 @@ AssertionError
 [ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\存在已创建作业\
 打开浏览器
 
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\存在自己创建题目\
+打开浏览器
+Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d44cc]
+	(No symbol) [0x0x7ff6229d459f]
+	(No symbol) [0x0x7ff622a23fb1]
+	(No symbol) [0x0x7ff622a217d0]
+	(No symbol) [0x0x7ff622a13458]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a12d06]
+	(No symbol) [0x0x7ff622a48820]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff622bfe415+77285]
+	GetHandleVerifier [0x0x7ff622bfe470+77376]
+	(No symbol) [0x0x7ff6229c9a6a]
+	(No symbol) [0x0x7ff6229d1419]
+	(No symbol) [0x0x7ff6229d44cc]
+	(No symbol) [0x0x7ff6229d459f]
+	(No symbol) [0x0x7ff622a22977]
+	(No symbol) [0x0x7ff622a21aa1]
+	(No symbol) [0x0x7ff622a13458]
+	(No symbol) [0x0x7ff622a4860a]
+	(No symbol) [0x0x7ff622a12d06]
+	(No symbol) [0x0x7ff622a48820]
+	(No symbol) [0x0x7ff622a7087f]
+	(No symbol) [0x0x7ff622a483e3]
+	(No symbol) [0x0x7ff622a11521]
+	(No symbol) [0x0x7ff622a122b3]
+	GetHandleVerifier [0x0x7ff622ee1efd+3107021]
+	GetHandleVerifier [0x0x7ff622edc29d+3083373]
+	GetHandleVerifier [0x0x7ff622efbedd+3213485]
+	GetHandleVerifier [0x0x7ff622c1884e+184862]
+	GetHandleVerifier [0x0x7ff622c2055f+216879]
+	GetHandleVerifier [0x0x7ff622c07084+113236]
+	GetHandleVerifier [0x0x7ff622c07239+113673]
+	GetHandleVerifier [0x0x7ff622bee298+11368]
+	BaseThreadInitThunk [0x0x7ffd2aaf7344+20]
+	RtlUserThreadStart [0x0x7ffd2c7a26b1+33]
+
+
 [ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级一老师四学生\
 删除学生
 
@@ -990,7 +5899,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:04 GMT
+Date: Sun, 03 Aug 2025 11:18:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1011,7 +5920,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:08 GMT
+Date: Sun, 03 Aug 2025 11:18:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1032,7 +5941,151 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:08 GMT
+Date: Sun, 03 Aug 2025 11:18:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\
+列出班级
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 11:18:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "gradeid": null,
+  "retlist": [
+    {
+      "name": "实验二班",
+      "grade__name": "八年级",
+      "invitecode": "202996894830",
+      "studentlimit": 50,
+      "studentnumber": 1,
+      "id": 20299,
+      "teacherlist": [
+        {
+          "teacher__realname": "张明",
+          "subject_id": 1,
+          "subject__name": "初中数学",
+          "teacher__user_id": 7978
+        }
+      ]
+    },
+    {
+      "name": "实验一班",
+      "grade__name": "高一",
+      "invitecode": "203004660304",
+      "studentlimit": 80,
+      "studentnumber": 0,
+      "id": 20300,
+      "teacherlist": []
+    }
+  ],
+  "retcode": 0
+}
+-------- HTTP response * end -------
+
+
+添加老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 11:18:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language
+X-Frame-Options: SAMEORIGIN
+Content-Language: zh-cn
+Access-Control-Allow-Origin: *
+
+{
+  "retcode": 0,
+  "id": 5267
+}
+-------- HTTP response * end -------
+
+
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\老师登入登出.py
+
+* 老师登出2_TC_LOGINLOGOUT_102  -  2025-08-03 19:18:24
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师A登录web系统并退出 
+
+打开浏览器
+mes：老师登录
+
+** 检查点 **  检查是否登出成功，登录页面 ---->  通过
+
+
+-- 第 2 步 -- 老师B登录web系统并退出 
+
+mes：老师登录
+
+** 检查点 **  检查是否登出成功，登录页面 ---->  通过
+
+  PASS 
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\老师首页信息.py
+
+* 老师首页信息2_TC_HOME_002  -  2025-08-03 19:18:31
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用老师A账号登录，查看首页信息 
+
+打开浏览器
+
+** 检查点 **  检查首页信息 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\老师首页信息.py", line 20, in teststeps
+    CHECK_POINT('检查首页信息', name1 == '张明' and subject1 == '初中数学' and goldcoin == 0
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一学生\一班级两老师一学生\
+删除老师
+
+
+-------- HTTP response * begin -------
+200
+Server: nginx/1.17.0
+Date: Sun, 03 Aug 2025 11:18:37 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1055,7 +6108,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:08 GMT
+Date: Sun, 03 Aug 2025 11:18:37 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1071,6 +6124,224 @@ Access-Control-Allow-Origin: *
 
 
 
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一题目\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一题目\
+打开浏览器
+创建题目是否成功：添加题目成功
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师修改题目.py
+
+* 修改题目2_TC_QUESTION_102  -  2025-08-03 19:18:48
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 编辑题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改题目2_TC_QUESTION_102
+
+* 修改题目3_TC_QUESTION_103  -  2025-08-03 19:19:15
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 编辑题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改题目3_TC_QUESTION_103
+
+* 修改题目5_TC_QUESTION_105  -  2025-08-03 19:19:36
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 编辑题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改题目5_TC_QUESTION_105
+
+* 修改题目6_TC_QUESTION_106  -  2025-08-03 19:19:56
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 编辑题目 
+
+
+** 检查点 **  提示消息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改题目6_TC_QUESTION_106
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一题目\老师删除题目.py
+
+* 删除题目1_TC_QUESTION_201  -  2025-08-03 19:20:17
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 删除题目 
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 删除题目1_TC_QUESTION_201
+创建题目是否成功：添加题目成功
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\
+
+[ suite setup ] cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\
+打开浏览器
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+
+
+>>> cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\老师删除题目.py
+
+* 删除题目2_TC_QUESTION_202  -  2025-08-03 19:21:08
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 3 步 -- 删除题目 
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+
+** 检查点 **  是否删除成功 ---->  通过
+
+  PASS 
+
+[ case teardown ] 删除题目2_TC_QUESTION_202
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+创建题目是否成功：添加题目成功
+
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一题目\一班级一老师五题目\
+打开浏览器
+删除题目是否成功：True
+删除题目是否成功：True
+删除题目是否成功：True
+删除题目是否成功：True
+删除题目是否成功：True
+
+[ suite teardown ] cases\空白环境\一班级\一班级一老师\一班级一老师一题目\
+打开浏览器
+删除题目是否成功：True
+
+
+>>> cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py
+
+* 创建作业51_TC_HOMEWORK_051  -  2025-08-03 19:24:04
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  弹窗消息是否正确 ---->  通过
+
+  PASS 
+
+* 创建作业52_TC_HOMEWORK_052  -  2025-08-03 19:24:14
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  弹窗消息是否正确 ---->  通过
+
+  PASS 
+
+* 创建作业53_TC_HOMEWORK_053  -  2025-08-03 19:24:23
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 老师登录web系统 
+
+打开浏览器
+
+-- 第 2 步 -- 创建作业 
+
+
+** 检查点 **  是否新建作业成功 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "D:\tools\projects\auto_yjyj\cases\空白环境\一班级\一班级一老师\存在创已创建题目\老师创建作业.py", line 38, in teststeps
+    teacher_ui.publish_homework(taskname='z', mes='作业名称长度应为2~105个字符')
+  File "D:\tools\projects\auto_yjyj\lib\ui\TeacherUI.py", line 467, in publish_homework
+    CHECK_POINT('是否新建作业成功', mes == mes11)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 创建作业53_TC_HOMEWORK_053
+
 [ suite teardown ] cases\空白环境\一班级\一班级一老师\
 删除老师
 
@@ -1078,7 +6349,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:09 GMT
+Date: Sun, 03 Aug 2025 11:24:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1101,7 +6372,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Fri, 01 Aug 2025 16:12:09 GMT
+Date: Sun, 03 Aug 2025 11:24:42 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -1118,19 +6389,19 @@ Access-Control-Allow-Origin: *
 
 
 
-  ========= 测试结束 : 20250802_001208 =========
+  ========= 测试结束 : 20250803_192453 =========
 
 
-  耗时    : 342.106 秒
+  耗时    : 6663.352 秒
 
 
-  预备执行用例数量 : 20
+  预备执行用例数量 : 200
 
-  实际执行用例数量 : 20
+  实际执行用例数量 : 200
 
-  通过 : 12
+  通过 : 144
 
-  失败 : 8
+  失败 : 56
 
   异常 : 0
 
@@ -1140,4 +6411,4 @@ Access-Control-Allow-Origin: *
 
   用例初始化失败 : 0
 
-  用例清除  失败 : 0
+  用例清除  失败 : 1

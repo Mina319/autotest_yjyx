@@ -27,11 +27,15 @@ class TC_HOMEWORK_102:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, '发布作业')
-        teacher_ui.publish_process(taskname='哈'*10, taskdec='作业'+'哈'*8, mes1='建议完成时间错误', time=-1, checkall=True)
+        mes = teacher_ui.publish_process(taskname='哈哈1', taskdec='作业'+'哈'*8, mes1='', time=-1, checkall=True)
+        teacher_ui.wd.quit()
+        CHECK_POINT('检查:', mes == '建议完成时间错误！')
 
     def teardown(self):
         # 撤销 已发布作业
-        teacher_ui.revoke_homework('哈'*10)
+        teacher_ui.open_browser()
+        teacher_ui.login(username='zhangming')
+        teacher_ui.revoke_homework('哈哈1')
         teacher_ui.wd.quit()
 
 
@@ -43,7 +47,7 @@ class TC_HOMEWORK_103:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, '发布作业')
-        teacher_ui.publish_process(taskname='哈'*10, taskdec='作业'+'哈'*8, mes1='建议完成时间错误', time=0, num=1)
+        teacher_ui.publish_process(taskname='哈'*10, taskdec='作业'+'哈'*8, mes1='', time=0, num=1)
 
     def teardown(self):
         # 撤销 已发布作业
@@ -59,11 +63,12 @@ class TC_HOMEWORK_104:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, '发布作业')
-        teacher_ui.publish_process(taskname='哈'*10, taskdec='作业'+'哈'*8, mes1='建议完成时间错误', time='ss', num=1)
+        mes = teacher_ui.publish_process(taskname='哈哈2', taskdec='作业'+'哈'*8, mes1='建议完成时间错误', time='ss', num=1)
+        CHECK_POINT('检查:', mes == '建议完成时间错误！')
 
     def teardown(self):
         # 撤销 已发布作业
-        teacher_ui.revoke_homework('哈'*10)
+        teacher_ui.revoke_homework('哈哈2')
         teacher_ui.wd.quit()
 
 
@@ -123,7 +128,7 @@ class TC_HOMEWORK_111:
         teacher_ui.open_browser()
         teacher_ui.login(username='zhangming')
         STEP(2, '发布作业')
-        teacher_ui.publish_process(taskname='哈'*10, taskdec=None, mes1='作业已发布给学生', num=1)
+        teacher_ui.publish_process(taskname='哈'*10, taskdec='哈'*20, mes1='作业已发布给学生', num=1)
 
     def teardown(self):
         # 撤销 已发布作业
