@@ -11,6 +11,12 @@
 == cases\空白环境\__st__.py 
 
 
+== cases\空白环境\app添加班级.py 
+
+
+== cases\空白环境\app登录.py 
+
+
 == cases\空白环境\学生登入登出.py 
 
 
@@ -18,6 +24,9 @@
 
 
 == cases\空白环境\一班级\__st__.py 
+
+
+== cases\空白环境\一班级\app添加老师.py 
 
 
 == cases\空白环境\一班级\学生登入登出.py 
@@ -60,6 +69,9 @@
 
 
 == cases\空白环境\一班级\一班级一老师\__st__.py 
+
+
+== cases\空白环境\一班级\一班级一老师\app登录.py 
 
 
 == cases\空白环境\一班级\一班级一老师\老师修改题目.py 
@@ -147,11 +159,11 @@ textbook: [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [0, 2, 0], [0, 2, 1], [0,
 
 ===   [ 执行测试用例 ]  === 
 
-预备执行用例数量 : 200
+预备执行用例数量 : 205
 
 
 
-  ========= 测试开始 : 20250803_173259 =========
+  ========= 测试开始 : 20250806_095555 =========
 
 
 
@@ -165,7 +177,7 @@ textbook: [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [0, 2, 0], [0, 2, 1], [0,
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:32:59 GMT
+Date: Wed, 06 Aug 2025 01:55:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -188,7 +200,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:00 GMT
+Date: Wed, 06 Aug 2025 01:55:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -211,7 +223,7 @@ Access-Control-Allow-Origin: *
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:00 GMT
+Date: Wed, 06 Aug 2025 01:55:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -222,17 +234,7 @@ Access-Control-Allow-Origin: *
 
 {
   "gradeid": null,
-  "retlist": [
-    {
-      "name": "实验一班",
-      "grade__name": "高一",
-      "invitecode": "202979819423",
-      "studentlimit": 80,
-      "studentnumber": 0,
-      "id": 20297,
-      "teacherlist": []
-    }
-  ],
+  "retlist": [],
   "retcode": 0
 }
 -------- HTTP response * end -------
@@ -240,29 +242,66 @@ Access-Control-Allow-Origin: *
 
 
 
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:00 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
+>>> cases\空白环境\app添加班级.py
 
-{
-  "retcode": 0
-}
--------- HTTP response * end -------
+* 添加班级1_TC_APP_6101  -  2025-08-06 09:55:55
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 获取 
+
+连接Appium Server
+Session ID: 786d4ff6-c588-480f-8c77-a8ff6110997a
+
+-- 第 2 步 -- 添加班级 
+
+添加成功，班级id：20247，班级邀请码：202476409531
+picture imgs/20250806095618797022.png
+
+** 检查点 **  提示信息是否正确: ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加班级1_TC_APP_6101
+sids: [20247]
+picture imgs/20250806095621259425.png
 
 
+>>> cases\空白环境\app登录.py
+
+* vcode登录1_TC_APP_6001  -  2025-08-06 09:56:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用无效的vcode登录 
+
+连接Appium Server
+Session ID: a6c7bdf9-4b21-4345-af53-b83c16666780
+picture imgs/20250806095637823832.png
+
+** 检查点 **  提示信息是否正确: ---->  通过
+
+  PASS 
+
+* vcode登录2_TC_APP_6002  -  2025-08-06 09:56:38
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 使用正确的vcode登录 
+
+连接Appium Server
+Session ID: 63ec261f-fc46-40d1-9a0d-2bef4e99969e
+mes: 该学校还没有班级，点击刷新
+picture imgs/20250806095654064034.png
+
+** 检查点 **  提示信息是否正确: ---->  通过
+
+  PASS 
 
 
 >>> cases\空白环境\学生登入登出.py
 
-* 学生登录1_TC_LOGINLOGOUT_201  -  2025-08-03 17:33:00
+* 学生登录1_TC_LOGINLOGOUT_201  -  2025-08-06 09:56:55
 
   [ case execution steps ]
 
@@ -270,21 +309,14 @@ Access-Control-Allow-Origin: *
 
 打开浏览器
 
-** 检查点 **  提示框消息 ---->  !! 不通过!!
+** 检查点 **  提示框消息 ---->  通过
 
-  FAIL    
-Traceback:
-  File "D:\tools\projects\auto_yjyj\cases\空白环境\学生登入登出.py", line 23, in teststeps
-    CHECK_POINT('提示框消息', mes == '登录失败 : 用户或者密码错误')
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\hytest\common.py", line 76, in CHECK_POINT
-    raise AssertionError()
-AssertionError
-
+  PASS 
 
 
 >>> cases\空白环境\老师登入登出.py
 
-* 老师登录1_TC_LOGINLOGOUT_001  -  2025-08-03 17:33:05
+* 老师登录1_TC_LOGINLOGOUT_001  -  2025-08-06 09:57:02
 
   [ case execution steps ]
 
@@ -306,7 +338,7 @@ AssertionError
 -------- HTTP response * begin -------
 200
 Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:11 GMT
+Date: Wed, 06 Aug 2025 01:57:07 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -316,200 +348,21 @@ Content-Language: zh-cn
 Access-Control-Allow-Origin: *
 
 {
-  "invitecode": "202980490847",
+  "invitecode": "202483452828",
   "retcode": 0,
-  "id": 20298
+  "id": 20248
 }
 -------- HTTP response * end -------
 
 
 
 
->>> cases\空白环境\一班级\学生登入登出.py
+>>> cases\空白环境\一班级\app添加老师.py
 
-* 学生登录2_TC_LOGINLOGOUT_202  -  2025-08-03 17:33:11
+* 添加老师1_TC_APP_6201  -  2025-08-06 09:57:08
 
   [ case execution steps ]
 
--- 第 1 步 -- 创建学生 
+-- 第 1 步 -- 获取 
 
-列出班级
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:11 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "gradeid": null,
-  "retlist": [
-    {
-      "name": "实验二班",
-      "grade__name": "八年级",
-      "invitecode": "202980490847",
-      "studentlimit": 50,
-      "studentnumber": 0,
-      "id": 20298,
-      "teacherlist": []
-    }
-  ],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-添加学生
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:12 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retcode": 0,
-  "id": 2247
-}
--------- HTTP response * end -------
-
-
-
-** 检查点 **  是否创建学生成功 ---->  通过
-
-
--- 第 2 步 -- 登录web系统 
-
-打开浏览器
-
--- 第 3 步 -- 检查 学校、姓名、已发布微课、已发布作业 的信息是否正确 
-
-picture imgs/20250803173315730201.png
-
-** 检查点 **  检查信息是否正确 ---->  通过
-
-
--- 第 4 步 -- 查看错题库 
-
-picture imgs/20250803173316108494.png
-
-** 检查点 **  检查错题库 ---->  通过
-
-  PASS 
-
-[ case teardown ] 学生登录2_TC_LOGINLOGOUT_202
-删除学生
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:20 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-
-
->>> cases\空白环境\一班级\学生首页信息.py
-
-* 学生首页信息1_TC_HOME_101  -  2025-08-03 17:33:19
-
-  [ case execution steps ]
-
--- 第 1 步 -- 创建学生 
-
-列出班级
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:20 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "gradeid": null,
-  "retlist": [
-    {
-      "name": "实验二班",
-      "grade__name": "八年级",
-      "invitecode": "202980490847",
-      "studentlimit": 50,
-      "studentnumber": 0,
-      "id": 20298,
-      "teacherlist": []
-    }
-  ],
-  "retcode": 0
-}
--------- HTTP response * end -------
-
-
-添加学生
-
-
--------- HTTP response * begin -------
-200
-Server: nginx/1.17.0
-Date: Sun, 03 Aug 2025 09:33:20 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Language
-X-Frame-Options: SAMEORIGIN
-Content-Language: zh-cn
-Access-Control-Allow-Origin: *
-
-{
-  "retcode": 0,
-  "id": 2248
-}
--------- HTTP response * end -------
-
-
-
-** 检查点 **  是否创建学生成功 ---->  通过
-
-
--- 第 2 步 -- 登录web系统 
-
-打开浏览器
-检查 学校、姓名、已发布微课、已发布作业 的信息是否正确
-picture imgs/20250803173324919037.png
-
-** 检查点 **  检查信息是否正确 ---->  通过
-
-
--- 第 3 步 -- 查看顶部菜单 
-
+连接Appium Server

@@ -23,8 +23,6 @@ class MySignalHandler:
 
         for sheet in book.sheets():
             sheet_name = sheet.name
-            if sheet_name == 'api':
-                continue
             # 用例编号所在列
             caseNumbers = sheet.col_values(colx=4)
 

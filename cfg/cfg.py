@@ -1,4 +1,20 @@
 
+desired_caps = {
+    'platformName': 'Android',  # 被测手机是安卓
+    'platformVersion': '12',  # 手机安卓版本，如果是鸿蒙系统，依次尝试 12、11、10 这些版本号
+    'deviceName': 'HA19CUMG',  # 设备名，安卓手机可以随意填写
+    'appPackage': 'com.yjyxapp',  # 启动APP Package名称
+    'appActivity': '.MainActivity',  # 启动Activity名称
+    'unicodeKeyboard': True,  # 自动化需要输入中文时填True
+    'resetKeyboard': True,  # 执行完程序恢复原来输入法
+    # 'noReset': True,  # 不要重置App
+    'newCommandTimeout': 6000,
+    'automationName': 'UiAutomator2',
+    # 'chromeOptions': {'w3c': False},
+    # 'chromedriverExecutable': r'D:\tools\chromedriver_win32_99.0.4844.51\chromedriver.exe',
+}
+app_server_url = 'http://localhost:4723/wd/hub'
+
 
 g_vcode = "00000004074389951477"
 
